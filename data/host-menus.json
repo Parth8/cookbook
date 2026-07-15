@@ -1,0 +1,170 @@
+[
+  {
+    "id": "italian-night",
+    "kind": "date",
+    "title": "Italian Night",
+    "sub": "For two. The one you cook when it matters.",
+    "tab": "peach",
+    "courses": [
+      { "label": "Starter", "ids": ["bruschetta"] },
+      { "label": "Main",    "ids": ["creamy-tuscan-chicken"] },
+      { "label": "Sides",   "ids": ["garlic-parmesan-potatoes", "roasted-vegetables"] },
+      { "label": "Dessert", "ids": ["chocolate-mousse"] },
+      { "label": "Pour",    "ids": ["spritz"] }
+    ],
+    "runsheet": [
+      { "time": "6:00", "task": "Mousse: whip, cup, fridge. It needs the two hours, nothing else does." },
+      { "time": "7:00", "task": "Potatoes into the air fryer. Veg tossed and ready on a tray." },
+      { "time": "7:30", "task": "Bruschetta topping mixed. Do not toast the bread yet." },
+      { "time": "7:40", "task": "Build the spritz. Ice first, then the bitter, then soda. Hand it over." },
+      { "time": "7:45", "task": "Toast the bread, spoon, serve. This is the only thing they watch you do." },
+      { "time": "8:00", "task": "Chicken in the pan. Twelve minutes, and the smell does the work." },
+      { "time": "8:15", "task": "Plate wide and shallow. Sauce under the chicken, never over." }
+    ],
+    "plating": "Wide shallow bowls. Sauce pooled underneath, chicken on top, one basil leaf. Potatoes in a separate dish so the plate stays clean.",
+    "call_it": "creamy Tuscan chicken - never mention the yogurt"
+  },
+  {
+    "id": "desi-night",
+    "kind": "date",
+    "title": "Desi Night",
+    "sub": "For two. Tastes like home, weighs like it doesn't.",
+    "tab": "butter",
+    "courses": [
+      { "label": "Starter", "ids": ["chicken-tikka"] },
+      { "label": "Main",    "ids": ["butter-chicken"] },
+      { "label": "Sides",   "ids": ["jeera-rice", "mint-raita"] },
+      { "label": "Dessert", "ids": ["protein-gulab-jamun"] },
+      { "label": "Pour",    "ids": ["whiskey-highball", "masala-chaas"] }
+    ],
+    "runsheet": [
+      { "time": "5:30", "task": "Tikka marinade on. Longer is better - this is the one thing you cannot rush." },
+      { "time": "7:00", "task": "Gulab jamun rolled and syruped. They sit happily." },
+      { "time": "7:30", "task": "Butter chicken gravy to the point where it only needs the chicken." },
+      { "time": "7:45", "task": "Rice on. One whistle. Forget about it." },
+      { "time": "7:50", "task": "Highball built, or chaas if they're not drinking. Both take ninety seconds." },
+      { "time": "8:00", "task": "Tikka into the air fryer while they're in the room. The char smell is the starter." },
+      { "time": "8:20", "task": "Chicken into the gravy, two minutes, done. Raita out of the fridge last." }
+    ],
+    "plating": "Tikka on a small plate with onion rings and a lime wedge. Butter chicken in a katori, rice separate. Raita in the smallest bowl you own.",
+    "call_it": "butter chicken - the cashew base is nobody's business"
+  },
+  {
+    "id": "asian-night",
+    "kind": "date",
+    "title": "Asian Night",
+    "sub": "For two. Sticky, hot, and over in thirty minutes.",
+    "tab": "sage",
+    "courses": [
+      { "label": "Starter", "ids": ["edamame-chilli-salt"] },
+      { "label": "Main",    "ids": ["gochujang-chicken"] },
+      { "label": "Sides",   "ids": ["jeera-rice"] },
+      { "label": "Dessert", "ids": ["froyo-bark"] },
+      { "label": "Pour",    "ids": ["whiskey-highball"] }
+    ],
+    "runsheet": [
+      { "time": "Night before", "task": "FroYo bark into the freezer. It is the least work and the most surprising." },
+      { "time": "7:30", "task": "Chicken cubed, sauce whisked. Both sit in bowls looking organised." },
+      { "time": "7:50", "task": "Edamame in salted water, three minutes, chilli salt over. Snack while you cook." },
+      { "time": "8:00", "task": "Rice on." },
+      { "time": "8:10", "task": "Chicken in a hot pan. Sauce in at the end or it burns - this is the whole trick." },
+      { "time": "8:20", "task": "Sesame, spring onion, serve. Bark out of the freezer twenty minutes later." }
+    ],
+    "plating": "White plate, sauce pooled not tossed, sesame and spring onion scattered late. Bark snapped, not cut.",
+    "call_it": "gochujang glazed chicken"
+  },
+  {
+    "id": "mexican-night",
+    "kind": "date",
+    "title": "Mexican Night",
+    "sub": "For two. The sizzle is the entire performance.",
+    "tab": "blush",
+    "courses": [
+      { "label": "Starter", "ids": ["guacamole"] },
+      { "label": "Main",    "ids": ["chicken-fajitas"] },
+      { "label": "Dessert", "ids": ["mango-panna-cotta"] },
+      { "label": "Pour",    "ids": ["margarita"] }
+    ],
+    "runsheet": [
+      { "time": "Afternoon", "task": "Panna cotta set in the fridge. It needs four hours and zero attention." },
+      { "time": "7:30", "task": "Peppers and onion sliced. Chicken strips seasoned. Everything on one tray." },
+      { "time": "7:45", "task": "Guac mashed rough. Make it in front of them - it is a two-minute show." },
+      { "time": "7:50", "task": "Margaritas. Fresh lime only. No mix, no sugar rim, no argument." },
+      { "time": "8:05", "task": "Pan screaming hot. Chicken, then peppers. Carry the pan to the table still hissing." },
+      { "time": "8:10", "task": "They build their own. You sit down. That's the point of fajitas." }
+    ],
+    "plating": "Cast iron straight to the table on a board. Warm tortillas in a cloth. Everything else in small bowls.",
+    "call_it": "fajitas - and let the pan do the talking"
+  },
+  {
+    "id": "taco-night",
+    "kind": "party",
+    "title": "Taco Night",
+    "sub": "Four to six. An assembly line, not a service.",
+    "tab": "peach",
+    "serves": 6,
+    "courses": [
+      { "label": "Build your own", "ids": ["chicken-tacos", "chicken-fajitas"] },
+      { "label": "On the side",    "ids": ["guacamole", "charred-corn"] },
+      { "label": "Dessert",        "ids": ["chocolate-mug-cake"] },
+      { "label": "Pour",           "ids": ["sangria-pitcher", "margarita"] }
+    ],
+    "runsheet": [
+      { "time": "Night before", "task": "Chicken marinated. Sangria built and left in the fridge - it improves overnight." },
+      { "time": "2 hours out",  "task": "Peppers and onions sliced. Corn charred and dressed. Everything into bowls, cling film on." },
+      { "time": "30 min out",   "task": "Guac last - it browns. Make it big, make it rough." },
+      { "time": "On arrival",   "task": "Sangria poured immediately. It buys you twenty minutes." },
+      { "time": "Fire",         "task": "Chicken in batches, tortillas warmed in a dry pan. Everything to the table at once and step back." },
+      { "time": "Later",        "task": "Mug cakes - one per person, ninety seconds each, made while they watch." }
+    ],
+    "plating": "One long spread. Warm tortillas under a cloth so they stay warm. Nobody plates anything - that's the format.",
+    "call_it": "taco night"
+  },
+  {
+    "id": "mezze-board",
+    "kind": "party",
+    "title": "Mezze Board",
+    "sub": "Four to six. Almost all of it is made before anyone arrives.",
+    "tab": "sage",
+    "serves": 6,
+    "courses": [
+      { "label": "The board", "ids": ["hummus", "tzatziki", "air-fryer-falafel"] },
+      { "label": "Hot",       "ids": ["chicken-souvlaki"] },
+      { "label": "Dessert",   "ids": ["froyo-bark"] },
+      { "label": "Pour",      "ids": ["gin-tonic", "virgin-mojito"] }
+    ],
+    "runsheet": [
+      { "time": "Night before", "task": "Hummus and tzatziki made. Both are better on day two. Bark into the freezer." },
+      { "time": "3 hours out",  "task": "Chicken on skewers, marinating. Falafel mix rolled and resting." },
+      { "time": "1 hour out",   "task": "Board assembled cold - dips, pita, olives, cucumber. Cover it." },
+      { "time": "On arrival",   "task": "G&Ts, or virgin mojitos. Board out. You are now free." },
+      { "time": "Fire",         "task": "Falafel in the air fryer, souvlaki on the pan. Twelve minutes total, both hot at once." }
+    ],
+    "plating": "One big board, dips in the middle, everything else radiating out. Hot skewers land on it straight off the pan.",
+    "call_it": "a mezze board"
+  },
+  {
+    "id": "kebab-platter",
+    "kind": "party",
+    "title": "Kebab Platter",
+    "sub": "Four to six. Your freezer does most of the work.",
+    "tab": "butter",
+    "serves": 6,
+    "courses": [
+      { "label": "Off the grill", "ids": ["seekh-kebabs", "chicken-tikka", "paneer-pops"] },
+      { "label": "On the side",   "ids": ["mint-raita", "boondi-raita"] },
+      { "label": "Dessert",       "ids": ["cardamom-kulfi"] },
+      { "label": "Pour",          "ids": ["masala-chaas", "whiskey-highball"] }
+    ],
+    "runsheet": [
+      { "time": "Weeks before", "task": "Seekh kebabs batched and frozen. This is why you did that." },
+      { "time": "Night before", "task": "Kulfi into moulds. Tikka marinade on." },
+      { "time": "1 hour out",   "task": "Raitas mixed. Onion rings sliced and soaked in cold water so they stay sharp." },
+      { "time": "On arrival",   "task": "Chaas for everyone, highballs for whoever wants one." },
+      { "time": "Fire",         "task": "Air fryer runs in three rounds: kebabs, tikka, paneer pops. Serve each as it lands - nobody waits for the full platter." },
+      { "time": "Later",        "task": "Kulfi out, five minutes to soften, then cut." }
+    ],
+    "plating": "Serve in waves straight from the air fryer onto a warm platter. Onion, lime, raita permanently on the table.",
+    "call_it": "a kebab platter"
+  }
+]

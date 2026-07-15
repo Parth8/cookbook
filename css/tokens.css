@@ -1,63 +1,81 @@
 /* ============================================================
    Parth's Cookbook - Design tokens
-   Direction: "Pintori" - Olivetti / Italian modernist.
-   Flat saturated colour, strict grid, disciplined space.
-   Colour encodes STATE, not taxonomy.
+   Warm, indie, readable. Light. Inviting.
+
+   TYPE: two faces, not three.
+     Fraunces - a soft, wonky old-style serif with an optical-size
+       axis, so it is TUNED for the size it is set at. Unlike a Didone,
+       its hairlines survive at 18px, which is where 164 dish names
+       actually live.
+     Karla - a humanist grotesque with quirky proportions and
+       tabular figures.
+     They complement because they share a temperament (warm, humanist,
+       slightly off-grid) and contrast in structure. Karla's tabular
+       figures carry the data voice, so there is no third face.
    ============================================================ */
 
 :root {
-  /* ---- Palette: 4 colours + 2 semantic marks. That's all. ---- */
-  --paper:        #EDEDE7;  /* pale chalk, faint green-grey. Not cream. */
-  --ink:          #171A14;  /* near-black, warm cast. Never brown. */
-  --ultramarine:  #2337C9;  /* THE signature. Numbers, active, links, focus. */
-  --saffron:      #F2A81C;  /* section rules + core mark. Nothing else. */
+  /* ---- Warm ground ---- */
+  --paper:    #FBF7F1;   /* warm white, faint peach. Inviting, not yellow. */
+  --surface:  #F3EBE1;   /* raised: sheets, cards, sticky chrome */
+  --ink:      #2E2620;   /* warm espresso. ~13:1 on paper - AAA. */
+  --muted:    #746355;   /* warm taupe. 5.4:1 on paper, 4.9:1 on surface. AA on both. */
 
-  --veg:          #1F7A3D;  /* Indian square-dot mark only */
-  --nonveg:       #B02B1A;  /* Indian square-dot mark only */
+  /* ---- Accent: mulberry. Warm, deep, appetising.
+          Not terracotta. Distinct from the veg/non-veg marks. ~7.5:1 - AAA. ---- */
+  --accent:      #8A3556;
+  --accent-soft: #F0DEE4;
+
+  /* ---- Honey: rules and the core mark. Never text. ---- */
+  --honey:    #D89A2E;
+
+  /* ---- Semantic marks (Indian menu language) ---- */
+  --veg:      #4A7A3B;
+  --nonveg:   #A8402C;
+
+  /* ---- Course pastels: real pastels, as small blocks behind course
+          names. Not 8% washes - those went muddy. ---- */
+  --peach:  #F7D9C0;
+  --butter: #F7E7B8;
+  --blush:  #F3D3D0;
+  --sage:   #D6DEC4;
+  --lilac:  #DCD1E6;
+  --sky:    #CFDDE8;
 
   /* ---- Derived ---- */
-  --quiet:   color-mix(in srgb, var(--ink) 45%, transparent);
-  --quieter: color-mix(in srgb, var(--ink) 25%, transparent);
-  --rule:    color-mix(in srgb, var(--ink) 14%, transparent);
-  --hover:   color-mix(in srgb, var(--ultramarine) 5%, transparent);
-  --surface: color-mix(in srgb, var(--ink) 4%, transparent);
+  --rule:     #E4D9CC;
+  --hairline: #EFE6DA;
+  --hover:    #F5EDE4;
 
-  /* ---- Type: 3 faces. Verified loading in index.html. ---- */
-  --display: 'Bodoni Moda', Georgia, serif;
-  --body:    'Switzer', system-ui, -apple-system, sans-serif;
-  --data:    'Fragment Mono', ui-monospace, monospace;
+  /* ---- Type ---- */
+  --display: 'Fraunces', Georgia, serif;
+  --body:    'Karla', system-ui, -apple-system, sans-serif;
+  --wonk: "SOFT" 40, "WONK" 1;   /* where the warmth lives */
 
-  /* ---- Scale ---- */
-  --t-xs:   0.68rem;
-  --t-sm:   0.78rem;
-  --t-base: 0.9375rem;   /* 15px */
-  --t-md:   1.05rem;
-  --t-lg:   1.35rem;
-  --t-xl:   1.75rem;
-  --t-2xl:  2.5rem;
+  /* ---- Scale: opened up. The old set was too small and too light. ---- */
+  --t-xs:   0.75rem;
+  --t-sm:   0.875rem;
+  --t-base: 1rem;
+  --t-md:   1.125rem;
+  --t-lg:   1.5rem;
+  --t-xl:   2rem;
+  --t-2xl:  2.75rem;
+  --t-3xl:  3.5rem;
 
   /* ---- Space ---- */
-  --s1: 0.25rem;
-  --s2: 0.5rem;
-  --s3: 0.75rem;
-  --s4: 1rem;
-  --s5: 1.5rem;
-  --s6: 2rem;
-  --s7: 3rem;
-  --s8: 4rem;
+  --s1: 0.25rem;  --s2: 0.5rem;   --s3: 0.75rem;  --s4: 1rem;
+  --s5: 1.5rem;   --s6: 2rem;     --s7: 3rem;     --s8: 4.5rem;
 
   /* ---- Layout ---- */
-  --measure: 62rem;
+  --measure: 60rem;
   --gutter:  2rem;
-  --radius:  2px;   /* near-square. Modernist, not friendly-blob. */
+  --radius:  6px;   /* soft, not blobby. Indie print, not iOS. */
 
-  /* ---- Motion: the entire budget lives here ---- */
+  /* ---- Motion ---- */
   --ease:      cubic-bezier(.2, .8, .2, 1);
   --d-hover:   180ms;
-  --d-flip:    200ms;
+  --d-flip:    220ms;
   --d-stagger: 40ms;
 }
 
-@media (max-width: 720px) {
-  :root { --gutter: 1.25rem; }
-}
+@media (max-width: 720px) { :root { --gutter: 1.25rem; } }
