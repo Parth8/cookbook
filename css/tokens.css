@@ -1,54 +1,40 @@
 /* ============================================================
    Parth's Cookbook - Design tokens
-   Warm, indie, readable. Light. Inviting.
-
-   TYPE: two faces, not three.
-     Fraunces - a soft, wonky old-style serif with an optical-size
-       axis, so it is TUNED for the size it is set at. Unlike a Didone,
-       its hairlines survive at 18px, which is where 164 dish names
-       actually live.
-     Karla - a humanist grotesque with quirky proportions and
-       tabular figures.
-     They complement because they share a temperament (warm, humanist,
-       slightly off-grid) and contrast in structure. Karla's tabular
-       figures carry the data voice, so there is no third face.
+   Palette: NEWSPRINT
    ============================================================ */
 
 :root {
-/* ============ PALETTE: Newsprint ============
-   Warm grey, near-black, one vermilion. Maximum restraint.
-   Paste over lines 19-48 of css/tokens.css (the block from --paper to --hover). */
- 
+  /* Newsprint - warm grey, near-black, one vermilion. */
   --paper:    #F7F5F1;
   --surface:  #EBE8E2;
   --ink:      #1C1A17;
   --muted:    #5C5953;
- 
+
   --accent:      #B33010;
-  --accent-soft: #EDD9D2;
- 
+  --accent-soft: #EFD7D0;
+
   --honey:    #B8912A;
- 
+
   --veg:      #4A7A3B;
   --nonveg:   #A8402C;
- 
-  --peach:  #DFCFA5;
-  --butter: #E7DBBD;
-  --blush:  #E9CEC4;
-  --sage:   #CDD7C5;
-  --lilac:  #F0DFD8;
-  --sky:    #DBD9D5;
- 
-  --rule:     #D4D2CE;
-  --hairline: #E5E3E0;
-  --hover:    #F3E9E4;
+
+  --peach:  #E6E2DA;
+  --butter: #EFE6D2;
+  --blush:  #EBDDD8;
+  --sage:   #DFE3D9;
+  --lilac:  #E4DEE1;
+  --sky:    #D9DBD6;
+
+  --rule:     #DAD5CC;
+  --hairline: #E8E3D9;
+  --hover:    #F0E7E1;
 
   /* ---- Type ---- */
   --display: 'Fraunces', Georgia, serif;
   --body:    'Karla', system-ui, -apple-system, sans-serif;
-  --wonk: "SOFT" 40, "WONK" 1;   /* where the warmth lives */
+  --wonk: "SOFT" 40, "WONK" 1;
 
-  /* ---- Scale: opened up. The old set was too small and too light. ---- */
+  /* ---- Scale ---- */
   --t-xs:   0.75rem;
   --t-sm:   0.875rem;
   --t-base: 1rem;
@@ -65,13 +51,32 @@
   /* ---- Layout ---- */
   --measure: 60rem;
   --gutter:  2rem;
-  --radius:  6px;   /* soft, not blobby. Indie print, not iOS. */
+  --radius:  6px;
 
-  /* ---- Motion ---- */
-  --ease:      cubic-bezier(.2, .8, .2, 1);
-  --d-hover:   180ms;
-  --d-flip:    220ms;
-  --d-stagger: 40ms;
+  /* ============================================================
+     MOTION VOCABULARY
+     Three curves, three durations. Every animation on the site
+     picks one of each. Nothing invents its own numbers.
+
+     The "flowy" feeling comes from three things together:
+       1) longer durations (300-500ms, not 200)
+       2) an ease-out with a long tail, so motion decelerates
+          into its resting place rather than snapping
+       3) properties animate TOGETHER, never one-at-a-time
+     ============================================================ */
+
+  /* ease-fluid: deep decel. The Linear/Arc feel. Use for most things. */
+  --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
+  /* ease-soft:  gentle in-and-out for hovers and small state changes */
+  --ease-soft:  cubic-bezier(0.4, 0, 0.2, 1);
+  /* ease-swell: micro-overshoot for satisfying selects. Restrained. */
+  --ease-swell: cubic-bezier(0.34, 1.28, 0.64, 1);
+
+  --d-quick:  240ms;   /* hover, chip state, small toggles */
+  --d-flow:   380ms;   /* filter change, section collapse, pill pop */
+  --d-drape:  520ms;   /* first paint, page-scale reveals */
+
+  --d-stagger: 32ms;
 }
 
 @media (max-width: 720px) { :root { --gutter: 1.25rem; } }

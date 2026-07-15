@@ -1,44 +1,268 @@
 /* ============================================================
-   Motion - the ENTIRE budget. Five items. Anything not
-   listed here is a bug, not a feature.
+   Motion - the whole system.
 
-   1. First paint: 20-line stagger, once, never again
-   2. Line hover: background + number + dots->tagline  (components.css)
-   3. Filter change: FLIP                              (menu.js)
-   4. Line -> recipe: View Transitions morph
-   5. prefers-reduced-motion kills all of it
+   PHILOSOPHY
+   -----------
+   "Flowy" = things move TOGETHER (translate + opacity + scale),
+   not one property at a time. Motion decelerates into rest
+   (long-tail ease-out) instead of snapping.
+   No property that changes layout metrics animates via the
+   layout box - we always translate/scale/opacity, which the
+   compositor can hand to the GPU. That is why it stays smooth
+   under a full 164-line board.
+
+   INVENTORY - every animation on the site is one of these:
+   1. First paint          entrance ripple, top-down
+   2. Line hover           hover-lift (color + dot-to-tagline swap)
+   3. Filter change        FLIP + dissolve-out for removed lines
+   4. Section collapse     height + opacity + translate, one motion
+   5. Chip / start-card    tap-pop (soft press, gentle swell back)
+   6. Route change         View Transitions morph
+   7. Sheet open/close     drape-down
+   Anything not on this list is a bug.
    ============================================================ */
 
-/* 1. First paint stagger. Applied by menu.js on boot only.
-      Capped at 20 lines - never 164. */
-.line[data-enter] {
-  animation: enter 320ms var(--ease) both;
+/* ------------------------------------------------------------
+   1. FIRST PAINT — the site pours in, top to bottom.
+   Combines translate + opacity + a barely-there scale. The
+   scale is what makes it feel like paper settling instead of
+   text jumping in.
+   ------------------------------------------------------------ */
+.line[data-enter],
+.start-card[data-enter],
+.section-head[data-enter] {
+  animation: pour var(--d-drape) var(--ease-fluid) both;
   animation-delay: calc(var(--i, 0) * var(--d-stagger));
+  will-change: transform, opacity;
 }
-.start-card[data-enter] {
-  animation: enter 320ms var(--ease) both;
-  animation-delay: calc(var(--i, 0) * 30ms);
-}
-@keyframes enter {
-  from { opacity: 0; transform: translateY(6px); }
+@keyframes pour {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
   to   { opacity: 1; transform: none; }
 }
 
-/* 3. FLIP. menu.js measures, then plays this. */
-.line[data-flip] { transition: transform var(--d-flip) var(--ease); }
+/* Once the animation is done, unset will-change so the browser
+   frees the compositor layer. menu.js removes [data-enter] to
+   trigger this. */
+.line, .start-card { will-change: auto; }
 
-/* 4. Shared-element morph: board line -> recipe hero.
-      Progressive enhancement; no-op where unsupported. */
-@supports (view-transition-name: none) {
-  .line .no        { view-transition-name: var(--vt-no,  none); }
-  .line .name      { view-transition-name: var(--vt-name, none); }
-  .recipe-number   { view-transition-name: vt-no; }
-  .recipe-title    { view-transition-name: vt-name; }
-  ::view-transition-old(root),
-  ::view-transition-new(root) { animation-duration: 220ms; }
+/* ------------------------------------------------------------
+   3. FILTER CHANGE — the FLIP move.
+   menu.js measures before, applies visibility, then plays this.
+   Longer than instinct says. Short = jaggy. Long = liquid.
+   ------------------------------------------------------------ */
+.line[data-flip] {
+  transition: transform var(--d-flow) var(--ease-fluid);
+  will-change: transform;
 }
 
-/* 5. Non-negotiable. */
+/* Lines being hidden dissolve out before disappearing.
+   No abrupt display:none.
+   menu.js sets [data-leaving], waits the duration, then hides. */
+.line[data-leaving] {
+  transition: opacity var(--d-flow) var(--ease-soft),
+              transform var(--d-flow) var(--ease-fluid);
+  opacity: 0;
+  transform: translateY(-4px) scale(.99);
+  pointer-events: none;
+}
+
+/* Newly-revealed lines swell in.
+   menu.js sets [data-entering] on things that were hidden and just
+   became visible. */
+.line[data-entering] {
+  animation: swell-in var(--d-flow) var(--ease-fluid) both;
+}
+@keyframes swell-in {
+  from { opacity: 0; transform: translateY(8px) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ------------------------------------------------------------
+   4. SECTION COLLAPSE
+   grid-template-rows: 0fr <-> 1fr is the modern trick. Height
+   animates smoothly with content-driven size and no JS
+   measurement. Opacity and translate join in so it feels like
+   folding, not clipping.
+   ------------------------------------------------------------ */
+.menu-section .section-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition:
+    grid-template-rows var(--d-flow) var(--ease-fluid),
+    opacity var(--d-flow) var(--ease-soft),
+    margin-top var(--d-flow) var(--ease-fluid);
+  opacity: 1;
+}
+.menu-section .section-body > .section-inner {
+  overflow: hidden;
+  transition: transform var(--d-flow) var(--ease-fluid);
+}
+.menu-section[data-collapsed="true"] .section-body {
+  grid-template-rows: 0fr;
+  opacity: 0;
+  margin-top: 0;
+}
+.menu-section[data-collapsed="true"] .section-body > .section-inner {
+  transform: translateY(-6px);
+}
+
+/* Section head chevron rotates with the same curve. */
+.section-toggle .chev {
+  display: inline-block;
+  transition: transform var(--d-flow) var(--ease-fluid);
+  transform-origin: center;
+}
+.menu-section[data-collapsed="true"] .section-toggle .chev {
+  transform: rotate(-90deg);
+}
+
+/* ------------------------------------------------------------
+   5. TAP-POP — the "clicked something" feedback loop.
+   Chips, start cards, filter buttons all use this. The gentle
+   scale down + rebound is what makes a tap feel confirmed.
+   ------------------------------------------------------------ */
+.tap-target {
+  transition:
+    background-color var(--d-quick) var(--ease-soft),
+    border-color var(--d-quick) var(--ease-soft),
+    color var(--d-quick) var(--ease-soft),
+    transform var(--d-quick) var(--ease-swell);
+}
+.tap-target:active { transform: scale(.96); }
+
+/* When a chip goes to `included`, it swells briefly. This is the
+   micro-satisfaction. Applied by menu.js as [data-just-toggled]. */
+.chip[data-just-toggled],
+.start-card[data-just-toggled] {
+  animation: pop var(--d-flow) var(--ease-swell);
+}
+@keyframes pop {
+  0%   { transform: none; }
+  40%  { transform: scale(1.06); }
+  100% { transform: none; }
+}
+
+/* Pills fly in from the filter button when they get added,
+   drift away when removed. */
+.pill {
+  animation: pill-in var(--d-flow) var(--ease-fluid) both;
+}
+@keyframes pill-in {
+  from { opacity: 0; transform: translateY(-6px) scale(.85); }
+  to   { opacity: 1; transform: none; }
+}
+.pill[data-leaving] {
+  animation: pill-out var(--d-quick) var(--ease-soft) forwards;
+  pointer-events: none;
+}
+@keyframes pill-out {
+  to { opacity: 0; transform: translateY(-6px) scale(.85); }
+}
+
+/* ------------------------------------------------------------
+   2. LINE HOVER — colour + dots-to-tagline
+   Longer than instinct says. Feels like the tagline
+   is being drawn onto the paper.
+   ------------------------------------------------------------ */
+.line {
+  transition:
+    background-color var(--d-quick) var(--ease-soft),
+    padding var(--d-quick) var(--ease-soft);
+}
+.line .no {
+  transition: color var(--d-quick) var(--ease-soft);
+}
+.line .dots {
+  transition: opacity var(--d-quick) var(--ease-soft);
+}
+.line .tagline {
+  transition:
+    opacity var(--d-flow) var(--ease-fluid),
+    transform var(--d-flow) var(--ease-fluid);
+}
+
+/* ------------------------------------------------------------
+   6. ROUTE CHANGE — shared-element morph.
+   The dish number and name morph from the menu line into the
+   recipe header. Progressive enhancement; no-op where
+   unsupported. app.js wraps route changes in startViewTransition.
+   ------------------------------------------------------------ */
+@supports (view-transition-name: none) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: var(--d-flow);
+    animation-timing-function: var(--ease-fluid);
+  }
+  ::view-transition-group(*) {
+    animation-duration: var(--d-flow);
+    animation-timing-function: var(--ease-fluid);
+  }
+}
+
+/* ------------------------------------------------------------
+   7. SHEET / OVERLAY — drape down, not slam.
+   ------------------------------------------------------------ */
+.sheet {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr;
+  transition:
+    grid-template-rows var(--d-flow) var(--ease-fluid),
+    opacity var(--d-quick) var(--ease-soft);
+  opacity: 1;
+}
+.sheet[hidden] {
+  display: grid !important;         /* keep it in flow to animate */
+  grid-template-rows: 0fr;
+  opacity: 0;
+  pointer-events: none;
+}
+.sheet > * { overflow: hidden; min-height: 0; }
+
+/* Search + picker overlays: fade the scrim, translate the panel */
+.search-modal, .picker-overlay {
+  transition: opacity var(--d-quick) var(--ease-soft);
+}
+.search-panel, .picker {
+  animation: drape-in var(--d-flow) var(--ease-fluid) both;
+}
+@keyframes drape-in {
+  from { opacity: 0; transform: translateY(-8px) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+.search-modal[hidden], .picker-overlay[hidden] {
+  display: flex !important;
+  opacity: 0;
+  pointer-events: none;
+}
+.search-modal[hidden] .search-panel,
+.picker-overlay[hidden] .picker {
+  transform: translateY(-8px) scale(.985);
+  opacity: 0;
+}
+
+/* ------------------------------------------------------------
+   Accordions on the recipe page - open with the same grid trick
+   ------------------------------------------------------------ */
+.accordion-content {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr;
+  transition:
+    grid-template-rows var(--d-flow) var(--ease-fluid),
+    opacity var(--d-quick) var(--ease-soft);
+}
+.accordion-content[hidden] {
+  display: grid !important;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  pointer-events: none;
+}
+.accordion-content > * { min-height: 0; overflow: hidden; }
+
+/* ------------------------------------------------------------
+   Reduced motion - non-negotiable
+   ------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
