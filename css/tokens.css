@@ -15,37 +15,33 @@
    ============================================================ */
 
 :root {
-  /* ---- Warm ground ---- */
-  --paper:    #FBF7F1;   /* warm white, faint peach. Inviting, not yellow. */
-  --surface:  #F3EBE1;   /* raised: sheets, cards, sticky chrome */
-  --ink:      #2E2620;   /* warm espresso. ~13:1 on paper - AAA. */
-  --muted:    #746355;   /* warm taupe. 5.4:1 on paper, 4.9:1 on surface. AA on both. */
-
-  /* ---- Accent: mulberry. Warm, deep, appetising.
-          Not terracotta. Distinct from the veg/non-veg marks. ~7.5:1 - AAA. ---- */
-  --accent:      #8A3556;
-  --accent-soft: #F0DEE4;
-
-  /* ---- Honey: rules and the core mark. Never text. ---- */
-  --honey:    #D89A2E;
-
-  /* ---- Semantic marks (Indian menu language) ---- */
+/* ============ PALETTE: Newsprint ============
+   Warm grey, near-black, one vermilion. Maximum restraint.
+   Paste over lines 19-48 of css/tokens.css (the block from --paper to --hover). */
+ 
+  --paper:    #F7F5F1;
+  --surface:  #EBE8E2;
+  --ink:      #1C1A17;
+  --muted:    #5C5953;
+ 
+  --accent:      #B33010;
+  --accent-soft: #EDD9D2;
+ 
+  --honey:    #B8912A;
+ 
   --veg:      #4A7A3B;
   --nonveg:   #A8402C;
-
-  /* ---- Course pastels: real pastels, as small blocks behind course
-          names. Not 8% washes - those went muddy. ---- */
-  --peach:  #F7D9C0;
-  --butter: #F7E7B8;
-  --blush:  #F3D3D0;
-  --sage:   #D6DEC4;
-  --lilac:  #DCD1E6;
-  --sky:    #CFDDE8;
-
-  /* ---- Derived ---- */
-  --rule:     #E4D9CC;
-  --hairline: #EFE6DA;
-  --hover:    #F5EDE4;
+ 
+  --peach:  #DFCFA5;
+  --butter: #E7DBBD;
+  --blush:  #E9CEC4;
+  --sage:   #CDD7C5;
+  --lilac:  #F0DFD8;
+  --sky:    #DBD9D5;
+ 
+  --rule:     #D4D2CE;
+  --hairline: #E5E3E0;
+  --hover:    #F3E9E4;
 
   /* ---- Type ---- */
   --display: 'Fraunces', Georgia, serif;
