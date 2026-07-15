@@ -1,0 +1,2026 @@
+[
+  {
+    "ref": "chicken-breast",
+    "name": "Chicken breast",
+    "macros_per_100g": {
+      "kcal": 165,
+      "protein_g": 31,
+      "carbs_g": 0,
+      "fat_g": 3.6
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_piece": 150
+    }
+  },
+  {
+    "ref": "greek-yogurt",
+    "name": "Greek yogurt (unsweetened)",
+    "macros_per_100g": {
+      "kcal": 59,
+      "protein_g": 10,
+      "carbs_g": 3.6,
+      "fat_g": 0.4
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_tbsp": 20,
+      "1_cup": 240
+    }
+  },
+  {
+    "ref": "paneer-lowfat",
+    "name": "Paneer (low-fat)",
+    "macros_per_100g": {
+      "kcal": 265,
+      "protein_g": 18,
+      "carbs_g": 4,
+      "fat_g": 20
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_cube": 25
+    }
+  },
+  {
+    "ref": "egg-whole",
+    "name": "Egg (whole)",
+    "macros_per_100g": {
+      "kcal": 143,
+      "protein_g": 13,
+      "carbs_g": 1,
+      "fat_g": 10
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_egg": 50
+    }
+  },
+  {
+    "ref": "egg-white",
+    "name": "Egg white",
+    "macros_per_100g": {
+      "kcal": 52,
+      "protein_g": 11,
+      "carbs_g": 0.7,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_egg_white": 33
+    }
+  },
+  {
+    "ref": "whey-protein",
+    "name": "Whey protein powder",
+    "macros_per_100g": {
+      "kcal": 400,
+      "protein_g": 80,
+      "carbs_g": 7,
+      "fat_g": 5
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_scoop": 30
+    }
+  },
+  {
+    "ref": "oats",
+    "name": "Oats",
+    "macros_per_100g": {
+      "kcal": 389,
+      "protein_g": 17,
+      "carbs_g": 66,
+      "fat_g": 7
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_cup": 80
+    }
+  },
+  {
+    "ref": "olive-oil",
+    "name": "Olive oil",
+    "macros_per_100g": {
+      "kcal": 884,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 5,
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "vegetable-oil",
+    "name": "Cooking oil (sunflower/rice bran)",
+    "macros_per_100g": {
+      "kcal": 884,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 5,
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "ghee",
+    "name": "Ghee",
+    "macros_per_100g": {
+      "kcal": 900,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 5,
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "butter",
+    "name": "Butter (Amul)",
+    "macros_per_100g": {
+      "kcal": 717,
+      "protein_g": 0.9,
+      "carbs_g": 0.1,
+      "fat_g": 81
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_tsp": 5,
+      "1_tbsp": 14
+    }
+  },
+  {
+    "ref": "curd",
+    "name": "Curd (dahi, toned)",
+    "macros_per_100g": {
+      "kcal": 60,
+      "protein_g": 3.1,
+      "carbs_g": 4.7,
+      "fat_g": 3.3
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_katori": 100,
+      "1_tbsp": 20
+    }
+  },
+  {
+    "ref": "milk-toned",
+    "name": "Milk (toned)",
+    "macros_per_100g": {
+      "kcal": 58,
+      "protein_g": 3.1,
+      "carbs_g": 4.7,
+      "fat_g": 3
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_glass": 200,
+      "1_cup": 240
+    }
+  },
+  {
+    "ref": "basa-fillet",
+    "name": "Basa fillet",
+    "macros_per_100g": {
+      "kcal": 90,
+      "protein_g": 16,
+      "carbs_g": 0,
+      "fat_g": 2.5
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_fillet": 120
+    }
+  },
+  {
+    "ref": "soya-chunks",
+    "name": "Soya chunks (dry)",
+    "macros_per_100g": {
+      "kcal": 345,
+      "protein_g": 52,
+      "carbs_g": 33,
+      "fat_g": 0.5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori_dry": 40
+    }
+  },
+  {
+    "ref": "besan",
+    "name": "Besan (gram flour)",
+    "macros_per_100g": {
+      "kcal": 387,
+      "protein_g": 22,
+      "carbs_g": 58,
+      "fat_g": 6.7
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori": 60,
+      "1_tbsp": 10
+    }
+  },
+  {
+    "ref": "moong-dal",
+    "name": "Moong dal (dry)",
+    "macros_per_100g": {
+      "kcal": 347,
+      "protein_g": 24,
+      "carbs_g": 63,
+      "fat_g": 1.2
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori_dry": 60
+    }
+  },
+  {
+    "ref": "toor-dal",
+    "name": "Toor dal (dry)",
+    "macros_per_100g": {
+      "kcal": 343,
+      "protein_g": 22,
+      "carbs_g": 63,
+      "fat_g": 1.5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori_dry": 60
+    }
+  },
+  {
+    "ref": "rajma-dry",
+    "name": "Rajma (dry)",
+    "macros_per_100g": {
+      "kcal": 333,
+      "protein_g": 24,
+      "carbs_g": 60,
+      "fat_g": 0.8
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori_dry": 60
+    }
+  },
+  {
+    "ref": "chickpeas-dry",
+    "name": "Chickpeas / kabuli chana (dry)",
+    "macros_per_100g": {
+      "kcal": 364,
+      "protein_g": 19,
+      "carbs_g": 61,
+      "fat_g": 6
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori_dry": 60
+    }
+  },
+  {
+    "ref": "basmati-rice",
+    "name": "Basmati rice (cooked)",
+    "macros_per_100g": {
+      "kcal": 121,
+      "protein_g": 3,
+      "carbs_g": 25,
+      "fat_g": 0.4
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_cup_cooked": 195,
+      "1_katori": 100
+    }
+  },
+  {
+    "ref": "rice-raw",
+    "name": "Basmati rice (raw)",
+    "macros_per_100g": {
+      "kcal": 356,
+      "protein_g": 7,
+      "carbs_g": 78,
+      "fat_g": 0.6
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori": 60
+    }
+  },
+  {
+    "ref": "whole-wheat-roti",
+    "name": "Whole wheat roti",
+    "macros_per_100g": {
+      "kcal": 264,
+      "protein_g": 9,
+      "carbs_g": 46,
+      "fat_g": 4
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_roti": 40
+    }
+  },
+  {
+    "ref": "pav",
+    "name": "Pav (ladi pav)",
+    "macros_per_100g": {
+      "kcal": 270,
+      "protein_g": 9,
+      "carbs_g": 50,
+      "fat_g": 3.5
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_pav": 40
+    }
+  },
+  {
+    "ref": "tomato",
+    "name": "Tomato",
+    "macros_per_100g": {
+      "kcal": 18,
+      "protein_g": 0.9,
+      "carbs_g": 3.9,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_medium": 150
+    }
+  },
+  {
+    "ref": "onion",
+    "name": "Onion",
+    "macros_per_100g": {
+      "kcal": 40,
+      "protein_g": 1.1,
+      "carbs_g": 9.3,
+      "fat_g": 0.1
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_medium": 110
+    }
+  },
+  {
+    "ref": "garlic",
+    "name": "Garlic",
+    "macros_per_100g": {
+      "kcal": 149,
+      "protein_g": 6.4,
+      "carbs_g": 33,
+      "fat_g": 0.5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_clove": 3
+    }
+  },
+  {
+    "ref": "ginger",
+    "name": "Ginger",
+    "macros_per_100g": {
+      "kcal": 80,
+      "protein_g": 1.8,
+      "carbs_g": 18,
+      "fat_g": 0.8
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_inch": 10
+    }
+  },
+  {
+    "ref": "green-chilli",
+    "name": "Green chilli",
+    "macros_per_100g": {
+      "kcal": 40,
+      "protein_g": 2,
+      "carbs_g": 9,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_chilli": 5
+    }
+  },
+  {
+    "ref": "capsicum",
+    "name": "Capsicum",
+    "macros_per_100g": {
+      "kcal": 26,
+      "protein_g": 1,
+      "carbs_g": 6,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_medium": 120
+    }
+  },
+  {
+    "ref": "green-peas",
+    "name": "Green peas (frozen ok)",
+    "macros_per_100g": {
+      "kcal": 81,
+      "protein_g": 5.4,
+      "carbs_g": 14,
+      "fat_g": 0.4
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_katori": 80
+    }
+  },
+  {
+    "ref": "spinach",
+    "name": "Spinach (palak)",
+    "macros_per_100g": {
+      "kcal": 23,
+      "protein_g": 2.9,
+      "carbs_g": 3.6,
+      "fat_g": 0.4
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_bunch": 200
+    }
+  },
+  {
+    "ref": "coriander-leaves",
+    "name": "Coriander leaves",
+    "macros_per_100g": {
+      "kcal": 23,
+      "protein_g": 2.1,
+      "carbs_g": 3.7,
+      "fat_g": 0.5
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_handful": 20
+    }
+  },
+  {
+    "ref": "mint-leaves",
+    "name": "Mint leaves",
+    "macros_per_100g": {
+      "kcal": 44,
+      "protein_g": 3.3,
+      "carbs_g": 8.4,
+      "fat_g": 0.7
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_handful": 10
+    }
+  },
+  {
+    "ref": "lime",
+    "name": "Lime (nimbu)",
+    "macros_per_100g": {
+      "kcal": 30,
+      "protein_g": 0.7,
+      "carbs_g": 11,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_lime": 50,
+      "1_tbsp_juice": 15
+    }
+  },
+  {
+    "ref": "cashews",
+    "name": "Cashews",
+    "macros_per_100g": {
+      "kcal": 553,
+      "protein_g": 18,
+      "carbs_g": 30,
+      "fat_g": 44
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "10_pieces": 15
+    }
+  },
+  {
+    "ref": "pistachios",
+    "name": "Pistachios (shelled)",
+    "macros_per_100g": {
+      "kcal": 562,
+      "protein_g": 20,
+      "carbs_g": 28,
+      "fat_g": 45
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "10_pieces": 8
+    }
+  },
+  {
+    "ref": "cumin-seeds",
+    "name": "Cumin seeds (jeera)",
+    "macros_per_100g": {
+      "kcal": 375,
+      "protein_g": 18,
+      "carbs_g": 44,
+      "fat_g": 22
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2
+    }
+  },
+  {
+    "ref": "mustard-seeds",
+    "name": "Mustard seeds (rai)",
+    "macros_per_100g": {
+      "kcal": 508,
+      "protein_g": 26,
+      "carbs_g": 28,
+      "fat_g": 36
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 3
+    }
+  },
+  {
+    "ref": "turmeric",
+    "name": "Turmeric (haldi)",
+    "macros_per_100g": {
+      "kcal": 354,
+      "protein_g": 8,
+      "carbs_g": 65,
+      "fat_g": 10
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 3
+    }
+  },
+  {
+    "ref": "red-chilli-powder",
+    "name": "Red chilli powder",
+    "macros_per_100g": {
+      "kcal": 282,
+      "protein_g": 12,
+      "carbs_g": 50,
+      "fat_g": 14
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2.5
+    }
+  },
+  {
+    "ref": "coriander-powder",
+    "name": "Coriander powder (dhania)",
+    "macros_per_100g": {
+      "kcal": 298,
+      "protein_g": 12,
+      "carbs_g": 55,
+      "fat_g": 18
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2.5
+    }
+  },
+  {
+    "ref": "garam-masala",
+    "name": "Garam masala",
+    "macros_per_100g": {
+      "kcal": 379,
+      "protein_g": 14,
+      "carbs_g": 47,
+      "fat_g": 15
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2.5
+    }
+  },
+  {
+    "ref": "kasuri-methi",
+    "name": "Kasuri methi (dried fenugreek)",
+    "macros_per_100g": {
+      "kcal": 323,
+      "protein_g": 23,
+      "carbs_g": 34,
+      "fat_g": 6
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 1
+    }
+  },
+  {
+    "ref": "curry-leaves",
+    "name": "Curry leaves",
+    "macros_per_100g": {
+      "kcal": 108,
+      "protein_g": 6,
+      "carbs_g": 18,
+      "fat_g": 1
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_sprig": 2
+    }
+  },
+  {
+    "ref": "cardamom",
+    "name": "Green cardamom (elaichi)",
+    "macros_per_100g": {
+      "kcal": 311,
+      "protein_g": 11,
+      "carbs_g": 68,
+      "fat_g": 7
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_pod": 0.5
+    }
+  },
+  {
+    "ref": "black-pepper",
+    "name": "Black pepper (crushed)",
+    "macros_per_100g": {
+      "kcal": 251,
+      "protein_g": 10,
+      "carbs_g": 64,
+      "fat_g": 3.3
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2.5
+    }
+  },
+  {
+    "ref": "ajwain",
+    "name": "Ajwain (carom seeds)",
+    "macros_per_100g": {
+      "kcal": 305,
+      "protein_g": 16,
+      "carbs_g": 43,
+      "fat_g": 25
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2
+    }
+  },
+  {
+    "ref": "black-salt",
+    "name": "Black salt (kala namak)",
+    "macros_per_100g": {
+      "kcal": 0,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_pinch": 0.5
+    }
+  },
+  {
+    "ref": "salt",
+    "name": "Salt",
+    "macros_per_100g": {
+      "kcal": 0,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 5
+    }
+  },
+  {
+    "ref": "sugar",
+    "name": "Sugar",
+    "macros_per_100g": {
+      "kcal": 387,
+      "protein_g": 0,
+      "carbs_g": 100,
+      "fat_g": 0
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 4
+    }
+  },
+  {
+    "ref": "jaggery",
+    "name": "Jaggery (gur)",
+    "macros_per_100g": {
+      "kcal": 383,
+      "protein_g": 0.4,
+      "carbs_g": 98,
+      "fat_g": 0.1
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_small_piece": 10
+    }
+  },
+  {
+    "ref": "corn-flour",
+    "name": "Corn flour",
+    "macros_per_100g": {
+      "kcal": 381,
+      "protein_g": 0.3,
+      "carbs_g": 91,
+      "fat_g": 0.1
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 8
+    }
+  },
+  {
+    "ref": "soy-sauce",
+    "name": "Soy sauce",
+    "macros_per_100g": {
+      "kcal": 53,
+      "protein_g": 8,
+      "carbs_g": 5,
+      "fat_g": 0
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "instant-coffee",
+    "name": "Instant coffee",
+    "macros_per_100g": {
+      "kcal": 353,
+      "protein_g": 12,
+      "carbs_g": 75,
+      "fat_g": 0.5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2
+    }
+  },
+  {
+    "ref": "soda-water",
+    "name": "Soda water",
+    "macros_per_100g": {
+      "kcal": 0,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_bottle": 300
+    }
+  },
+  {
+    "ref": "whiskey",
+    "name": "Whiskey (40% ABV)",
+    "macros_per_100g": {
+      "kcal": 224,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0,
+      "alcohol_g": 32
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_peg": 30,
+      "1_shot": 45
+    }
+  },
+  {
+    "ref": "gin",
+    "name": "Gin (40% ABV)",
+    "macros_per_100g": {
+      "kcal": 224,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0,
+      "alcohol_g": 32
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_peg": 30,
+      "1_shot": 45
+    }
+  },
+  {
+    "ref": "tonic-water-diet",
+    "name": "Tonic water (diet)",
+    "macros_per_100g": {
+      "kcal": 1,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_can": 200
+    }
+  },
+  {
+    "ref": "pasta-penne",
+    "name": "Penne (dry)",
+    "macros_per_100g": {
+      "kcal": 371,
+      "protein_g": 13,
+      "carbs_g": 75,
+      "fat_g": 1.5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_serving": 70
+    }
+  },
+  {
+    "ref": "noodles",
+    "name": "Noodles (dry, wheat)",
+    "macros_per_100g": {
+      "kcal": 384,
+      "protein_g": 13,
+      "carbs_g": 71,
+      "fat_g": 5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_cake": 70
+    }
+  },
+  {
+    "ref": "breadcrumbs",
+    "name": "Breadcrumbs (panko)",
+    "macros_per_100g": {
+      "kcal": 395,
+      "protein_g": 13,
+      "carbs_g": 72,
+      "fat_g": 5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_katori": 40
+    }
+  },
+  {
+    "ref": "tortilla",
+    "name": "Tortilla (whole wheat)",
+    "macros_per_100g": {
+      "kcal": 306,
+      "protein_g": 8,
+      "carbs_g": 51,
+      "fat_g": 8
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tortilla": 45
+    }
+  },
+  {
+    "ref": "parmesan",
+    "name": "Parmesan",
+    "macros_per_100g": {
+      "kcal": 431,
+      "protein_g": 38,
+      "carbs_g": 4,
+      "fat_g": 29
+    },
+    "cost_band": 3,
+    "perishable": true,
+    "conversions": {
+      "1_tbsp_grated": 5
+    }
+  },
+  {
+    "ref": "mozzarella-lowfat",
+    "name": "Mozzarella (low-moisture)",
+    "macros_per_100g": {
+      "kcal": 254,
+      "protein_g": 24,
+      "carbs_g": 3,
+      "fat_g": 16
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_slice": 20
+    }
+  },
+  {
+    "ref": "lettuce",
+    "name": "Lettuce (romaine/iceberg)",
+    "macros_per_100g": {
+      "kcal": 15,
+      "protein_g": 1.4,
+      "carbs_g": 2.9,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_handful": 30
+    }
+  },
+  {
+    "ref": "cucumber",
+    "name": "Cucumber",
+    "macros_per_100g": {
+      "kcal": 15,
+      "protein_g": 0.7,
+      "carbs_g": 3.6,
+      "fat_g": 0.1
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_medium": 200
+    }
+  },
+  {
+    "ref": "avocado",
+    "name": "Avocado",
+    "macros_per_100g": {
+      "kcal": 160,
+      "protein_g": 2,
+      "carbs_g": 9,
+      "fat_g": 15
+    },
+    "cost_band": 3,
+    "perishable": true,
+    "conversions": {
+      "1_half": 80
+    }
+  },
+  {
+    "ref": "sweet-corn",
+    "name": "Sweet corn (frozen ok)",
+    "macros_per_100g": {
+      "kcal": 86,
+      "protein_g": 3.3,
+      "carbs_g": 19,
+      "fat_g": 1.4
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_katori": 80
+    }
+  },
+  {
+    "ref": "mixed-berries",
+    "name": "Mixed berries (frozen)",
+    "macros_per_100g": {
+      "kcal": 50,
+      "protein_g": 0.7,
+      "carbs_g": 12,
+      "fat_g": 0.3
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_handful": 50
+    }
+  },
+  {
+    "ref": "basil-leaves",
+    "name": "Basil leaves",
+    "macros_per_100g": {
+      "kcal": 23,
+      "protein_g": 3.2,
+      "carbs_g": 2.7,
+      "fat_g": 0.6
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_handful": 10
+    }
+  },
+  {
+    "ref": "lemon",
+    "name": "Lemon",
+    "macros_per_100g": {
+      "kcal": 29,
+      "protein_g": 1.1,
+      "carbs_g": 9,
+      "fat_g": 0.3
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_lemon": 60,
+      "1_tbsp_juice": 15
+    }
+  },
+  {
+    "ref": "orange",
+    "name": "Orange",
+    "macros_per_100g": {
+      "kcal": 47,
+      "protein_g": 0.9,
+      "carbs_g": 12,
+      "fat_g": 0.1
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_medium": 130
+    }
+  },
+  {
+    "ref": "grapefruit-juice",
+    "name": "Grapefruit juice",
+    "macros_per_100g": {
+      "kcal": 39,
+      "protein_g": 0.5,
+      "carbs_g": 9,
+      "fat_g": 0.1
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_glass": 200
+    }
+  },
+  {
+    "ref": "sun-dried-tomatoes",
+    "name": "Sun-dried tomatoes",
+    "macros_per_100g": {
+      "kcal": 258,
+      "protein_g": 14,
+      "carbs_g": 56,
+      "fat_g": 3
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "5_pieces": 15
+    }
+  },
+  {
+    "ref": "dried-oregano",
+    "name": "Dried oregano / Italian herbs",
+    "macros_per_100g": {
+      "kcal": 265,
+      "protein_g": 9,
+      "carbs_g": 69,
+      "fat_g": 4
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 1
+    }
+  },
+  {
+    "ref": "gochujang",
+    "name": "Gochujang paste",
+    "macros_per_100g": {
+      "kcal": 185,
+      "protein_g": 4,
+      "carbs_g": 40,
+      "fat_g": 1
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 20
+    }
+  },
+  {
+    "ref": "thai-curry-paste",
+    "name": "Thai curry paste (green/red)",
+    "macros_per_100g": {
+      "kcal": 120,
+      "protein_g": 2,
+      "carbs_g": 15,
+      "fat_g": 6
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 20
+    }
+  },
+  {
+    "ref": "coconut-milk",
+    "name": "Coconut milk (canned)",
+    "macros_per_100g": {
+      "kcal": 197,
+      "protein_g": 2,
+      "carbs_g": 3,
+      "fat_g": 21
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_katori": 100
+    }
+  },
+  {
+    "ref": "sesame-oil",
+    "name": "Sesame oil (toasted)",
+    "macros_per_100g": {
+      "kcal": 884,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 5
+    }
+  },
+  {
+    "ref": "honey",
+    "name": "Honey",
+    "macros_per_100g": {
+      "kcal": 304,
+      "protein_g": 0.3,
+      "carbs_g": 82,
+      "fat_g": 0
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 7,
+      "1_tbsp": 21
+    }
+  },
+  {
+    "ref": "tahini",
+    "name": "Tahini (sesame paste)",
+    "macros_per_100g": {
+      "kcal": 595,
+      "protein_g": 17,
+      "carbs_g": 21,
+      "fat_g": 54
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "dark-chocolate",
+    "name": "Dark chocolate (70%)",
+    "macros_per_100g": {
+      "kcal": 546,
+      "protein_g": 7.8,
+      "carbs_g": 46,
+      "fat_g": 38
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "2_squares": 15
+    }
+  },
+  {
+    "ref": "cocoa-powder",
+    "name": "Cocoa powder (unsweetened)",
+    "macros_per_100g": {
+      "kcal": 228,
+      "protein_g": 20,
+      "carbs_g": 58,
+      "fat_g": 14
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 8
+    }
+  },
+  {
+    "ref": "tequila",
+    "name": "Tequila (40% ABV, 100% agave)",
+    "macros_per_100g": {
+      "kcal": 224,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0,
+      "alcohol_g": 32
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_peg": 30,
+      "1_shot": 45
+    }
+  },
+  {
+    "ref": "vodka",
+    "name": "Vodka (40% ABV)",
+    "macros_per_100g": {
+      "kcal": 224,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0,
+      "alcohol_g": 32
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_peg": 30,
+      "1_shot": 45
+    }
+  },
+  {
+    "ref": "white-rum",
+    "name": "White rum (40% ABV)",
+    "macros_per_100g": {
+      "kcal": 224,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0,
+      "alcohol_g": 32
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_peg": 30,
+      "1_shot": 45
+    }
+  },
+  {
+    "ref": "aperol",
+    "name": "Aperol (11% ABV)",
+    "macros_per_100g": {
+      "kcal": 125,
+      "protein_g": 0,
+      "carbs_g": 15,
+      "fat_g": 0,
+      "alcohol_g": 8.7
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_pour": 60
+    }
+  },
+  {
+    "ref": "campari",
+    "name": "Campari (25% ABV)",
+    "macros_per_100g": {
+      "kcal": 240,
+      "protein_g": 0,
+      "carbs_g": 24,
+      "fat_g": 0,
+      "alcohol_g": 20
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_pour": 30
+    }
+  },
+  {
+    "ref": "sweet-vermouth",
+    "name": "Sweet vermouth (15% ABV)",
+    "macros_per_100g": {
+      "kcal": 150,
+      "protein_g": 0,
+      "carbs_g": 16,
+      "fat_g": 0,
+      "alcohol_g": 12
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_pour": 30
+    }
+  },
+  {
+    "ref": "red-wine",
+    "name": "Red wine (13.5% ABV)",
+    "macros_per_100g": {
+      "kcal": 85,
+      "protein_g": 0.1,
+      "carbs_g": 2.6,
+      "fat_g": 0,
+      "alcohol_g": 10.6
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_glass": 150
+    }
+  },
+  {
+    "ref": "prosecco",
+    "name": "Prosecco (11% ABV, brut)",
+    "macros_per_100g": {
+      "kcal": 70,
+      "protein_g": 0,
+      "carbs_g": 1,
+      "fat_g": 0,
+      "alcohol_g": 8.5
+    },
+    "cost_band": 3,
+    "perishable": true,
+    "conversions": {
+      "1_glass": 120
+    }
+  },
+  {
+    "ref": "coffee-liqueur",
+    "name": "Coffee liqueur (20% ABV)",
+    "macros_per_100g": {
+      "kcal": 330,
+      "protein_g": 0,
+      "carbs_g": 50,
+      "fat_g": 0,
+      "alcohol_g": 15.8
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_pour": 20
+    }
+  },
+  {
+    "ref": "ginger-beer",
+    "name": "Ginger beer",
+    "macros_per_100g": {
+      "kcal": 38,
+      "protein_g": 0,
+      "carbs_g": 9.5,
+      "fat_g": 0
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_bottle": 200
+    }
+  },
+  {
+    "ref": "bitters",
+    "name": "Angostura bitters (44% ABV)",
+    "macros_per_100g": {
+      "kcal": 230,
+      "protein_g": 0,
+      "carbs_g": 6,
+      "fat_g": 0,
+      "alcohol_g": 32
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_dash": 1
+    }
+  },
+  {
+    "ref": "matcha",
+    "name": "Matcha powder",
+    "macros_per_100g": {
+      "kcal": 324,
+      "protein_g": 30,
+      "carbs_g": 39,
+      "fat_g": 5
+    },
+    "cost_band": 3,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2
+    }
+  },
+  {
+    "ref": "filter-coffee-powder",
+    "name": "Filter coffee powder (with chicory)",
+    "macros_per_100g": {
+      "kcal": 350,
+      "protein_g": 12,
+      "carbs_g": 70,
+      "fat_g": 1
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_brew": 8
+    }
+  },
+  {
+    "ref": "black-tea",
+    "name": "Black tea (CTC)",
+    "macros_per_100g": {
+      "kcal": 300,
+      "protein_g": 20,
+      "carbs_g": 50,
+      "fat_g": 2
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_cup": 2
+    }
+  },
+  {
+    "ref": "cinnamon",
+    "name": "Cinnamon (ground)",
+    "macros_per_100g": {
+      "kcal": 247,
+      "protein_g": 4,
+      "carbs_g": 81,
+      "fat_g": 1.2
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2
+    }
+  },
+  {
+    "ref": "vanilla-ice-cream",
+    "name": "Vanilla ice cream",
+    "macros_per_100g": {
+      "kcal": 207,
+      "protein_g": 3.5,
+      "carbs_g": 24,
+      "fat_g": 11
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_scoop": 60
+    }
+  },
+  {
+    "ref": "condensed-milk",
+    "name": "Condensed milk (sweetened)",
+    "macros_per_100g": {
+      "kcal": 321,
+      "protein_g": 7.9,
+      "carbs_g": 54.4,
+      "fat_g": 8.7
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 20
+    }
+  },
+  {
+    "ref": "bread-wholewheat",
+    "name": "Whole wheat bread",
+    "macros_per_100g": {
+      "kcal": 247,
+      "protein_g": 13,
+      "carbs_g": 41,
+      "fat_g": 4
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_slice": 30
+    }
+  },
+  {
+    "ref": "tofu-firm",
+    "name": "Tofu (firm)",
+    "macros_per_100g": {
+      "kcal": 144,
+      "protein_g": 17,
+      "carbs_g": 3,
+      "fat_g": 8
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_block": 200
+    }
+  },
+  {
+    "ref": "moong-sprouts",
+    "name": "Moong sprouts",
+    "macros_per_100g": {
+      "kcal": 30,
+      "protein_g": 3,
+      "carbs_g": 6,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 100
+    }
+  },
+  {
+    "ref": "mushroom",
+    "name": "Button mushrooms",
+    "macros_per_100g": {
+      "kcal": 22,
+      "protein_g": 3.1,
+      "carbs_g": 3.3,
+      "fat_g": 0.3
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 70
+    }
+  },
+  {
+    "ref": "potato",
+    "name": "Potato",
+    "macros_per_100g": {
+      "kcal": 77,
+      "protein_g": 2,
+      "carbs_g": 17,
+      "fat_g": 0.1
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_medium": 150
+    }
+  },
+  {
+    "ref": "cauliflower",
+    "name": "Cauliflower",
+    "macros_per_100g": {
+      "kcal": 25,
+      "protein_g": 1.9,
+      "carbs_g": 5,
+      "fat_g": 0.3
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 100
+    }
+  },
+  {
+    "ref": "urad-dal",
+    "name": "Urad dal (split black gram)",
+    "macros_per_100g": {
+      "kcal": 341,
+      "protein_g": 25,
+      "carbs_g": 59,
+      "fat_g": 1.4
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_cup": 200
+    }
+  },
+  {
+    "ref": "methi-leaves",
+    "name": "Fresh methi (fenugreek leaves)",
+    "macros_per_100g": {
+      "kcal": 49,
+      "protein_g": 4.4,
+      "carbs_g": 6,
+      "fat_g": 0.9
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_bunch": 50
+    }
+  },
+  {
+    "ref": "soya-chaap",
+    "name": "Soya chaap",
+    "macros_per_100g": {
+      "kcal": 180,
+      "protein_g": 30,
+      "carbs_g": 8,
+      "fat_g": 3
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_piece": 100
+    }
+  },
+  {
+    "ref": "edamame",
+    "name": "Edamame (frozen, shelled)",
+    "macros_per_100g": {
+      "kcal": 122,
+      "protein_g": 11,
+      "carbs_g": 10,
+      "fat_g": 5
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 120
+    }
+  },
+  {
+    "ref": "popcorn-kernels",
+    "name": "Popcorn kernels",
+    "macros_per_100g": {
+      "kcal": 387,
+      "protein_g": 13,
+      "carbs_g": 78,
+      "fat_g": 5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "2_tbsp": 30
+    }
+  },
+  {
+    "ref": "dates",
+    "name": "Dates (pitted)",
+    "macros_per_100g": {
+      "kcal": 282,
+      "protein_g": 2.5,
+      "carbs_g": 75,
+      "fat_g": 0.4
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_date": 8
+    }
+  },
+  {
+    "ref": "cream-cheese-lowfat",
+    "name": "Cream cheese (low-fat)",
+    "macros_per_100g": {
+      "kcal": 180,
+      "protein_g": 7,
+      "carbs_g": 5,
+      "fat_g": 15
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "harissa-paste",
+    "name": "Harissa paste",
+    "macros_per_100g": {
+      "kcal": 170,
+      "protein_g": 3,
+      "carbs_g": 15,
+      "fat_g": 11
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 5
+    }
+  },
+  {
+    "ref": "japanese-curry-roux",
+    "name": "Japanese curry roux block",
+    "macros_per_100g": {
+      "kcal": 450,
+      "protein_g": 8,
+      "carbs_g": 55,
+      "fat_g": 22
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_cube": 20
+    }
+  },
+  {
+    "ref": "hot-sauce",
+    "name": "Hot sauce (Tabasco-style)",
+    "macros_per_100g": {
+      "kcal": 30,
+      "protein_g": 1,
+      "carbs_g": 6,
+      "fat_g": 0.5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 5
+    }
+  },
+  {
+    "ref": "mango-pulp",
+    "name": "Alphonso mango pulp (unsweetened)",
+    "macros_per_100g": {
+      "kcal": 60,
+      "protein_g": 0.5,
+      "carbs_g": 15,
+      "fat_g": 0.2
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 250
+    }
+  },
+  {
+    "ref": "boondi",
+    "name": "Boondi (plain)",
+    "macros_per_100g": {
+      "kcal": 500,
+      "protein_g": 10,
+      "carbs_g": 60,
+      "fat_g": 25
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_cup": 50
+    }
+  },
+  {
+    "ref": "kulcha",
+    "name": "Kulcha (plain, store-bought)",
+    "macros_per_100g": {
+      "kcal": 280,
+      "protein_g": 8,
+      "carbs_g": 48,
+      "fat_g": 6
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_piece": 80
+    }
+  },
+  {
+    "ref": "pesto",
+    "name": "Basil pesto",
+    "macros_per_100g": {
+      "kcal": 420,
+      "protein_g": 5,
+      "carbs_g": 6,
+      "fat_g": 42
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "macaroni",
+    "name": "Macaroni (dry)",
+    "macros_per_100g": {
+      "kcal": 371,
+      "protein_g": 13,
+      "carbs_g": 75,
+      "fat_g": 1.5
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_cup": 100
+    }
+  },
+  {
+    "ref": "prawns",
+    "name": "Prawns (peeled, raw)",
+    "macros_per_100g": {
+      "kcal": 99,
+      "protein_g": 24,
+      "carbs_g": 0.2,
+      "fat_g": 0.3
+    },
+    "cost_band": 3,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 150
+    }
+  },
+  {
+    "ref": "green-tea",
+    "name": "Green tea (loose or bags)",
+    "macros_per_100g": {
+      "kcal": 1,
+      "protein_g": 0,
+      "carbs_g": 0.2,
+      "fat_g": 0
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_bag": 2
+    }
+  },
+  {
+    "ref": "cottage-cheese-lowfat",
+    "name": "Cottage cheese (low-fat)",
+    "macros_per_100g": {
+      "kcal": 72,
+      "protein_g": 11,
+      "carbs_g": 3,
+      "fat_g": 1
+    },
+    "cost_band": 2,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 200
+    }
+  },
+  {
+    "ref": "biscuits",
+    "name": "Digestive biscuits",
+    "macros_per_100g": {
+      "kcal": 480,
+      "protein_g": 6,
+      "carbs_g": 65,
+      "fat_g": 22
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_biscuit": 15
+    }
+  },
+  {
+    "ref": "agar-agar",
+    "name": "Agar agar powder",
+    "macros_per_100g": {
+      "kcal": 26,
+      "protein_g": 0,
+      "carbs_g": 7,
+      "fat_g": 0
+    },
+    "cost_band": 2,
+    "perishable": false,
+    "conversions": {
+      "1_tsp": 2
+    }
+  },
+  {
+    "ref": "cabbage",
+    "name": "Cabbage",
+    "macros_per_100g": {
+      "kcal": 25,
+      "protein_g": 1.3,
+      "carbs_g": 6,
+      "fat_g": 0.1
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_cup": 90
+    }
+  },
+  {
+    "ref": "carrot",
+    "name": "Carrot",
+    "macros_per_100g": {
+      "kcal": 41,
+      "protein_g": 0.9,
+      "carbs_g": 10,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_medium": 60
+    }
+  },
+  {
+    "ref": "celery",
+    "name": "Celery",
+    "macros_per_100g": {
+      "kcal": 16,
+      "protein_g": 0.7,
+      "carbs_g": 3,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_stalk": 40
+    }
+  },
+  {
+    "ref": "spring-onion",
+    "name": "Spring onion",
+    "macros_per_100g": {
+      "kcal": 32,
+      "protein_g": 1.8,
+      "carbs_g": 7,
+      "fat_g": 0.2
+    },
+    "cost_band": 1,
+    "perishable": true,
+    "conversions": {
+      "1_bunch": 50
+    }
+  },
+  {
+    "ref": "vinegar",
+    "name": "White vinegar",
+    "macros_per_100g": {
+      "kcal": 18,
+      "protein_g": 0,
+      "carbs_g": 0.04,
+      "fat_g": 0
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 15
+    }
+  },
+  {
+    "ref": "buffalo-sauce",
+    "name": "Buffalo sauce (hot sauce + butter)",
+    "macros_per_100g": {
+      "kcal": 80,
+      "protein_g": 0.5,
+      "carbs_g": 4,
+      "fat_g": 7
+    },
+    "cost_band": 1,
+    "perishable": false,
+    "conversions": {
+      "1_tbsp": 15
+    }
+  }
+]

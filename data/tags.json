@@ -1,0 +1,87 @@
+{
+  "meal": {
+    "color": "haldi",
+    "values": ["breakfast", "lunch", "soup", "dinner", "snack", "dessert", "side", "drink"]
+  },
+  "cuisine": {
+    "color": "apricot",
+    "values": [
+      "north-indian", "punjabi", "south-indian", "hyderabadi",
+      "indo-chinese", "italian", "mexican", "mediterranean",
+      "korean", "thai", "japanese", "asian", "american-diner", "bar", "cafe"
+    ]
+  },
+  "temp": {
+    "color": "apricot",
+    "values": ["hot", "cold"]
+  },
+  "protein": {
+    "color": "brick",
+    "values": [
+      "chicken", "fish", "egg", "paneer", "tofu", "soya-chunks",
+      "dal", "rajma", "chickpeas", "soya-chaap", "vegetarian"
+    ]
+  },
+  "time": {
+    "color": "cocoa",
+    "values": ["under-10", "under-15", "under-30", "weekend-project"]
+  },
+  "effort": {
+    "color": "cocoa",
+    "values": ["beginner", "intermediate", "fancy"]
+  },
+  "occasion": {
+    "color": "rose-milk",
+    "values": [
+      "everyday", "meal-prep", "date-night", "party", "solo",
+      "rainy-day", "sick-day", "post-workout", "hungover"
+    ]
+  },
+  "nutrition": {
+    "color": "pistachio",
+    "values": [
+      "high-protein", "low-cal", "low-fat", "high-fiber",
+      "gluten-free", "dairy-free", "no-added-sugar"
+    ]
+  },
+  "equipment": {
+    "color": "cocoa",
+    "values": [
+      "air-fryer", "oven", "pressure-cooker", "one-pan",
+      "no-cook", "blender", "cast-iron", "shaker"
+    ]
+  },
+  "pantry": {
+    "color": "haldi",
+    "values": [
+      "pantry-only", "uses-leftover-rice", "uses-leftover-chicken",
+      "uses-greek-yogurt", "fresh-herbs"
+    ]
+  },
+  "strength": {
+    "color": "brick",
+    "values": ["zero-proof", "light-pour", "strong-pour"]
+  },
+  "flavor": {
+    "color": "tomato",
+    "values": [
+      "creamy", "smoky", "spicy", "tangy", "fresh", "citrusy",
+      "garlicky", "umami", "sweet", "savory", "sticky-sweet",
+      "buttery", "herby", "nutty", "bitter", "fizzy"
+    ]
+  },
+  "texture": {
+    "color": "pistachio",
+    "values": [
+      "crispy", "crunchy", "creamy", "soft", "juicy", "saucy",
+      "sticky", "silky", "chunky", "icy"
+    ]
+  },
+  "mood": {
+    "color": "rose-milk",
+    "values": [
+      "lazy", "comfort", "healthy", "fancy", "cozy", "fresh",
+      "indulgent", "summer", "winter"
+    ]
+  }
+}

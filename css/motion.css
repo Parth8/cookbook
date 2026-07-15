@@ -1,0 +1,183 @@
+/* Motion and Animations - Parth's Cookbook */
+
+/* View Transitions API support */
+@view-transition {
+    navigation: auto;
+}
+
+/* Stagger animations for list items */
+.recipe-line {
+    animation: fadeSlideIn var(--duration-base) var(--ease-out) both;
+    animation-delay: calc(var(--index, 0) * 30ms);
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chip interactions */
+.chip {
+    transition: transform var(--duration-fast) var(--ease-out),
+                background var(--duration-fast) var(--ease-out),
+                border-color var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.chip:active {
+    transform: scale(0.95);
+}
+
+/* Search modal animations */
+.search-modal {
+    animation: fadeIn var(--duration-base) var(--ease-out);
+}
+
+.search-modal-content {
+    animation: slideUpFadeIn var(--duration-slow) var(--ease-spring);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Steam animation for hot dishes (Studio mode only) */
+@keyframes steam {
+    0%, 100% {
+        opacity: 0.1;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(-10px) scale(1.1);
+    }
+}
+
+[data-mode="studio"] .recipe-sketch[data-hot="true"]::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, var(--color-ink) 0%, transparent 70%);
+    opacity: 0.2;
+    animation: steam 3s ease-in-out infinite;
+    animation-delay: calc(var(--index, 0) * 0.5s);
+    pointer-events: none;
+}
+
+/* Bubble animation for drinks (Studio mode only) */
+@keyframes bubble {
+    0% {
+        opacity: 0.3;
+        transform: translateY(0) scale(0.8);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(1.2);
+    }
+}
+
+[data-mode="studio"] .recipe-sketch[data-drink="true"]::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: var(--color-ink);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: bubble 2s ease-in-out infinite;
+    animation-delay: calc(var(--index, 0) * 0.3s);
+    pointer-events: none;
+}
+
+/* Accordion expand animation */
+.accordion-content {
+    transition: max-height var(--duration-slow) var(--ease-out),
+                opacity var(--duration-base) var(--ease-out);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.accordion[data-open="true"] .accordion-content {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+/* Page transition skeleton */
+.page-loading {
+    opacity: 0.6;
+    pointer-events: none;
+    transition: opacity var(--duration-base) var(--ease-out);
+}
+
+/* Hover lifts (Studio mode) */
+[data-mode="studio"] .start-card:hover,
+[data-mode="studio"] .recipe-line:hover {
+    transition: transform var(--duration-base) var(--ease-spring),
+                box-shadow var(--duration-base) var(--ease-spring),
+                background var(--duration-fast) var(--ease-out);
+}
+
+/* Reading mode - reduced motion */
+[data-mode="reading"] .recipe-line,
+[data-mode="reading"] .chip,
+[data-mode="reading"] .start-card {
+    animation: none;
+    transition: background var(--duration-fast) var(--ease-out);
+}
+
+[data-mode="reading"] .recipe-sketch::after {
+    display: none;
+}
+
+/* Reduced motion user preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visible animations */
+:focus-visible {
+    animation: focusPulse var(--duration-slow) var(--ease-out);
+}
+
+@keyframes focusPulse {
+    0%, 100% {
+        outline-offset: 2px;
+    }
+    50% {
+        outline-offset: 4px;
+    }
+}
