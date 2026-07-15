@@ -45,7 +45,7 @@ function setColophon() {
   const { recipes } = window.cookbook;
   const core = recipes.filter(r => r.core).length;
   document.getElementById('colophon').textContent =
-    `${recipes.length} dishes · ${core} in rotation · high protein, low calorie · Hyderabad`;
+    `${recipes.length} dishes · ${core} in rotation · high protein, low calorie`;
 }
 
 // ---------------------------------------------------------------- router
