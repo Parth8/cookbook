@@ -68,8 +68,9 @@
 .sheet-hint {
   font-size: var(--t-sm); color: var(--muted);
   border-left: 3px solid var(--honey); padding-left: var(--s3);
+  line-height: 1.2;
 }
-.facet { display: grid; gap: var(--s2); }
+.facet { display: grid; gap: .35rem; }
 .facet-label {
   font-family: var(--body); font-size: var(--t-xs); font-weight: 600;
   letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
@@ -86,8 +87,9 @@
 .chip[data-state="excluded"] {
   border-color: var(--ink); color: var(--ink); background: var(--paper);
   text-decoration: line-through; text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--muted); /* Softens the line itself */
 }
-.more-btn { font-size: var(--t-sm); font-weight: 600; color: var(--accent); justify-self: start; background: none; border: none; cursor: pointer; }
+.more-btn { font-size: var(--t-sm); font-weight: 600; color: var(--accent); justify-self: start; background: none; border: none; cursor: pointer; margin-top: var(--s1); }
 .more-btn:hover { text-decoration: underline; }
 
 /* ---------------- Board ---------------- */
