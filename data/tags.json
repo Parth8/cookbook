@@ -1,4 +1,8 @@
 {
+  "diet": {
+  "color": "haldi",
+  "values": ["veg", "egg-veg", "non-veg"]
+},
   "meal": {
     "color": "haldi",
     "values": ["breakfast", "lunch", "soup", "dinner", "snack", "dessert", "side", "drink"]

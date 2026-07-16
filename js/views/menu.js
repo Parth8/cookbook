@@ -61,7 +61,7 @@ const ENTRY_POINTS = [
   { id: 'ep-bar',    title: 'Behind the bar',        query: { cuisine: ['bar'] } }
 ];
 
-const PRIORITY_FACETS = ['protein', 'time', 'cuisine', 'occasion', 'nutrition', 'equipment'];
+const PRIORITY_FACETS = ['diet', 'protein', 'time', 'cuisine', 'occasion', 'nutrition', 'equipment'];
 const label = v => v.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
 const isDrink = r => r.tags?.meal?.includes('drink');
 

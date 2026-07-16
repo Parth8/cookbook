@@ -34,6 +34,13 @@ async function loadData() {
     Object.assign(window.cookbook, {
       recipes, ingredients, tags, graph: buildRelationshipGraph(recipes)
     });
+    // Derive a synthetic 'diet' tag on every recipe so the existing
+// filter machinery picks it up like any other facet.
+window.cookbook.recipes.forEach(r => {
+  const proteins = r.tags.protein || [];
+  const isEgg = proteins.includes('egg') && !proteins.some(p => ['chicken', 'fish'].includes(p));
+  r.tags.diet = r.veg ? ['veg'] : isEgg ? ['egg-veg'] : ['non-veg'];
+});
   } catch (e) {
     console.error('Failed to load data:', e);
     document.getElementById('app').innerHTML =
