@@ -60,7 +60,11 @@
 }
 
 .sheet { border-bottom: 1px solid var(--rule); background: var(--surface); }
-.sheet-inner { padding: var(--s5) 0; display: grid; gap: var(--s5); }
+.sheet-inner { 
+  padding: var(--s5) var(--s3); /* Replaced 0 with var(--s3) or any custom value like 1.5rem */
+  display: grid; 
+  gap: var(--s5); 
+}
 .sheet-hint {
   font-size: var(--t-sm); color: var(--muted);
   border-left: 3px solid var(--honey); padding-left: var(--s3);
