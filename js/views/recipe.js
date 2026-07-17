@@ -3434,7 +3434,8 @@
     "tzatziki"
    ],
    "similar_to": [
-    "chicken-burrito-bowl"
+    "chicken-burrito-bowl",
+    "mediterranean-chickpea-bowl"
    ],
    "leftovers_become": [],
    "drink": [
@@ -4571,7 +4572,8 @@
    ],
    "drink": [
     "whiskey-highball",
-    "masala-chaas"
+    "masala-chaas",
+    "curry-leaf-gin-fizz"
    ]
   },
   "variants": [
@@ -4973,7 +4975,8 @@
    ],
    "drink": [
     "whiskey-highball",
-    "masala-chaas"
+    "masala-chaas",
+    "curry-leaf-gin-fizz"
    ]
   },
   "variants": [],
@@ -6140,7 +6143,8 @@
     "jeera-rice"
    ],
    "similar_to": [
-    "paneer-bhurji"
+    "paneer-bhurji",
+    "baingan-bharta"
    ],
    "leftovers_become": [],
    "drink": [
@@ -8535,7 +8539,8 @@
    ],
    "similar_to": [
     "creamy-tuscan-chicken",
-    "pink-sauce-pasta"
+    "pink-sauce-pasta",
+    "mushroom-alfredo"
    ],
    "leftovers_become": [],
    "drink": [
@@ -8901,7 +8906,8 @@
     "caprese-salad"
    ],
    "similar_to": [
-    "chicken-arrabbiata"
+    "chicken-arrabbiata",
+    "mushroom-alfredo"
    ],
    "leftovers_become": [],
    "drink": [
@@ -10828,7 +10834,8 @@
    ],
    "similar_to": [
     "chicken-shawarma-plate",
-    "chicken-tikka"
+    "chicken-tikka",
+    "halloumi-souvlaki"
    ],
    "leftovers_become": [],
    "drink": [
@@ -12682,7 +12689,8 @@
    ],
    "similar_to": [
     "chicken-parmesan",
-    "amritsari-fish"
+    "amritsari-fish",
+    "tofu-katsu"
    ],
    "leftovers_become": [],
    "drink": [
@@ -16641,7 +16649,8 @@
    ],
    "drink": [
     "whiskey-highball",
-    "masala-chaas"
+    "masala-chaas",
+    "tamarind-highball"
    ]
   },
   "variants": [],
@@ -20837,8 +20846,18 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tikka",
+    "seekh-kebabs",
+    "tandoori-chicken",
+    "butter-chicken"
+   ],
+   "similar_to": [
+    "manhattan",
+    "sazerac",
+    "turmeric-old-fashioned",
+    "boulevardier"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -20865,7 +20884,7 @@
     "sub": null
    },
    {
-    "ref": "orange-peel",
+    "ref": "orange",
     "qty_g": 5,
     "display": "1 large orange peel",
     "perishable": true,
@@ -21172,8 +21191,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chocolate-mousse",
+    "protein-tiramisu",
+    "cheesecake-cups"
+   ],
+   "similar_to": [
+    "vodka-martini",
+    "cosmopolitan"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -21200,14 +21226,14 @@
     "sub": "strong filter coffee at a pinch"
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 10,
     "display": "10ml sugar syrup",
     "perishable": false,
     "sub": null
    },
    {
-    "ref": "coffee-beans",
+    "ref": "espresso",
     "qty_g": 1,
     "display": "3 coffee beans",
     "perishable": false,
@@ -21336,8 +21362,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "chicken-souvlaki",
+    "hummus"
+   ],
+   "similar_to": [
+    "boulevardier",
+    "old-fashioned",
+    "paper-plane"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -21364,7 +21398,7 @@
     "sub": null
    },
    {
-    "ref": "orange-peel",
+    "ref": "orange",
     "qty_g": 5,
     "display": "orange peel",
     "perishable": true,
@@ -21496,8 +21530,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-souvlaki",
+    "chicken-tikka",
+    "hummus"
+   ],
+   "similar_to": [
+    "dark-and-stormy",
+    "cuba-libre",
+    "cosmopolitan"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -21524,7 +21566,7 @@
     "sub": null
    },
    {
-    "ref": "lime-wedge",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wedge",
     "perishable": true,
@@ -21673,8 +21715,17 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chicken-fajitas",
+    "guacamole",
+    "chipotle-paneer-skewers"
+   ],
+   "similar_to": [
+    "ranch-water",
+    "tommys-margarita",
+    "cuba-libre"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -21729,7 +21780,7 @@
     "sub": null
    },
    {
-    "ref": "grapefruit-slice",
+    "ref": "grapefruit",
     "qty_g": 20,
     "display": "grapefruit slice",
     "perishable": true,
@@ -21846,8 +21897,17 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tikka",
+    "seekh-kebabs",
+    "air-fryer-falafel"
+   ],
+   "similar_to": [
+    "gimlet",
+    "bees-knees",
+    "jaggery-bourbon-sour",
+    "paper-plane"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -21867,7 +21927,7 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 20,
     "display": "20ml sugar syrup (1:1)",
     "perishable": false,
@@ -25453,10 +25513,20 @@
   "smell": "medium",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "masala-chaas",
+    "protein-lassi-smoothie"
+   ],
+   "similar_to": [
+    "upma",
+    "pesarattu",
+    "besan-cheela-veg"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "masala-chaas",
+    "iced-lemon-tea"
+   ]
   },
   "rescues": [
    {
@@ -25684,10 +25754,19 @@
   "smell": "medium",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "masala-chaas",
+    "protein-lassi-smoothie",
+    "curd-rice"
+   ],
+   "similar_to": [
+    "poha",
+    "ragi-dosa"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "masala-chaas"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -25913,10 +25992,20 @@
   "smell": "low",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "masala-chaas",
+    "protein-lassi-smoothie"
+   ],
+   "similar_to": [
+    "besan-cheela-veg",
+    "upma",
+    "pesarattu"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "masala-chaas",
+    "iced-lemon-tea"
+   ]
   },
   "rescues": [
    {
@@ -26121,10 +26210,18 @@
   "smell": "high",
   "cost_band": 1,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "boondi-raita",
+    "mint-raita",
+    "masala-chaas"
+   ],
+   "similar_to": [
+    "stuffed-paneer-paratha"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "masala-chaas"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -26335,10 +26432,19 @@
   "smell": "low",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "masala-chaas",
+    "iced-lemon-tea"
+   ],
+   "similar_to": [
+    "egg-wrap",
+    "paneer-tikka-wrap"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "iced-lemon-tea",
+    "masala-chaas"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -26411,7 +26517,7 @@
   },
   "ingredients": [
    {
-    "ref": "bread-whole",
+    "ref": "bread",
     "qty_g": 80,
     "display": "4 slices multigrain or whole wheat bread",
     "perishable": false,
@@ -26545,10 +26651,19 @@
   "smell": "medium",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "mint-raita",
+    "masala-chaas"
+   ],
+   "similar_to": [
+    "masala-omelette",
+    "ragi-dosa",
+    "moong-dal-chilla"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "masala-chaas"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -26759,10 +26874,23 @@
   "smell": "high",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "jeera-rice",
+    "mint-raita",
+    "dal-tadka"
+   ],
+   "similar_to": [
+    "mushroom-do-pyaza",
+    "matar-paneer",
+    "paneer-bhurji",
+    "palak-paneer"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "chilli-lime-gt",
+    "whiskey-highball",
+    "masala-chaas"
+   ]
   },
   "rescues": [
    {
@@ -27014,10 +27142,21 @@
   "smell": "medium",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "dal-tadka",
+    "dal-fry",
+    "jeera-rice",
+    "mint-raita"
+   ],
+   "similar_to": [
+    "mushroom-do-pyaza",
+    "aloo-gobi"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "chilli-lime-gt",
+    "masala-chaas"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -27213,10 +27352,21 @@
   "smell": "high",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "dal-tadka",
+    "jeera-rice",
+    "boondi-raita"
+   ],
+   "similar_to": [
+    "aloo-gobi",
+    "kadhai-paneer"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "chilli-lime-gt",
+    "masala-chaas",
+    "whiskey-highball"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -27375,7 +27525,7 @@
     "sub": null
    },
    {
-    "ref": "peas",
+    "ref": "green-peas",
     "qty_g": 50,
     "display": "handful green peas (optional)",
     "perishable": false,
@@ -27443,10 +27593,20 @@
   "smell": "high",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "jeera-rice",
+    "aloo-paratha",
+    "poha",
+    "mint-raita"
+   ],
+   "similar_to": [
+    "dal-tadka",
+    "dal-makhani"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "masala-chaas"
+   ]
   },
   "rescues": [
    {
@@ -27705,10 +27865,21 @@
   "smell": "high",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "jeera-rice",
+    "aloo-paratha",
+    "boondi-raita"
+   ],
+   "similar_to": [
+    "kadhai-paneer",
+    "paneer-bhurji",
+    "palak-paneer"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "chilli-lime-gt",
+    "masala-chaas"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -27984,10 +28155,22 @@
   "smell": "high",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "jeera-rice",
+    "aloo-paratha",
+    "mint-raita"
+   ],
+   "similar_to": [
+    "rajma",
+    "dal-fry",
+    "palak-chickpea"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "chilli-lime-gt",
+    "masala-chaas",
+    "whiskey-highball"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -28273,10 +28456,19 @@
   "smell": "medium",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "jeera-rice",
+    "mint-raita"
+   ],
+   "similar_to": [
+    "chana-masala",
+    "palak-paneer"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "chilli-lime-gt",
+    "masala-chaas"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -28506,10 +28698,22 @@
   "smell": "high",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "dal-fry",
+    "jeera-rice",
+    "mint-raita",
+    "aloo-paratha"
+   ],
+   "similar_to": [
+    "kadhai-paneer",
+    "bhindi-do-pyaza"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "chilli-lime-gt",
+    "whiskey-highball",
+    "turmeric-old-fashioned"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -28728,10 +28932,20 @@
   "smell": "high",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta"
+   ],
+   "similar_to": [
+    "chicken-alfredo",
+    "pesto-chicken-pasta",
+    "protein-mac-cheese"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "negroni",
+    "basil-smash",
+    "chilli-lime-gt"
+   ]
   },
   "rescues": [
    {
@@ -28945,10 +29159,22 @@
   "smell": "medium",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "hummus",
+    "tzatziki",
+    "air-fryer-falafel"
+   ],
+   "similar_to": [
+    "chicken-souvlaki",
+    "chipotle-paneer-skewers"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "hugo-spritz",
+    "gimlet",
+    "chilli-lime-gt",
+    "bees-knees"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -29095,7 +29321,7 @@
     "sub": null
    },
    {
-    "ref": "red-onion",
+    "ref": "onion",
     "qty_g": 50,
     "display": "1/4 red onion, thin slice",
     "perishable": true,
@@ -29171,10 +29397,19 @@
   "smell": "low",
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "hummus",
+    "tzatziki"
+   ],
+   "similar_to": [
+    "chickpea-mediterranean-salad",
+    "hummus"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "gimlet",
+    "hugo-spritz"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -29277,7 +29512,7 @@
     "sub": null
    },
    {
-    "ref": "red-onion",
+    "ref": "onion",
     "qty_g": 30,
     "display": "1/4 red onion, fine dice, soaked in water 5 min",
     "perishable": true,
@@ -29340,7 +29575,7 @@
     "sub": null
    },
    {
-    "ref": "chickpeas-crispy",
+    "ref": "chickpeas",
     "qty_g": 30,
     "display": "handful crispy chickpeas OR toasted pumpkin seeds",
     "perishable": false,
@@ -29391,9 +29626,13 @@
   "cost_band": 2,
   "rel": {
    "pairs_with": [],
-   "similar_to": [],
+   "similar_to": [
+    "chicken-katsu"
+   ],
    "leftovers_become": [],
-   "drink": []
+   "drink": [
+    "shandy"
+   ]
   },
   "rescues": [],
   "leftovers": {
@@ -29675,8 +29914,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tikka",
+    "seekh-kebabs",
+    "tandoori-chicken"
+   ],
+   "similar_to": [
+    "old-fashioned",
+    "boulevardier",
+    "sazerac"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -29839,8 +30086,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tikka",
+    "seekh-kebabs",
+    "chicken-souvlaki"
+   ],
+   "similar_to": [
+    "negroni",
+    "manhattan",
+    "old-fashioned"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -29867,7 +30122,7 @@
     "sub": null
    },
    {
-    "ref": "orange-peel",
+    "ref": "orange",
     "qty_g": 5,
     "display": "orange peel",
     "perishable": true,
@@ -29985,8 +30240,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "butter-chicken",
+    "dal-makhani",
+    "seekh-kebabs"
+   ],
+   "similar_to": [
+    "whiskey-sour",
+    "gimlet",
+    "turmeric-old-fashioned"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -30013,7 +30276,7 @@
     "sub": null
    },
    {
-    "ref": "honey-ginger",
+    "ref": "honey",
     "qty_g": 22,
     "display": "22ml honey-ginger syrup (recipe below)",
     "perishable": false,
@@ -30164,8 +30427,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "hummus",
+    "air-fryer-falafel"
+   ],
+   "similar_to": [
+    "whiskey-sour",
+    "boulevardier",
+    "negroni"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -30307,8 +30578,14 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "seekh-kebabs",
+    "tandoori-chicken"
+   ],
+   "similar_to": [
+    "old-fashioned",
+    "manhattan"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -30349,7 +30626,7 @@
     "sub": null
    },
    {
-    "ref": "lemon-peel",
+    "ref": "lemon",
     "qty_g": 5,
     "display": "lemon peel (NO drop-in)",
     "perishable": true,
@@ -30473,8 +30750,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chicken-fajitas",
+    "air-fryer-falafel"
+   ],
+   "similar_to": [
+    "gimlet",
+    "tommys-margarita",
+    "dark-and-stormy"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -30494,7 +30779,7 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
@@ -30632,8 +30917,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chicken-fajitas",
+    "guacamole"
+   ],
+   "similar_to": [
+    "moscow-mule",
+    "cuba-libre",
+    "kokum-rum-cooler"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -30660,7 +30953,7 @@
     "sub": null
    },
    {
-    "ref": "lime-wedge",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wedge",
     "perishable": true,
@@ -30785,8 +31078,14 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chipotle-paneer-skewers"
+   ],
+   "similar_to": [
+    "mai-tai",
+    "frose"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -30834,7 +31133,7 @@
     "sub": null
    },
    {
-    "ref": "pineapple-wedge",
+    "ref": "pineapple",
     "qty_g": 30,
     "display": "pineapple wedge for garnish",
     "perishable": true,
@@ -30952,8 +31251,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "gochujang-chicken",
+    "chicken-tacos",
+    "chilli-chicken"
+   ],
+   "similar_to": [
+    "pina-colada",
+    "daiquiri",
+    "cuba-libre"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -30994,7 +31301,7 @@
     "sub": null
    },
    {
-    "ref": "crushed-ice",
+    "ref": "ice",
     "qty_g": 200,
     "display": "1 cup crushed ice",
     "perishable": false,
@@ -31008,7 +31315,7 @@
     "sub": null
    },
    {
-    "ref": "lime-shell",
+    "ref": "lime",
     "qty_g": 10,
     "display": "spent lime half",
     "perishable": true,
@@ -31125,8 +31432,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chicken-fajitas",
+    "guacamole"
+   ],
+   "similar_to": [
+    "dark-and-stormy",
+    "moscow-mule",
+    "shandy"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -31153,7 +31468,7 @@
     "sub": null
    },
    {
-    "ref": "lime-wedge",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wedge",
     "perishable": true,
@@ -31272,8 +31587,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "masala-omelette",
+    "chicken-souvlaki",
+    "air-fryer-falafel"
+   ],
+   "similar_to": [
+    "daiquiri",
+    "dark-and-stormy",
+    "guava-chilli-margarita"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -31286,7 +31609,7 @@
     "sub": null
    },
    {
-    "ref": "kokum-syrup",
+    "ref": "kokum",
     "qty_g": 30,
     "display": "30ml kokum syrup (recipe below)",
     "perishable": false,
@@ -31464,8 +31787,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chicken-fajitas",
+    "guacamole"
+   ],
+   "similar_to": [
+    "daiquiri",
+    "gimlet",
+    "mezcal-margarita"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -31506,7 +31837,7 @@
     "sub": null
    },
    {
-    "ref": "lime-wheel",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wheel",
     "perishable": true,
@@ -31635,8 +31966,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chipotle-paneer-skewers",
+    "chicken-tacos",
+    "seekh-kebabs"
+   ],
+   "similar_to": [
+    "tommys-margarita",
+    "guava-chilli-margarita",
+    "paloma"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -31677,7 +32016,7 @@
     "sub": null
    },
    {
-    "ref": "salt-tajin",
+    "ref": "salt",
     "qty_g": 3,
     "display": "salt + Tajin for rim",
     "perishable": false,
@@ -31801,8 +32140,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-fajitas",
+    "guacamole"
+   ],
+   "similar_to": [
+    "paloma",
+    "tommys-margarita",
+    "cuba-libre"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -31829,7 +32175,7 @@
     "sub": "any highly carbonated soda"
    },
    {
-    "ref": "lime-wedge",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wedge",
     "perishable": true,
@@ -31948,8 +32294,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-fajitas",
+    "chicken-tacos",
+    "seekh-kebabs"
+   ],
+   "similar_to": [
+    "tommys-margarita",
+    "mezcal-margarita",
+    "chilli-lime-gt"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -31990,7 +32344,7 @@
     "sub": null
    },
    {
-    "ref": "chilli-salt",
+    "ref": "salt",
     "qty_g": 3,
     "display": "chilli salt or Tajin for rim",
     "perishable": false,
@@ -32118,8 +32472,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "hummus"
+   ],
+   "similar_to": [
+    "gimlet",
+    "whiskey-sour",
+    "daiquiri"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -32153,7 +32514,7 @@
     "sub": null
    },
    {
-    "ref": "orange-peel",
+    "ref": "orange",
     "qty_g": 5,
     "display": "orange peel",
     "perishable": true,
@@ -32273,8 +32634,14 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "air-fryer-falafel"
+   ],
+   "similar_to": [
+    "negroni",
+    "gimlet",
+    "cosmopolitan"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -32294,7 +32661,7 @@
     "sub": null
    },
    {
-    "ref": "lemon-peel",
+    "ref": "lemon",
     "qty_g": 5,
     "display": "lemon peel OR 3 olives",
     "perishable": true,
@@ -32438,8 +32805,14 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "masala-omelette",
+    "shakshuka",
+    "egg-white-french-toast"
+   ],
+   "similar_to": [
+    "michelada"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -32494,7 +32867,7 @@
     "sub": null
    },
    {
-    "ref": "celery-salt",
+    "ref": "salt",
     "qty_g": 1,
     "display": "pinch celery salt",
     "perishable": false,
@@ -32508,7 +32881,7 @@
     "sub": null
    },
    {
-    "ref": "lemon-wedge",
+    "ref": "lemon",
     "qty_g": 10,
     "display": "lemon wedge",
     "perishable": true,
@@ -32644,8 +33017,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "chicken-souvlaki",
+    "air-fryer-falafel"
+   ],
+   "similar_to": [
+    "daiquiri",
+    "tommys-margarita",
+    "whiskey-sour"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -32665,14 +33046,14 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
     "sub": "OR 15ml Rose's lime cordial (then skip lime juice too)"
    },
    {
-    "ref": "lime-wheel",
+    "ref": "lime",
     "qty_g": 5,
     "display": "lime wheel",
     "perishable": true,
@@ -32799,8 +33180,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "chicken-souvlaki"
+   ],
+   "similar_to": [
+    "bellini",
+    "mimosa",
+    "tom-collins"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -32820,7 +33208,7 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 10,
     "display": "10ml sugar syrup",
     "perishable": false,
@@ -32834,7 +33222,7 @@
     "sub": null
    },
    {
-    "ref": "lemon-twist",
+    "ref": "lemon",
     "qty_g": 5,
     "display": "long lemon twist",
     "perishable": true,
@@ -32962,8 +33350,14 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "chicken-souvlaki"
+   ],
+   "similar_to": [
+    "whiskey-sour",
+    "gimlet"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -32983,7 +33377,7 @@
     "sub": null
    },
    {
-    "ref": "honey-syrup",
+    "ref": "honey",
     "qty_g": 22,
     "display": "22ml honey syrup",
     "perishable": false,
@@ -32997,7 +33391,7 @@
     "sub": null
    },
    {
-    "ref": "lemon-peel",
+    "ref": "lemon",
     "qty_g": 5,
     "display": "lemon peel",
     "perishable": true,
@@ -33121,8 +33515,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "hummus",
+    "chicken-souvlaki"
+   ],
+   "similar_to": [
+    "french-75",
+    "shandy",
+    "gimlet"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -33142,7 +33544,7 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 20,
     "display": "20ml sugar syrup",
     "perishable": false,
@@ -33163,7 +33565,7 @@
     "sub": null
    },
    {
-    "ref": "lemon-wheel",
+    "ref": "lemon",
     "qty_g": 10,
     "display": "lemon wheel",
     "perishable": true,
@@ -33289,8 +33691,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "chicken-souvlaki",
+    "pesto-chicken-pasta"
+   ],
+   "similar_to": [
+    "gimlet",
+    "tom-collins",
+    "chilli-lime-gt"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -33317,14 +33727,14 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
     "sub": null
    },
    {
-    "ref": "basil-sprig",
+    "ref": "basil",
     "qty_g": 3,
     "display": "basil sprig for garnish",
     "perishable": true,
@@ -33453,8 +33863,17 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "kadhai-paneer",
+    "seekh-kebabs",
+    "chicken-tikka",
+    "hummus"
+   ],
+   "similar_to": [
+    "gimlet",
+    "basil-smash",
+    "guava-chilli-margarita"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -33488,7 +33907,7 @@
     "sub": null
    },
    {
-    "ref": "lime-wheel",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wheel",
     "perishable": true,
@@ -33642,8 +34061,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "greek-yogurt-bowl"
+   ],
+   "similar_to": [
+    "mimosa",
+    "hugo-spritz",
+    "french-75"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -33782,8 +34208,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "shakshuka",
+    "egg-white-french-toast",
+    "protein-pancakes"
+   ],
+   "similar_to": [
+    "bellini",
+    "hugo-spritz"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -33796,7 +34229,7 @@
     "sub": null
    },
    {
-    "ref": "orange-juice",
+    "ref": "orange",
     "qty_g": 60,
     "display": "60ml FRESH orange juice (not concentrate)",
     "perishable": true,
@@ -33911,8 +34344,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "bruschetta",
+    "chicken-souvlaki",
+    "hummus"
+   ],
+   "similar_to": [
+    "bellini",
+    "mimosa",
+    "french-75"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -33946,7 +34387,7 @@
     "sub": null
    },
    {
-    "ref": "lime-wheel",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wheel",
     "perishable": true,
@@ -34070,8 +34511,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-souvlaki",
+    "hummus",
+    "chipotle-paneer-skewers"
+   ],
+   "similar_to": [
+    "hugo-spritz",
+    "pina-colada"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -34098,7 +34546,7 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 40,
     "display": "40ml sugar syrup",
     "perishable": false,
@@ -34226,14 +34674,21 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chicken-fajitas",
+    "masala-omelette"
+   ],
+   "similar_to": [
+    "bloody-mary",
+    "paloma"
+   ],
    "leftovers_become": [],
    "drink": []
   },
   "ingredients": [
    {
-    "ref": "mexican-lager",
+    "ref": "lager",
     "qty_g": 330,
     "display": "1 bottle Mexican lager (Corona, Modelo, Pacifico)",
     "perishable": false,
@@ -34282,7 +34737,7 @@
     "sub": null
    },
    {
-    "ref": "lime-wedge",
+    "ref": "lime",
     "qty_g": 10,
     "display": "lime wedge",
     "perishable": true,
@@ -34406,8 +34861,14 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tacos",
+    "chicken-souvlaki"
+   ],
+   "similar_to": [
+    "cuba-libre",
+    "tom-collins"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -34427,7 +34888,7 @@
     "sub": null
    },
    {
-    "ref": "lemon-wedge",
+    "ref": "lemon",
     "qty_g": 10,
     "display": "lemon wedge",
     "perishable": true,
@@ -34546,8 +35007,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "chicken-tikka",
+    "kadhai-paneer",
+    "seekh-kebabs"
+   ],
+   "similar_to": [
+    "basil-smash",
+    "chilli-lime-gt",
+    "tom-collins"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -34574,7 +35043,7 @@
     "sub": null
    },
    {
-    "ref": "syrup",
+    "ref": "sugar",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
@@ -34720,8 +35189,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "seekh-kebabs",
+    "chicken-tikka",
+    "butter-chicken"
+   ],
+   "similar_to": [
+    "old-fashioned",
+    "turmeric-old-fashioned",
+    "jaggery-bourbon-sour"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -34912,8 +35389,15 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "butter-chicken",
+    "dal-makhani",
+    "seekh-kebabs"
+   ],
+   "similar_to": [
+    "old-fashioned",
+    "manhattan"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -34926,7 +35410,7 @@
     "sub": null
    },
    {
-    "ref": "turmeric-syrup",
+    "ref": "turmeric",
     "qty_g": 12,
     "display": "12ml turmeric-ginger syrup",
     "perishable": false,
@@ -34968,7 +35452,7 @@
     "sub": null
    },
    {
-    "ref": "orange-peel",
+    "ref": "orange",
     "qty_g": 5,
     "display": "orange peel",
     "perishable": true,
@@ -35094,8 +35578,16 @@
   },
   "cost_band": 2,
   "rel": {
-   "pairs_with": [],
-   "similar_to": [],
+   "pairs_with": [
+    "seekh-kebabs",
+    "chicken-tikka",
+    "protein-brownies"
+   ],
+   "similar_to": [
+    "whiskey-sour",
+    "tamarind-highball",
+    "penicillin"
+   ],
    "leftovers_become": [],
    "drink": []
   },
@@ -35108,7 +35600,7 @@
     "sub": null
    },
    {
-    "ref": "jaggery-syrup",
+    "ref": "jaggery",
     "qty_g": 20,
     "display": "20ml jaggery syrup",
     "perishable": false,
