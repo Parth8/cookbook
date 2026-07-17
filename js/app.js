@@ -1,6 +1,11 @@
 // Router + state.
-// Mode toggle removed: the design is now readable by default, so there is
-// nothing to escape from. One design, done properly.
+// Mode toggle removed: one design, done properly.
+//
+// This build adds:
+// 1. Cache-busted data fetches so no browser holds stale recipes.json / tags.json
+// 2. Verbose error reporting - if anything throws during load, you SEE the
+//    stack trace on the page instead of a generic "Could not load menu"
+// 3. A defensive guard on the diet derivation in case any recipe is malformed
 
 import { renderMenu } from './views/menu.js';
 import { renderTonight } from './views/tonight.js';
@@ -17,6 +22,7 @@ let menuScroll = 0;
 
 async function init() {
   await loadData();
+  if (!window.cookbook.recipes.length) return;   // loadData already showed the error
   setColophon();
   setupSearch();
   setupKeys();
@@ -25,34 +31,73 @@ async function init() {
 }
 
 async function loadData() {
+  // Cache bust — GitHub Pages + browser both cache aggressively.
+  // Appending a stamp forces a fresh fetch on every page load.
+  const bust = `?v=${Date.now()}`;
+
+  let stage = 'fetch';
   try {
     const [recipes, ingredients, tags] = await Promise.all([
-      fetch('data/recipes.json').then(r => r.json()),
-      fetch('data/ingredients.json').then(r => r.json()),
-      fetch('data/tags.json').then(r => r.json())
+      fetch('data/recipes.json' + bust).then(r => {
+        if (!r.ok) throw new Error(`recipes.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch('data/ingredients.json' + bust).then(r => {
+        if (!r.ok) throw new Error(`ingredients.json HTTP ${r.status}`);
+        return r.json();
+      }),
+      fetch('data/tags.json' + bust).then(r => {
+        if (!r.ok) throw new Error(`tags.json HTTP ${r.status}`);
+        return r.json();
+      })
     ]);
-    Object.assign(window.cookbook, {
-      recipes, ingredients, tags, graph: buildRelationshipGraph(recipes)
+
+    stage = 'validate';
+    if (!Array.isArray(recipes)) throw new Error(`recipes.json is not an array (got ${typeof recipes})`);
+    if (!Array.isArray(ingredients)) throw new Error(`ingredients.json is not an array`);
+    if (!tags || typeof tags !== 'object') throw new Error(`tags.json is not an object`);
+    if (recipes.length === 0) throw new Error(`recipes.json is empty`);
+
+    stage = 'derive-diet';
+    recipes.forEach((r, i) => {
+      if (!r || typeof r !== 'object') throw new Error(`recipe #${i} is not an object`);
+      if (!r.tags) r.tags = {};
+      const proteins = r.tags.protein || [];
+      const isEgg = proteins.includes('egg') && !proteins.some(p => ['chicken','fish'].includes(p));
+      r.tags.diet = r.veg ? ['veg'] : isEgg ? ['egg-veg'] : ['non-veg'];
     });
-    // Derive a synthetic 'diet' tag on every recipe so the existing
-// filter machinery picks it up like any other facet.
-window.cookbook.recipes.forEach(r => {
-  const proteins = r.tags.protein || [];
-  const isEgg = proteins.includes('egg') && !proteins.some(p => ['chicken', 'fish'].includes(p));
-  r.tags.diet = r.veg ? ['veg'] : isEgg ? ['egg-veg'] : ['non-veg'];
-});
+
+    stage = 'build-graph';
+    // Defensive: ensure every recipe has a rel object before buildRelationshipGraph runs
+    recipes.forEach((r, i) => {
+      if (!r.rel || typeof r.rel !== 'object') {
+        r.rel = { pairs_with: [], similar_to: [], leftovers_become: [], drink: [] };
+      }
+    });
+    const graph = buildRelationshipGraph(recipes);
+
+    stage = 'assign';
+    Object.assign(window.cookbook, { recipes, ingredients, tags, graph });
+
+    console.log(`[cookbook] Loaded ${recipes.length} recipes, ${ingredients.length} ingredients, ${Object.keys(tags).length} facets`);
   } catch (e) {
-    console.error('Failed to load data:', e);
-    document.getElementById('app').innerHTML =
-      '<p class="error">Could not load the menu. Check data/ and reload.</p>';
+    console.error(`[cookbook] Load failed at stage: ${stage}`, e);
+    document.getElementById('app').innerHTML = `
+      <div style="padding: 2rem; font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; background: #FEF3F2; border: 1px solid #B33010; border-radius: 6px;">
+        <h2 style="color: #B33010; margin-bottom: 1rem;">Load failed</h2>
+        <p style="margin-bottom: 0.5rem;"><strong>Stage:</strong> ${stage}</p>
+        <p style="margin-bottom: 0.5rem;"><strong>Error:</strong> ${e.message}</p>
+        <pre style="background: #fff; padding: 1rem; overflow: auto; font-size: 0.75rem; max-height: 20rem;">${(e.stack || '').replace(/</g, '&lt;')}</pre>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #666;">Screenshot this and send it. It tells us exactly what's broken.</p>
+      </div>`;
   }
 }
 
 function setColophon() {
   const { recipes } = window.cookbook;
   const core = recipes.filter(r => r.core).length;
-  document.getElementById('colophon').textContent =
-    `${recipes.length} dishes · ${core} in rotation · high protein, low calorie`;
+  const el = document.getElementById('colophon');
+  if (el) el.textContent = `${recipes.length} dishes · ${core} in rotation · high protein, low calorie`;
 }
 
 // ---------------------------------------------------------------- router
@@ -69,7 +114,6 @@ function handleRoute() {
 
   const run = () => paint(view, params);
 
-  // View Transitions: progressive enhancement, no-op where unsupported.
   if (document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.startViewTransition(run);
   } else {
@@ -81,17 +125,26 @@ function paint(view, params) {
   const app = document.getElementById('app');
   window.cookbook.currentView = view || 'menu';
 
-  switch (view) {
-    case 'tonight': renderTonight(app); break;
-    case 'fridge':  renderFridge(app); break;
-    case 'planner': renderPlanner(app); break;
-    case 'host':    renderHost(app); break;
-    case 'recipe':  if (params[0]) renderRecipe(app, params[0], params[1]); break;
-    case 'cook':    if (params[0]) renderCookMode(app, params[0]); break;
-    default:        renderMenu(app);
+  try {
+    switch (view) {
+      case 'tonight': renderTonight(app); break;
+      case 'fridge':  renderFridge(app); break;
+      case 'planner': renderPlanner(app); break;
+      case 'host':    renderHost(app); break;
+      case 'recipe':  if (params[0]) renderRecipe(app, params[0], params[1]); break;
+      case 'cook':    if (params[0]) renderCookMode(app, params[0]); break;
+      default:        renderMenu(app);
+    }
+  } catch (e) {
+    console.error(`[cookbook] Render failed for view "${view}":`, e);
+    app.innerHTML = `
+      <div style="padding: 2rem; font-family: system-ui;">
+        <h2 style="color: #B33010;">Render failed on view: ${view || 'menu'}</h2>
+        <p><strong>Error:</strong> ${e.message}</p>
+        <pre style="background: #EBE8E2; padding: 1rem; overflow: auto; font-size: 0.75rem;">${(e.stack || '').replace(/</g, '&lt;')}</pre>
+      </div>`;
   }
 
-  // Back to the board lands where you left it.
   if (!view) requestAnimationFrame(() => window.scrollTo(0, menuScroll));
   else window.scrollTo(0, 0);
 }
@@ -102,11 +155,13 @@ function setupSearch() {
   const modal = document.querySelector('.search-modal');
   const input = document.querySelector('.search-input');
   const results = document.querySelector('.search-results');
+  if (!modal || !input || !results) return;
 
   const open = () => { modal.hidden = false; input.focus(); };
   const close = () => { modal.hidden = true; input.value = ''; results.innerHTML = ''; };
 
-  document.querySelector('.search-trigger').addEventListener('click', open);
+  const trigger = document.querySelector('.search-trigger');
+  if (trigger) trigger.addEventListener('click', open);
   modal.addEventListener('click', e => {
     if (e.target === modal || e.target.closest('.search-result')) close();
   });
@@ -143,6 +198,9 @@ function render(list, q) {
   return list.map(r => {
     const alias = !r.name.toLowerCase().includes(q)
       ? (r.aka || []).find(a => a.toLowerCase().includes(q)) : null;
+    const isDrink = (r.tags.meal || []).includes('drink');
+    const rightMeta = (r.macros.alcohol_g > 0) ? `${r.macros.alcohol_g}g alc`
+                    : isDrink ? '' : `${r.macros.protein_g}g P`;
     return `
       <a href="#/recipe/${r.id}" class="search-result">
         <span class="search-result-name">
@@ -150,16 +208,15 @@ function render(list, q) {
           ${r.name}
           ${alias ? `<span class="search-result-aka text-margin">aka ${alias}</span>` : ''}
         </span>
-        <span class="search-result-meta">${r.macros.kcal} kcal · ${
-          r.macros.alcohol_g > 0 ? `${r.macros.alcohol_g}g alc` : `${r.macros.protein_g}g P`}</span>
+        <span class="search-result-meta">${r.macros.kcal} kcal${rightMeta ? ' · ' + rightMeta : ''}</span>
       </a>`;
   }).join('');
 }
 
 function setupKeys() {
   document.addEventListener('keydown', e => {
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); window.__cookbookSearch.open(); }
-    if (e.key === 'Escape') window.__cookbookSearch.close();
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); window.__cookbookSearch?.open(); }
+    if (e.key === 'Escape') window.__cookbookSearch?.close();
   });
 }
 
