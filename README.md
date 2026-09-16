@@ -106,7 +106,42 @@ cookbook/
 python3 scripts/validate.py
 ```
 
-Checks every ingredient ref, tag value, and relationship id; verifies stated macros against the 4P + 4C + 9F + 7A identity (alcohol counts its 7 kcal/g) and against macros recomputed from `ingredients.json`; enforces drink rules (strength tag, alcohol_g, the 180 kcal cocktail budget); and runs a near-duplicate scan using ingredient-set overlap so redundant dishes get caught even when the names differ.
+Checks every ingredient ref, tag value, and relationship id; asserts that each
+card's macros **equal** the ingredient database (not merely resemble it);
+sanity-checks kcal against fibre-aware Atwater; verifies every nutrition claim
+against the numbers; enforces drink rules (strength, temp, alcohol_g, the
+220 kcal cocktail budget); and runs a near-duplicate scan on ingredient-set
+overlap so redundant dishes get caught even when the names differ.
+
+## Nutrition
+
+Every number on every card is computed from `ingredients.json` and divided by
+`serves`. Nothing is estimated, and `validate.py` fails the build if a card
+and the database disagree by more than rounding.
+
+Four things make the figures trustworthy rather than merely present:
+
+- **kcal comes from each ingredient's own kcal**, not from re-deriving
+  4P + 4C + 9F. USDA figures already apply food-specific Atwater factors, which
+  is why cocoa powder is 228 kcal and not the 438 the generic formula gives.
+- **Fibre is tracked** (`fiber_g`) and yields ~2 kcal/g, so the sanity check
+  does not overstate anything fibrous. It also means the `high-fiber` tag is
+  verified against a 5g bar rather than asserted.
+- **Alcohol is derived from ABV.** Ethanol is 0.789 g/mL at 7 kcal/g, so 100ml
+  of a 40% spirit carries 31.6g and 221 kcal. Every spirit, liqueur, wine and
+  beer in the database is on that one formula.
+- **Syrups are not neat sugar.** "20ml sugar syrup" is 1:1 simple syrup — half
+  water — so it is its own ingredient at half the density. Lines that make a
+  keeping batch of syrup carry `batch_prep` and are bought but not counted in
+  one serving.
+
+Nutrition tags are enforced, not decorative: `high-protein` means at least 20%
+of calories come from protein, `high-fiber` means 5g or more, `low-cal` means
+under 450 for a meal or 200 otherwise, `low-fat` means 15g or less. Twenty-three
+tags that the recomputed numbers did not support were removed.
+
+Variant macros (the `variants[]` swaps) are still author-stated — the swaps are
+described in prose, so they cannot be derived.
 
 ## Data Architecture
 
@@ -184,11 +219,12 @@ Each recipe is one JSON object:
   "tagline": "Charred at home, no tandoor required.",
   "core": true,
   "veg": false,
+  "serves": 1,
   "tags": { "meal": ["dinner"], "cuisine": ["north-indian"], ... },
   "time": { "active_min": 10, "passive_min": 20 },
   "cleanup": { "vessels": 1, "boards": 1 },
   "aka": ["boneless tandoori bites", "chicken tikka skewers"],
-  "macros": { "kcal": 355, "protein_g": 54, "carbs_g": 9, "fat_g": 11 },
+  "macros": { "kcal": 355, "protein_g": 54, "carbs_g": 9, "fat_g": 11, "fiber_g": 1.2 },
   "cost_band": 2,
   "lore": ["Optional fun facts - drinks carry two: one on the drink, one on the spirit"],
   "rel": {
@@ -205,7 +241,11 @@ Each recipe is one JSON object:
 }
 ```
 
-Macros are computed from `ingredients.json`, never estimated. Every rel ID must resolve (QA-enforced).
+Macros are computed from `ingredients.json` and divided by `serves`, never
+estimated — see [Nutrition](#nutrition). Ingredient lines may carry
+`batch_prep: true` to mean "you buy this, but it makes a batch that keeps";
+those are excluded from per-serving macros. Every rel ID must resolve
+(QA-enforced).
 
 ## Browser Support
 

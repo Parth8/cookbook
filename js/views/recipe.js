@@ -48,6 +48,7 @@ function template(r, servings, graph) {
   const passive = r.time?.passive_min || 0;
   const total = active + passive;
   const cleanup = r.cleanup?.vessels ?? 1;
+  const serves = r.serves || 1;
 
   // Read relationships off the graph, not off r.rel: the graph carries the
   // computed backlinks (a pairing authored on the other card, dishes that
@@ -84,7 +85,9 @@ function template(r, servings, graph) {
             : `<div class="macro-item"><div class="macro-value">${r.macros.protein_g}g</div><div class="macro-label">protein</div></div>`}
           <div class="macro-item"><div class="macro-value">${r.macros.carbs_g}g</div><div class="macro-label">carbs</div></div>
           <div class="macro-item"><div class="macro-value">${r.macros.fat_g}g</div><div class="macro-label">fat</div></div>
+          ${r.macros.fiber_g ? `<div class="macro-item"><div class="macro-value">${r.macros.fiber_g}g</div><div class="macro-label">fibre</div></div>` : ''}
         </div>
+        <p class="macro-basis text-margin">Per serving${serves > 1 ? `, and this makes ${serves}` : ''}. Computed from the ingredient list, not estimated.</p>
 
         <div class="effort-bar">
           <div class="effort-item"><b>${total}</b> min total ${passive ? `(${active} active, ${passive} passive)` : ''}</div>
@@ -122,16 +125,17 @@ function template(r, servings, graph) {
           </button>
           <div class="accordion-content">
             <div class="scaler">
-              <span class="text-margin">Scale:</span>
+              <span class="text-margin">${serves > 1 ? `Makes ${serves} · Scale:` : 'Scale:'}</span>
               ${[1, 2, 4].map(s => `<button class="scale-btn" data-scale="${s}" data-active="${s === servings}">${s}×</button>`).join('')}
             </div>
             ${servings !== 1 ? `<p class="scale-note text-margin">Scaled to ${servings}× — go by the amounts on the left; the descriptions still read at 1×.</p>` : ''}
             <ul class="ingredient-list" data-scaled="${servings !== 1}">
               ${(r.ingredients || []).map(i => `
-                <li class="ingredient-item">
+                <li class="ingredient-item"${i.batch_prep ? ' data-batch="true"' : ''}>
                   <span class="ingredient-qty">${scaleDisplay(i, servings)}</span>
                   <span class="ingredient-name">${i.display || i.ref}</span>
                   ${i.sub ? `<span class="ingredient-sub">— sub: ${i.sub}</span>` : ''}
+                  ${i.batch_prep ? '<span class="ingredient-sub">— makes a batch; keeps</span>' : ''}
                 </li>`).join('')}
             </ul>
           </div>

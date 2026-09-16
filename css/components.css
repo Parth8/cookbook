@@ -380,6 +380,10 @@
    computed amount on the left carry the weight. */
 .ingredient-list[data-scaled="true"] .ingredient-name { color: var(--muted); }
 .scale-note { font-size: var(--t-sm); }
+.macro-basis { font-size: var(--t-sm); }
+/* Batch-prep lines are bought but not eaten in one serving, so they read
+   lighter than the rest of the list. */
+.ingredient-item[data-batch="true"] { opacity: .72; }
 .step-item { display: grid; gap: var(--s1); padding-bottom: var(--s3); border-bottom: 1px solid var(--hairline); }
 .step-title { font-family: var(--display); font-size: var(--t-md); font-weight: 500; font-variation-settings: var(--wonk), "opsz" 18; }
 .step-cue { font-family: var(--display); font-style: italic; font-size: var(--t-sm); color: var(--muted); border-left: 3px solid var(--honey); padding-left: var(--s3); font-variation-settings: var(--wonk), "opsz" 14; }
