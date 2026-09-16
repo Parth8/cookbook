@@ -31,10 +31,27 @@ import {
 } from '../lib/filters.js';
 
 const state = createFilterState();
-const collapsed = new Set(JSON.parse(localStorage.getItem('cookbook-collapsed') || '[]'));
+
+// Sections start CLOSED. We persist the set of sections the user chose to
+// open rather than the ones they closed, so "nothing stored" means
+// "everything collapsed" — the default the board is designed around.
+const EXPAND_KEY = 'cookbook-expanded';
+const expanded = new Set(readStored(EXPAND_KEY));
+
 let firstPaintDone = false;
 let sheetOpen = false;
 let showAllFacets = false;
+
+function readStored(key) {
+  try {
+    const v = JSON.parse(localStorage.getItem(key));
+    return Array.isArray(v) ? v : [];
+  } catch { return []; }
+}
+
+function persistExpanded() {
+  try { localStorage.setItem(EXPAND_KEY, JSON.stringify([...expanded])); } catch {}
+}
 
 const lineEls = new Map();
 let sectionEls = [];
@@ -91,6 +108,7 @@ export function renderMenu(container) {
       <div class="start"></div>
       <div class="filters">
         <button class="filter-btn tap-target" aria-expanded="false">FILTER +</button>
+        <button class="expand-all tap-target" data-mode="expand">EXPAND ALL</button>
         <span class="pills"></span>
         <span class="filter-count text-mono"></span>
       </div>
@@ -143,15 +161,16 @@ function buildBoard(root, recipes) {
     );
     if (!items.length) return '';
     const key = sec.meal + (sec.cuisine ? ':' + sec.cuisine : '');
-    const isCollapsed = collapsed.has(key);
+    const isCollapsed = !expanded.has(key);
+    const bodyId = `sec-${key.replace(/[^a-z0-9]/gi, '-')}`;
     return `
       <section class="menu-section" data-meal="${sec.meal}" data-key="${key}" data-collapsed="${isCollapsed}">
-        <button class="section-head section-toggle tap-target" aria-expanded="${!isCollapsed}">
+        <button class="section-head section-toggle tap-target" aria-expanded="${!isCollapsed}" aria-controls="${bodyId}">
           <h2>${sec.label}</h2>
           <span class="n">${String(items.length).padStart(2, '0')}</span>
           <svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <div class="section-body">
+        <div class="section-body" id="${bodyId}">
           <div class="section-inner">
             ${items.map(r => line(r, i++)).join('')}
           </div>
@@ -243,14 +262,18 @@ function apply({ animate }) {
   // animation so we don't collapse mid-flight.
   const updateSectionEmpty = () => {
     sectionEls.forEach(sec => {
-      const visibleLines = [...sec.querySelectorAll('.line')].filter(l => !l.hidden);
-      const n = visibleLines.length;
+      const n = [...sec.querySelectorAll('.line')].filter(l => matched.has(l.dataset.id)).length;
       const counter = sec.querySelector('.section-head .n');
       if (counter) counter.textContent = String(n).padStart(2, '0');
       sec.hidden = n === 0 && hasActiveFilters(state);
     });
+    updateExpandAll();
   };
   if (animate) setTimeout(updateSectionEmpty, 440); else updateSectionEmpty();
+
+  // Open the drawers that hold results. Runs on the same frame as the line
+  // reveal so the fold and the lines move together instead of in sequence.
+  syncSections(matched);
 
   chrome(matched.size, recipes.length);
 }
@@ -424,17 +447,58 @@ function wire(container) {
   });
 }
 
+function setSectionOpen(sec, open) {
+  sec.dataset.collapsed = String(!open);
+  sec.querySelector('.section-toggle')?.setAttribute('aria-expanded', String(open));
+}
+
+/**
+ * Sections are closed by default, which would make filtering invisible — you
+ * would narrow to 12 dishes and still stare at nine shut drawers. So while a
+ * filter is on, any section holding a match opens itself. The user's own
+ * choices live in `expanded` and come back the moment filters clear.
+ */
+function syncSections(matched) {
+  const filtering = hasActiveFilters(state);
+  sectionEls.forEach(sec => {
+    const hasMatch = [...sec.querySelectorAll('.line')].some(l => matched.has(l.dataset.id));
+    setSectionOpen(sec, filtering ? hasMatch : expanded.has(sec.dataset.key));
+  });
+  updateExpandAll();
+}
+
+function updateExpandAll() {
+  const btn = document.querySelector('.expand-all');
+  if (!btn) return;
+  const visible = sectionEls.filter(s => !s.hidden);
+  const allOpen = visible.length > 0 && visible.every(s => s.dataset.collapsed !== 'true');
+  btn.dataset.mode = allOpen ? 'collapse' : 'expand';
+  btn.textContent = allOpen ? 'COLLAPSE ALL' : 'EXPAND ALL';
+}
+
 function wireSections(container) {
   container.querySelectorAll('.section-toggle').forEach(head => {
     head.addEventListener('click', () => {
       const sec = head.closest('.menu-section');
-      const key = sec.dataset.key;
-      const wasCollapsed = sec.dataset.collapsed === 'true';
-      sec.dataset.collapsed = String(!wasCollapsed);
-      head.setAttribute('aria-expanded', String(wasCollapsed));
-      if (wasCollapsed) collapsed.delete(key); else collapsed.add(key);
-      try { localStorage.setItem('cookbook-collapsed', JSON.stringify([...collapsed])); } catch {}
+      const willOpen = sec.dataset.collapsed === 'true';
+      setSectionOpen(sec, willOpen);
+      if (willOpen) expanded.add(sec.dataset.key); else expanded.delete(sec.dataset.key);
+      persistExpanded();
+      updateExpandAll();
     });
+  });
+
+  const all = container.querySelector('.expand-all');
+  if (all) all.addEventListener('click', () => {
+    const opening = all.dataset.mode !== 'collapse';
+    sectionEls.forEach(sec => {
+      if (sec.hidden) return;
+      setSectionOpen(sec, opening);
+      if (opening) expanded.add(sec.dataset.key); else expanded.delete(sec.dataset.key);
+    });
+    persistExpanded();
+    updateExpandAll();
+    pop(all);
   });
 }
 

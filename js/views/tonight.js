@@ -66,9 +66,13 @@ function pool() {
   for (const [facet, value] of Object.entries(answers)) {
     state[facet] = { included: [value], excluded: [] };
   }
-  // Never deal a side or a plain ingredient as "dinner".
+  // Never deal a side or a drink as "dinner" - "what should I cook tonight?"
+  // is not answered by a Negroni.
   return filterRecipes(window.cookbook.recipes, state)
-    .filter(r => !(r.tags.meal || []).includes('side'));
+    .filter(r => {
+      const meal = r.tags.meal || [];
+      return !meal.includes('side') && !meal.includes('drink');
+    });
 }
 
 function updatePool(container) {

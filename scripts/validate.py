@@ -108,36 +108,80 @@ for r in recipes:
     if not r.get('steps'):
         err(f"{rid}: no steps")
 
-    # macro identity on stated macros
     m = r.get('macros', {})
-    identity = (m.get('protein_g', 0) * 4 + m.get('carbs_g', 0) * 4 +
-                m.get('fat_g', 0) * 9 + m.get('alcohol_g', 0) * 7)
+
+    # serves must be a sane positive integer - per-serving macros divide by it
+    serves = r.get('serves', 1)
+    if not isinstance(serves, int) or serves < 1:
+        err(f"{rid}: serves must be a positive integer, got {serves!r}")
+        serves = 1
+
+    # Macros must EQUAL the ingredient database, not merely resemble it.
+    # Sum every non-batch-prep line, divide by serves, compare to what the
+    # card claims. Anything beyond rounding is a bug, not a difference of
+    # opinion. kcal comes from each ingredient's own kcal figure because USDA
+    # already applies the right Atwater factors (fibre yields ~2 kcal/g, not 4).
+    FIELDS = ['kcal', 'protein_g', 'carbs_g', 'fat_g', 'fiber_g', 'alcohol_g']
+    comp = dict.fromkeys(FIELDS, 0.0)
+    resolved = True
+    for ing in r.get('ingredients', []):
+        if ing.get('batch_prep'):
+            continue
+        db = ing_by_ref.get(ing['ref'])
+        if not db:
+            resolved = False
+            break
+        f = ing['qty_g'] / 100.0
+        mm = db['macros_per_100g']
+        for k in FIELDS:
+            comp[k] += (mm.get(k) or 0) * f
+
+    if resolved and comp['kcal'] > 0:
+        for k in FIELDS:
+            expected = comp[k] / serves
+            stated = m.get(k, 0) or 0
+            # kcal and gram fields are stored rounded; allow only that much
+            tol = 1.0 if k == 'kcal' else 0.55
+            if abs(stated - expected) > tol:
+                err(f"{rid}: macros.{k} is {stated}, ingredients give "
+                    f"{expected:.1f} (serves {serves})")
+
+    # Fibre-aware sanity check. Loose on purpose: USDA applies food-specific
+    # Atwater factors, so the generic formula only ever approximates.
+    fiber = m.get('fiber_g', 0) or 0
+    net_carbs = max((m.get('carbs_g', 0) or 0) - fiber, 0)
+    identity = (m.get('protein_g', 0) * 4 + net_carbs * 4 + m.get('fat_g', 0) * 9 +
+                (m.get('alcohol_g', 0) or 0) * 7 + fiber * 2)
     if identity > 0:
         diff = abs(m.get('kcal', 0) - identity)
-        if diff > identity * 0.10:
-            err(f"{rid}: stated macros fail identity - kcal {m.get('kcal')} vs "
-                f"4P+4C+9F+7A = {identity:.0f} (diff {diff:.0f})")
+        if diff > max(identity * 0.25, 30):
+            warn(f"{rid}: kcal {m.get('kcal')} is far from fibre-aware Atwater "
+                 f"{identity:.0f} (diff {diff:.0f}) - check the ingredient entries")
 
-    # stated vs computed-from-ingredients (skip multi-serving cards where the
-    # ingredient list intentionally makes >1 serving)
-    MULTI_SERVING = {'hummus', 'froyo-bark', 'sangria-pitcher'}
-    if rid not in MULTI_SERVING:
-        comp = {'kcal': 0.0}
-        ok = True
-        for ing in r.get('ingredients', []):
-            db = ing_by_ref.get(ing['ref'])
-            if not db:
-                ok = False
-                break
-            f = ing['qty_g'] / 100.0
-            mm = db['macros_per_100g']
-            comp['kcal'] += (mm['protein_g'] * 4 + mm['carbs_g'] * 4 +
-                             mm['fat_g'] * 9 + mm.get('alcohol_g', 0) * 7) * f
-        if ok and comp['kcal'] > 0:
-            diff = abs(m.get('kcal', 0) - comp['kcal'])
-            if diff > max(comp['kcal'] * 0.15, 25):
-                warn(f"{rid}: stated {m.get('kcal')} kcal vs {comp['kcal']:.0f} computed "
-                     f"from ingredients (diff {diff:.0f})")
+    # Nutrition claims have to survive contact with the numbers.
+    #
+    # high-protein is protein DENSITY, not a raw gram count: at least 20% of
+    # the card's calories come from protein. That is the standard definition
+    # and it judges a dal and a chicken breast on the same terms, where a flat
+    # gram floor would just delete every vegetarian main. The per-meal gram
+    # floors below stay, as a separate informational report.
+    nutrition = r.get('tags', {}).get('nutrition', [])
+    meal_now = (r.get('tags', {}).get('meal') or [None])[0]
+    kcal_now = m.get('kcal', 0) or 0
+    if 'high-protein' in nutrition and kcal_now > 0:
+        share = m.get('protein_g', 0) * 4 / kcal_now
+        if share < 0.20:
+            err(f"{rid}: tagged high-protein but protein is only {share:.0%} of "
+                f"its {kcal_now} kcal ({m.get('protein_g')}g)")
+    if 'high-fiber' in nutrition and (m.get('fiber_g') or 0) < 5:
+        err(f"{rid}: tagged high-fiber but only {m.get('fiber_g')}g fibre "
+            f"(5g is the bar)")
+    # "Low calorie" means something different for a dinner than for a snack.
+    cap = 450 if meal_now in ('breakfast', 'lunch', 'dinner', 'soup') else 200
+    if 'low-cal' in nutrition and kcal_now > cap:
+        err(f"{rid}: tagged low-cal at {kcal_now} kcal ({meal_now} cap is {cap})")
+    if 'low-fat' in nutrition and m.get('fat_g', 0) > 15:
+        err(f"{rid}: tagged low-fat with {m.get('fat_g')}g fat")
 
     # aka aliases: every card should answer to at least one alternate name
     aka = r.get('aka')
@@ -162,8 +206,13 @@ for r in recipes:
         if strength and strength[0] != 'zero-proof':
             if not m.get('alcohol_g'):
                 err(f"{rid}: alcoholic drink missing macros.alcohol_g")
-            if m.get('kcal', 999) > 180:
-                warn(f"{rid}: cocktail over the 180 kcal budget ({m.get('kcal')})")
+            # The house pour is 60ml. At 40% ABV that is 133 kcal before a
+            # drop of anything else, so the old 180 budget left ~12g of sugar
+            # for the whole rest of the drink - unreachable for any sour once
+            # the macros were computed honestly rather than estimated. 220
+            # is the real line: spirit, citrus and a sensible measure of syrup.
+            if m.get('kcal', 999) > 220:
+                warn(f"{rid}: cocktail over the 220 kcal budget ({m.get('kcal')})")
         if strength and strength[0] == 'zero-proof' and m.get('alcohol_g'):
             err(f"{rid}: zero-proof drink has alcohol_g set")
         # egg white in a drink means it cannot be marked veg

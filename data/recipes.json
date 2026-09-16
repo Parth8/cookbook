@@ -61,10 +61,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 430,
+   "kcal": 427,
    "protein_g": 43,
    "carbs_g": 31,
-   "fat_g": 15
+   "fat_g": 15,
+   "fiber_g": 4.4
   },
   "cost_band": 2,
   "rel": {
@@ -177,7 +178,8 @@
    "oat pancakes",
    "gym pancakes",
    "banana-free protein hotcakes"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "egg-white-french-toast",
@@ -327,14 +329,16 @@
    "cinnamon egg toast"
   ],
   "macros": {
-   "kcal": 269,
+   "kcal": 267,
    "protein_g": 20,
    "carbs_g": 28,
-   "fat_g": 8
+   "fat_g": 9,
+   "fiber_g": 4.7
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "high-protein-hot-oats",
@@ -502,13 +506,15 @@
    "hot protein oats"
   ],
   "macros": {
-   "kcal": 442,
+   "kcal": 441,
    "protein_g": 44,
    "carbs_g": 44,
-   "fat_g": 10
+   "fat_g": 10,
+   "fiber_g": 6.5
   },
   "cost_band": 3,
-  "host": null
+  "host": null,
+  "serves": 1
  },
  {
   "id": "overnight-oats",
@@ -686,13 +692,15 @@
    "bircher muesli protein style"
   ],
   "macros": {
-   "kcal": 427,
+   "kcal": 425,
    "protein_g": 40,
    "carbs_g": 48,
-   "fat_g": 8
+   "fat_g": 8,
+   "fiber_g": 7.9
   },
   "cost_band": 3,
-  "host": null
+  "host": null,
+  "serves": 1
  },
  {
   "id": "masala-omelette",
@@ -757,10 +765,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 250,
+   "kcal": 256,
    "protein_g": 25,
    "carbs_g": 5,
-   "fat_g": 15
+   "fat_g": 15,
+   "fiber_g": 0.9
   },
   "cost_band": 1,
   "rel": {
@@ -880,7 +889,8 @@
   "aka": [
    "desi omelette",
    "indian omelette"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "shakshuka",
@@ -1057,14 +1067,16 @@
    "tomato poached eggs"
   ],
   "macros": {
-   "kcal": 310,
+   "kcal": 293,
    "protein_g": 17,
    "carbs_g": 20,
-   "fat_g": 18
+   "fat_g": 18,
+   "fiber_g": 4.8
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "greek-yogurt-bowl",
@@ -1214,14 +1226,16 @@
    "greek bowl"
   ],
   "macros": {
-   "kcal": 300,
+   "kcal": 295,
    "protein_g": 34,
    "carbs_g": 26,
-   "fat_g": 6
+   "fat_g": 6,
+   "fiber_g": 4.2
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "paneer-toast",
@@ -1386,14 +1400,16 @@
    "spiced paneer bread"
   ],
   "macros": {
-   "kcal": 437,
+   "kcal": 428,
    "protein_g": 23,
    "carbs_g": 33,
-   "fat_g": 24
+   "fat_g": 24,
+   "fiber_g": 4.8
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "besan-chilla",
@@ -1464,10 +1480,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 430,
+   "kcal": 436,
    "protein_g": 26,
-   "carbs_g": 41,
-   "fat_g": 17
+   "carbs_g": 43,
+   "fat_g": 18,
+   "fiber_g": 8.0
   },
   "cost_band": 1,
   "rel": {
@@ -1582,7 +1599,8 @@
    "chickpea pancake",
    "pudla",
    "vegan omelette"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "moong-dal-chilla",
@@ -1615,8 +1633,7 @@
    "nutrition": [
     "high-protein",
     "high-fiber",
-    "gluten-free",
-    "low-fat"
+    "gluten-free"
    ],
    "equipment": [
     "one-pan",
@@ -1649,10 +1666,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 420,
-   "protein_g": 27,
+   "kcal": 425,
+   "protein_g": 26,
    "carbs_g": 42,
-   "fat_g": 13
+   "fat_g": 18,
+   "fiber_g": 10.2
   },
   "cost_band": 1,
   "rel": {
@@ -1751,7 +1769,8 @@
   "aka": [
    "dal pancake",
    "moonglet (fluffier cousin)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "egg-bhurji-pav",
@@ -1815,10 +1834,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 360,
-   "protein_g": 28,
-   "carbs_g": 26,
-   "fat_g": 16
+   "kcal": 378,
+   "protein_g": 29,
+   "carbs_g": 28,
+   "fat_g": 17,
+   "fiber_g": 2.6
   },
   "cost_band": 1,
   "rel": {
@@ -1931,7 +1951,8 @@
   "aka": [
    "anda bhurji",
    "indian scrambled eggs"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "protein-lassi-smoothie",
@@ -2101,13 +2122,15 @@
    "mango protein smoothie"
   ],
   "macros": {
-   "kcal": 286,
+   "kcal": 284,
    "protein_g": 31,
    "carbs_g": 21,
-   "fat_g": 8
+   "fat_g": 9,
+   "fiber_g": 0.5
   },
   "cost_band": 3,
-  "host": null
+  "host": null,
+  "serves": 1
  },
  {
   "id": "pesarattu",
@@ -2258,14 +2281,16 @@
    "green gram crepe"
   ],
   "macros": {
-   "kcal": 347,
+   "kcal": 335,
    "protein_g": 20,
    "carbs_g": 53,
-   "fat_g": 6
+   "fat_g": 6,
+   "fiber_g": 13.4
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-burrito-bowl",
@@ -2336,10 +2361,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 520,
-   "protein_g": 52,
-   "carbs_g": 53,
-   "fat_g": 11
+   "kcal": 536,
+   "protein_g": 53,
+   "carbs_g": 56,
+   "fat_g": 11,
+   "fiber_g": 10.7
   },
   "cost_band": 2,
   "rel": {
@@ -2473,7 +2499,8 @@
   "aka": [
    "naked burrito",
    "chipotle-style bowl"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "rajma-rice-mexican-bowl",
@@ -2504,7 +2531,6 @@
     "meal-prep"
    ],
    "nutrition": [
-    "high-protein",
     "high-fiber",
     "gluten-free"
    ],
@@ -2648,14 +2674,16 @@
    "bean rice bowl"
   ],
   "macros": {
-   "kcal": 335,
+   "kcal": 323,
    "protein_g": 16,
    "carbs_g": 53,
-   "fat_g": 7
+   "fat_g": 7,
+   "fiber_g": 15.4
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-fried-rice",
@@ -2722,10 +2750,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 480,
-   "protein_g": 43,
-   "carbs_g": 48,
-   "fat_g": 10
+   "kcal": 509,
+   "protein_g": 45,
+   "carbs_g": 51,
+   "fat_g": 12,
+   "fiber_g": 2.1
   },
   "cost_band": 2,
   "rel": {
@@ -2835,7 +2864,8 @@
   "aka": [
    "indo-chinese fried rice",
    "leftover rice stir-fry"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "garlic-chicken-rice",
@@ -2995,14 +3025,16 @@
    "weekday fried rice"
   ],
   "macros": {
-   "kcal": 362,
+   "kcal": 373,
    "protein_g": 42,
    "carbs_g": 27,
-   "fat_g": 10
+   "fat_g": 10,
+   "fiber_g": 1.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "thai-basil-chicken",
@@ -3069,10 +3101,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 450,
-   "protein_g": 49,
+   "kcal": 475,
+   "protein_g": 52,
    "carbs_g": 34,
-   "fat_g": 12
+   "fat_g": 13,
+   "fiber_g": 1.4
   },
   "cost_band": 2,
   "rel": {
@@ -3190,7 +3223,8 @@
   "aka": [
    "pad krapow gai",
    "basil chicken stir-fry"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "tofu-stir-fry",
@@ -3355,14 +3389,16 @@
    "vegetarian stir fry"
   ],
   "macros": {
-   "kcal": 367,
+   "kcal": 350,
    "protein_g": 28,
    "carbs_g": 20,
-   "fat_g": 19
+   "fat_g": 19,
+   "fiber_g": 5.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chickpea-mediterranean-salad",
@@ -3392,7 +3428,6 @@
     "meal-prep"
    ],
    "nutrition": [
-    "high-protein",
     "high-fiber",
     "gluten-free"
    ],
@@ -3521,14 +3556,16 @@
    "no-cook lunch bowl"
   ],
   "macros": {
-   "kcal": 327,
+   "kcal": 312,
    "protein_g": 13,
    "carbs_g": 44,
-   "fat_g": 11
+   "fat_g": 11,
+   "fiber_g": 12.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "mediterranean-chicken-bowl",
@@ -3696,14 +3733,16 @@
    "med bowl"
   ],
   "macros": {
-   "kcal": 398,
+   "kcal": 407,
    "protein_g": 49,
    "carbs_g": 21,
-   "fat_g": 13
+   "fat_g": 13,
+   "fiber_g": 2.1
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "soya-keema-bowl",
@@ -3773,10 +3812,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 410,
-   "protein_g": 33,
-   "carbs_g": 55,
-   "fat_g": 6
+   "kcal": 434,
+   "protein_g": 34,
+   "carbs_g": 60,
+   "fat_g": 7,
+   "fiber_g": 12.8
   },
   "cost_band": 1,
   "rel": {
@@ -3897,7 +3937,8 @@
   "aka": [
    "veg keema",
    "soya granules keema"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "sprouts-chaat-bowl",
@@ -3928,7 +3969,6 @@
    ],
    "nutrition": [
     "high-protein",
-    "high-fiber",
     "low-fat"
    ],
    "equipment": [
@@ -4059,14 +4099,16 @@
    "sprout salad indian"
   ],
   "macros": {
-   "kcal": 88,
+   "kcal": 71,
    "protein_g": 5,
    "carbs_g": 15,
-   "fat_g": 1
+   "fat_g": 1,
+   "fiber_g": 4.4
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "tandoori-chicken",
@@ -4136,10 +4178,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 400,
-   "protein_g": 65,
-   "carbs_g": 3,
-   "fat_g": 12
+   "kcal": 444,
+   "protein_g": 68,
+   "carbs_g": 10,
+   "fat_g": 13,
+   "fiber_g": 2.1
   },
   "cost_band": 2,
   "rel": {
@@ -4273,7 +4316,8 @@
   "aka": [
    "tandoori murgh",
    "grilled red chicken"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "hariyali-chicken",
@@ -4343,10 +4387,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 420,
-   "protein_g": 68,
-   "carbs_g": 6,
-   "fat_g": 12
+   "kcal": 437,
+   "protein_g": 70,
+   "carbs_g": 9,
+   "fat_g": 13,
+   "fiber_g": 3.9
   },
   "cost_band": 2,
   "rel": {
@@ -4469,7 +4514,8 @@
   "aka": [
    "green chicken",
    "mint-coriander chicken"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chicken-tikka",
@@ -4540,10 +4586,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 355,
+   "kcal": 365,
    "protein_g": 54,
    "carbs_g": 9,
-   "fat_g": 11
+   "fat_g": 11,
+   "fiber_g": 1.7
   },
   "cost_band": 2,
   "rel": {
@@ -4683,7 +4730,8 @@
   "aka": [
    "chicken tikka skewers",
    "boneless tandoori bites"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chicken-curry",
@@ -4749,10 +4797,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 490,
-   "protein_g": 65,
-   "carbs_g": 15,
-   "fat_g": 17
+   "kcal": 525,
+   "protein_g": 66,
+   "carbs_g": 22,
+   "fat_g": 19,
+   "fiber_g": 6.0
   },
   "cost_band": 2,
   "rel": {
@@ -4887,7 +4936,8 @@
    "ghar wali chicken curry",
    "desi chicken curry",
    "sunday chicken curry"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "butter-chicken",
@@ -4954,10 +5004,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 490,
-   "protein_g": 60,
-   "carbs_g": 15,
-   "fat_g": 21
+   "kcal": 517,
+   "protein_g": 62,
+   "carbs_g": 17,
+   "fat_g": 22,
+   "fiber_g": 3.3
   },
   "cost_band": 2,
   "rel": {
@@ -5089,7 +5140,8 @@
   "aka": [
    "murgh makhani",
    "chicken makhani"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "egg-curry",
@@ -5157,10 +5209,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 430,
-   "protein_g": 34,
-   "carbs_g": 12,
-   "fat_g": 27
+   "kcal": 453,
+   "protein_g": 36,
+   "carbs_g": 15,
+   "fat_g": 29,
+   "fiber_g": 3.4
   },
   "cost_band": 1,
   "rel": {
@@ -5273,7 +5326,8 @@
   "aka": [
    "anda curry",
    "dhaba egg masala"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "dal-tadka",
@@ -5343,10 +5397,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 420,
+   "kcal": 430,
    "protein_g": 30,
-   "carbs_g": 60,
-   "fat_g": 8
+   "carbs_g": 65,
+   "fat_g": 7,
+   "fiber_g": 16.8
   },
   "cost_band": 1,
   "rel": {
@@ -5473,7 +5528,8 @@
   "aka": [
    "yellow dal",
    "dal fry (same family, extra fried onion)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "dal-makhani",
@@ -5649,14 +5705,16 @@
    "black dal lite"
   ],
   "macros": {
-   "kcal": 380,
+   "kcal": 369,
    "protein_g": 22,
-   "carbs_g": 55,
-   "fat_g": 8
+   "carbs_g": 56,
+   "fat_g": 8,
+   "fiber_g": 18.8
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "rajma",
@@ -5727,10 +5785,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 435,
-   "protein_g": 29,
-   "carbs_g": 60,
-   "fat_g": 8
+   "kcal": 456,
+   "protein_g": 30,
+   "carbs_g": 67,
+   "fat_g": 10,
+   "fiber_g": 24.6
   },
   "cost_band": 1,
   "rel": {
@@ -5853,7 +5912,8 @@
   "aka": [
    "kidney bean curry",
    "rajma chawal (with the rice)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chole",
@@ -5923,10 +5983,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 430,
-   "protein_g": 22,
-   "carbs_g": 55,
-   "fat_g": 11
+   "kcal": 480,
+   "protein_g": 25,
+   "carbs_g": 70,
+   "fat_g": 14,
+   "fiber_g": 19.3
   },
   "cost_band": 1,
   "rel": {
@@ -6062,7 +6123,8 @@
    "chana masala",
    "chickpea curry",
    "punjabi chole"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "palak-paneer",
@@ -6132,10 +6194,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 390,
+   "kcal": 412,
    "protein_g": 26,
-   "carbs_g": 13,
-   "fat_g": 26
+   "carbs_g": 21,
+   "fat_g": 27,
+   "fiber_g": 5.6
   },
   "cost_band": 2,
   "rel": {
@@ -6264,7 +6327,8 @@
   "aka": [
    "saag paneer (mixed-greens cousin)",
    "spinach paneer"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "paneer-bhurji",
@@ -6329,10 +6393,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 395,
-   "protein_g": 24,
-   "carbs_g": 12,
-   "fat_g": 29
+   "kcal": 408,
+   "protein_g": 23,
+   "carbs_g": 14,
+   "fat_g": 30,
+   "fiber_g": 2.6
   },
   "cost_band": 2,
   "rel": {
@@ -6446,7 +6511,8 @@
   "aka": [
    "scrambled paneer",
    "paneer scramble"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chicken-65",
@@ -6512,10 +6578,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 415,
-   "protein_g": 56,
-   "carbs_g": 18,
-   "fat_g": 12
+   "kcal": 476,
+   "protein_g": 58,
+   "carbs_g": 22,
+   "fat_g": 16,
+   "fiber_g": 1.8
   },
   "cost_band": 2,
   "rel": {
@@ -6650,7 +6717,8 @@
   "aka": [
    "dry chilli chicken (indo-chinese cousin - finish with a soy-chilli toss)",
    "south indian fried chicken"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "andhra-pepper-chicken",
@@ -6682,7 +6750,6 @@
    ],
    "nutrition": [
     "high-protein",
-    "low-cal",
     "gluten-free",
     "dairy-free"
    ],
@@ -6717,10 +6784,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 440,
-   "protein_g": 63,
-   "carbs_g": 8,
-   "fat_g": 16
+   "kcal": 475,
+   "protein_g": 64,
+   "carbs_g": 13,
+   "fat_g": 18,
+   "fiber_g": 2.5
   },
   "cost_band": 2,
   "rel": {
@@ -6843,7 +6911,8 @@
   "aka": [
    "miriyala kodi",
    "pepper chicken dry"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "methi-chicken",
@@ -7016,14 +7085,16 @@
    "punjabi methi chicken"
   ],
   "macros": {
-   "kcal": 375,
+   "kcal": 382,
    "protein_g": 52,
    "carbs_g": 16,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 4.7
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "soya-chaap-masala",
@@ -7193,14 +7264,16 @@
    "vegan kebab masala"
   ],
   "macros": {
-   "kcal": 470,
+   "kcal": 460,
    "protein_g": 50,
    "carbs_g": 30,
-   "fat_g": 17
+   "fat_g": 17,
+   "fiber_g": 6.4
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "kadhi",
@@ -7271,10 +7344,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 335,
+   "kcal": 376,
    "protein_g": 18,
-   "carbs_g": 40,
-   "fat_g": 11
+   "carbs_g": 43,
+   "fat_g": 15,
+   "fiber_g": 7.2
   },
   "cost_band": 1,
   "rel": {
@@ -7387,7 +7461,8 @@
   "aka": [
    "kadhi pakora",
    "besan yogurt curry"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "stuffed-paneer-paratha",
@@ -7414,9 +7489,6 @@
    ],
    "occasion": [
     "everyday"
-   ],
-   "nutrition": [
-    "high-protein"
    ],
    "equipment": [
     "one-pan",
@@ -7546,14 +7618,16 @@
    "punjabi paneer paratha"
   ],
   "macros": {
-   "kcal": 578,
+   "kcal": 581,
    "protein_g": 26,
    "carbs_g": 44,
-   "fat_g": 33
+   "fat_g": 33,
+   "fiber_g": 4.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chole-kulcha-bowl",
@@ -7583,7 +7657,6 @@
     "party"
    ],
    "nutrition": [
-    "high-protein",
     "high-fiber"
    ],
    "equipment": [
@@ -7724,14 +7797,16 @@
    "delhi street chole"
   ],
   "macros": {
-   "kcal": 510,
+   "kcal": 497,
    "protein_g": 20,
    "carbs_g": 85,
-   "fat_g": 10
+   "fat_g": 10,
+   "fiber_g": 15.9
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-keema-matar",
@@ -7795,10 +7870,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 445,
-   "protein_g": 61,
-   "carbs_g": 18,
-   "fat_g": 14
+   "kcal": 494,
+   "protein_g": 63,
+   "carbs_g": 26,
+   "fat_g": 15,
+   "fiber_g": 8.1
   },
   "cost_band": 2,
   "rel": {
@@ -7925,7 +8001,8 @@
   "aka": [
    "keema matar",
    "chicken mince curry"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "palak-chicken",
@@ -8097,14 +8174,16 @@
    "saag chicken"
   ],
   "macros": {
-   "kcal": 375,
+   "kcal": 374,
    "protein_g": 53,
    "carbs_g": 15,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 5.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "amritsari-fish",
@@ -8170,10 +8249,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 320,
-   "protein_g": 38,
-   "carbs_g": 15,
-   "fat_g": 12
+   "kcal": 353,
+   "protein_g": 39,
+   "carbs_g": 21,
+   "fat_g": 13,
+   "fiber_g": 4.9
   },
   "cost_band": 2,
   "rel": {
@@ -8291,7 +8371,8 @@
   "aka": [
    "fish pakora (same batter, smaller pieces)",
    "punjabi fried fish"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "dahi-chicken",
@@ -8466,14 +8547,16 @@
    "curd chicken curry"
   ],
   "macros": {
-   "kcal": 375,
+   "kcal": 385,
    "protein_g": 56,
    "carbs_g": 12,
-   "fat_g": 11
+   "fat_g": 11,
+   "fiber_g": 1.9
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-alfredo",
@@ -8639,14 +8722,16 @@
    "protein alfredo"
   ],
   "macros": {
-   "kcal": 640,
+   "kcal": 653,
    "protein_g": 60,
    "carbs_g": 60,
-   "fat_g": 18
+   "fat_g": 18,
+   "fiber_g": 2.4
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-arrabbiata",
@@ -8709,10 +8794,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 585,
-   "protein_g": 51,
-   "carbs_g": 57,
-   "fat_g": 15
+   "kcal": 611,
+   "protein_g": 52,
+   "carbs_g": 63,
+   "fat_g": 16,
+   "fiber_g": 5.2
   },
   "cost_band": 2,
   "rel": {
@@ -8841,7 +8927,8 @@
    "pink sauce pasta (stir 30ml warm milk in at the end)",
    "penne arrabbiata",
    "spicy chicken pasta"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "aglio-e-olio",
@@ -9011,13 +9098,15 @@
    "midnight pasta"
   ],
   "macros": {
-   "kcal": 498,
+   "kcal": 496,
    "protein_g": 39,
    "carbs_g": 59,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 3.1
   },
   "cost_band": 3,
-  "host": null
+  "host": null,
+  "serves": 1
  },
  {
   "id": "pesto-chicken-pasta",
@@ -9161,14 +9250,16 @@
    "green pasta chicken"
   ],
   "macros": {
-   "kcal": 600,
+   "kcal": 613,
    "protein_g": 52,
    "carbs_g": 56,
-   "fat_g": 19
+   "fat_g": 19,
+   "fiber_g": 3.1
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "pink-sauce-pasta",
@@ -9332,14 +9423,16 @@
    "cream tomato pasta chicken"
   ],
   "macros": {
-   "kcal": 585,
+   "kcal": 596,
    "protein_g": 55,
    "carbs_g": 60,
-   "fat_g": 14
+   "fat_g": 14,
+   "fiber_g": 3.6
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "skillet-lasagna",
@@ -9498,14 +9591,16 @@
    "lazy lasagna"
   ],
   "macros": {
-   "kcal": 554,
+   "kcal": 563,
    "protein_g": 54,
    "carbs_g": 53,
-   "fat_g": 14
+   "fat_g": 14,
+   "fiber_g": 3.5
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "protein-mac-cheese",
@@ -9653,14 +9748,16 @@
    "high protein mac"
   ],
   "macros": {
-   "kcal": 489,
+   "kcal": 500,
    "protein_g": 40,
    "carbs_g": 61,
-   "fat_g": 10
+   "fat_g": 10,
+   "fiber_g": 2.3
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-parmesan",
@@ -9724,10 +9821,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 520,
-   "protein_g": 69,
+   "kcal": 547,
+   "protein_g": 72,
    "carbs_g": 20,
-   "fat_g": 16
+   "fat_g": 18,
+   "fiber_g": 2.5
   },
   "cost_band": 2,
   "rel": {
@@ -9851,7 +9949,8 @@
    "chicken parmigiana",
    "parmo",
    "crumbed chicken cutlet"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "creamy-tuscan-chicken",
@@ -9915,10 +10014,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 530,
-   "protein_g": 66,
-   "carbs_g": 17,
-   "fat_g": 21
+   "kcal": 545,
+   "protein_g": 68,
+   "carbs_g": 20,
+   "fat_g": 21,
+   "fiber_g": 3.2
   },
   "cost_band": 2,
   "rel": {
@@ -10035,7 +10135,8 @@
   "aka": [
    "marry me chicken",
    "sun-dried tomato chicken"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chicken-tacos",
@@ -10104,10 +10205,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 530,
-   "protein_g": 51,
+   "kcal": 589,
+   "protein_g": 52,
    "carbs_g": 55,
-   "fat_g": 12
+   "fat_g": 18,
+   "fiber_g": 4.2
   },
   "cost_band": 2,
   "rel": {
@@ -10234,7 +10336,8 @@
   "aka": [
    "chicken quesadilla (same filling - fold into a tortilla with cheese, pan-toast)",
    "soft tacos"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chicken-fajitas",
@@ -10298,10 +10401,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 550,
-   "protein_g": 60,
-   "carbs_g": 40,
-   "fat_g": 14
+   "kcal": 577,
+   "protein_g": 62,
+   "carbs_g": 41,
+   "fat_g": 18,
+   "fiber_g": 5.7
   },
   "cost_band": 2,
   "rel": {
@@ -10425,7 +10529,8 @@
   "aka": [
    "sizzler chicken (the desi restaurant translation)",
    "pepper chicken skillet"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chicken-quesadilla",
@@ -10584,14 +10689,16 @@
    "weeknight quesadilla"
   ],
   "macros": {
-   "kcal": 494,
+   "kcal": 499,
    "protein_g": 46,
    "carbs_g": 37,
-   "fat_g": 18
+   "fat_g": 18,
+   "fiber_g": 2.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chipotle-paneer-skewers",
@@ -10758,14 +10865,16 @@
    "chipotle paneer"
   ],
   "macros": {
-   "kcal": 503,
+   "kcal": 491,
    "protein_g": 29,
    "carbs_g": 17,
-   "fat_g": 36
+   "fat_g": 36,
+   "fiber_g": 2.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-souvlaki",
@@ -10932,13 +11041,15 @@
    "yogurt chicken kebab"
   ],
   "macros": {
-   "kcal": 326,
+   "kcal": 334,
    "protein_g": 51,
    "carbs_g": 6,
-   "fat_g": 11
+   "fat_g": 11,
+   "fiber_g": 1.4
   },
   "cost_band": 2,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-shawarma-plate",
@@ -11005,10 +11116,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 550,
-   "protein_g": 67,
-   "carbs_g": 36,
-   "fat_g": 14
+   "kcal": 574,
+   "protein_g": 68,
+   "carbs_g": 39,
+   "fat_g": 15,
+   "fiber_g": 5.2
   },
   "cost_band": 2,
   "rel": {
@@ -11145,7 +11257,8 @@
    "chicken souvlaki (swap the spices for oregano and lemon)",
    "chicken gyro plate",
    "shawarma bowl"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "air-fryer-falafel",
@@ -11216,10 +11329,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 480,
+   "kcal": 462,
    "protein_g": 22,
-   "carbs_g": 65,
-   "fat_g": 12
+   "carbs_g": 71,
+   "fat_g": 12,
+   "fiber_g": 19.6
   },
   "cost_band": 1,
   "rel": {
@@ -11340,7 +11454,8 @@
   "aka": [
    "baked falafel",
    "chickpea fritters"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "lemon-herb-fish",
@@ -11413,10 +11528,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 325,
-   "protein_g": 41,
-   "carbs_g": 9,
-   "fat_g": 14
+   "kcal": 341,
+   "protein_g": 42,
+   "carbs_g": 13,
+   "fat_g": 14,
+   "fiber_g": 3.3
   },
   "cost_band": 2,
   "rel": {
@@ -11534,7 +11650,8 @@
   "aka": [
    "grilled basa",
    "fish in lemon butter (finish with a knob)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "harissa-chicken",
@@ -11693,14 +11810,16 @@
    "red paste chicken"
   ],
   "macros": {
-   "kcal": 378,
+   "kcal": 384,
    "protein_g": 48,
    "carbs_g": 14,
-   "fat_g": 14
+   "fat_g": 14,
+   "fiber_g": 2.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "gochujang-chicken",
@@ -11766,10 +11885,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 530,
-   "protein_g": 60,
-   "carbs_g": 46,
-   "fat_g": 11
+   "kcal": 542,
+   "protein_g": 61,
+   "carbs_g": 43,
+   "fat_g": 12,
+   "fiber_g": 1.3
   },
   "cost_band": 2,
   "rel": {
@@ -11884,7 +12004,8 @@
   "aka": [
    "korean sticky chicken",
    "korean fried chicken glaze (on seared, not fried, chicken)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "teriyaki-chicken",
@@ -11951,10 +12072,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 510,
-   "protein_g": 60,
-   "carbs_g": 38,
-   "fat_g": 10
+   "kcal": 525,
+   "protein_g": 61,
+   "carbs_g": 40,
+   "fat_g": 12,
+   "fiber_g": 1.0
   },
   "cost_band": 2,
   "rel": {
@@ -12073,7 +12195,8 @@
   "aka": [
    "honey garlic chicken (same glaze, skip the ginger)",
    "chicken teriyaki bowl"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "honey-garlic-chicken",
@@ -12238,14 +12361,16 @@
    "chinese honey chicken"
   ],
   "macros": {
-   "kcal": 390,
+   "kcal": 398,
    "protein_g": 49,
    "carbs_g": 25,
-   "fat_g": 10
+   "fat_g": 11,
+   "fiber_g": 0.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "thai-green-curry",
@@ -12312,10 +12437,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 575,
-   "protein_g": 51,
+   "kcal": 590,
+   "protein_g": 53,
    "carbs_g": 39,
-   "fat_g": 23
+   "fat_g": 24,
+   "fiber_g": 4.6
   },
   "cost_band": 2,
   "rel": {
@@ -12453,7 +12579,8 @@
   "aka": [
    "gaeng keow wan",
    "green curry chicken"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "japanese-curry-chicken",
@@ -12618,14 +12745,16 @@
    "golden curry chicken"
   ],
   "macros": {
-   "kcal": 729,
+   "kcal": 743,
    "protein_g": 56,
    "carbs_g": 89,
-   "fat_g": 16
+   "fat_g": 17,
+   "fiber_g": 6.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-katsu",
@@ -12775,14 +12904,16 @@
    "panko chicken"
   ],
   "macros": {
-   "kcal": 416,
+   "kcal": 433,
    "protein_g": 55,
    "carbs_g": 22,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 1.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chilli-chicken",
@@ -12973,13 +13104,15 @@
    "dry chilli chicken"
   ],
   "macros": {
-   "kcal": 428,
+   "kcal": 439,
    "protein_g": 50,
    "carbs_g": 26,
-   "fat_g": 14
+   "fat_g": 14,
+   "fiber_g": 2.4
   },
   "cost_band": 2,
-  "host": null
+  "host": null,
+  "serves": 1
  },
  {
   "id": "chicken-noodles",
@@ -13045,10 +13178,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 575,
-   "protein_g": 51,
-   "carbs_g": 60,
-   "fat_g": 11
+   "kcal": 592,
+   "protein_g": 52,
+   "carbs_g": 59,
+   "fat_g": 15,
+   "fiber_g": 3.8
   },
   "cost_band": 2,
   "rel": {
@@ -13166,7 +13300,8 @@
   "aka": [
    "chicken hakka noodles",
    "chow mein (the soft-noodle version)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chicken-caesar-wrap",
@@ -13236,10 +13371,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 410,
-   "protein_g": 49,
-   "carbs_g": 28,
-   "fat_g": 11
+   "kcal": 418,
+   "protein_g": 50,
+   "carbs_g": 29,
+   "fat_g": 11,
+   "fiber_g": 2.2
   },
   "cost_band": 2,
   "rel": {
@@ -13352,7 +13488,8 @@
   "aka": [
    "caesar salad wrap",
    "grilled chicken caesar roll"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "tandoori-chicken-wrap",
@@ -13421,10 +13558,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 390,
-   "protein_g": 46,
-   "carbs_g": 33,
-   "fat_g": 8
+   "kcal": 393,
+   "protein_g": 47,
+   "carbs_g": 32,
+   "fat_g": 7,
+   "fiber_g": 4.0
   },
   "cost_band": 2,
   "rel": {
@@ -13522,7 +13660,8 @@
   "aka": [
    "chicken kathi roll (close cousin)",
    "chicken frankie"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "paneer-tikka-wrap",
@@ -13692,14 +13831,16 @@
    "vegetarian tandoori wrap"
   ],
   "macros": {
-   "kcal": 609,
+   "kcal": 600,
    "protein_g": 32,
    "carbs_g": 43,
-   "fat_g": 34
+   "fat_g": 34,
+   "fiber_g": 3.5
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "egg-wrap",
@@ -13847,14 +13988,16 @@
    "protein egg burrito"
   ],
   "macros": {
-   "kcal": 391,
+   "kcal": 386,
    "protein_g": 22,
    "carbs_g": 35,
-   "fat_g": 18
+   "fat_g": 18,
+   "fiber_g": 2.2
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-club-sandwich",
@@ -14009,14 +14152,16 @@
    "deli club light"
   ],
   "macros": {
-   "kcal": 455,
+   "kcal": 454,
    "protein_g": 47,
    "carbs_g": 41,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 6.1
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "buffalo-chicken-wrap",
@@ -14171,14 +14316,16 @@
    "spicy chicken roll"
   ],
   "macros": {
-   "kcal": 475,
+   "kcal": 485,
    "protein_g": 48,
    "carbs_g": 45,
-   "fat_g": 12
+   "fat_g": 11,
+   "fiber_g": 2.5
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-pulao",
@@ -14245,10 +14392,11 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 575,
-   "protein_g": 52,
-   "carbs_g": 60,
-   "fat_g": 13
+   "kcal": 606,
+   "protein_g": 53,
+   "carbs_g": 64,
+   "fat_g": 14,
+   "fiber_g": 3.3
   },
   "cost_band": 2,
   "rel": {
@@ -14386,7 +14534,8 @@
    "one-pot chicken rice",
    "chicken pulav",
    "lazy biryani (say it quietly)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "egg-pulao",
@@ -14416,7 +14565,6 @@
     "meal-prep"
    ],
    "nutrition": [
-    "high-protein",
     "gluten-free"
    ],
    "equipment": [
@@ -14559,14 +14707,16 @@
    "boiled egg rice"
   ],
   "macros": {
-   "kcal": 349,
+   "kcal": 346,
    "protein_g": 17,
    "carbs_g": 27,
-   "fat_g": 19
+   "fat_g": 19,
+   "fiber_g": 2.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "curd-rice",
@@ -14635,10 +14785,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 310,
+   "kcal": 337,
    "protein_g": 14,
    "carbs_g": 46,
-   "fat_g": 7
+   "fat_g": 10,
+   "fiber_g": 1.5
   },
   "cost_band": 1,
   "rel": {
@@ -14744,7 +14895,8 @@
    "thayir sadam",
    "daddojanam",
    "yogurt rice"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "creamy-tomato-soup",
@@ -14902,14 +15054,16 @@
    "creamless tomato soup"
   ],
   "macros": {
-   "kcal": 159,
+   "kcal": 148,
    "protein_g": 8,
    "carbs_g": 19,
-   "fat_g": 6
+   "fat_g": 6,
+   "fiber_g": 4.5
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-clear-soup",
@@ -15066,14 +15220,16 @@
    "light chicken broth"
   ],
   "macros": {
-   "kcal": 193,
+   "kcal": 198,
    "protein_g": 32,
    "carbs_g": 7,
-   "fat_g": 4
+   "fat_g": 4,
+   "fiber_g": 2.3
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "hot-and-sour-soup",
@@ -15255,13 +15411,15 @@
    "restaurant soup home"
   ],
   "macros": {
-   "kcal": 196,
+   "kcal": 201,
    "protein_g": 28,
    "carbs_g": 13,
-   "fat_g": 3
+   "fat_g": 3,
+   "fiber_g": 2.1
   },
   "cost_band": 2,
-  "host": null
+  "host": null,
+  "serves": 1
  },
  {
   "id": "mushroom-chicken-soup",
@@ -15424,14 +15582,16 @@
    "earthy chicken soup"
   ],
   "macros": {
-   "kcal": 306,
+   "kcal": 305,
    "protein_g": 38,
    "carbs_g": 13,
-   "fat_g": 11
+   "fat_g": 11,
+   "fiber_g": 2.1
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "sweet-corn-chicken-soup",
@@ -15587,14 +15747,16 @@
    "restaurant corn soup"
   ],
   "macros": {
-   "kcal": 311,
+   "kcal": 301,
    "protein_g": 33,
    "carbs_g": 34,
-   "fat_g": 5
+   "fat_g": 5,
+   "fiber_g": 3.8
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "roasted-chickpeas",
@@ -15624,7 +15786,6 @@
     "meal-prep"
    ],
    "nutrition": [
-    "high-protein",
     "high-fiber",
     "gluten-free"
    ],
@@ -15763,13 +15924,15 @@
    "air fryer chickpeas"
   ],
   "macros": {
-   "kcal": 248,
+   "kcal": 239,
    "protein_g": 10,
    "carbs_g": 32,
-   "fat_g": 9
+   "fat_g": 9,
+   "fiber_g": 9.5
   },
   "cost_band": 2,
-  "host": null
+  "host": null,
+  "serves": 1
  },
  {
   "id": "paneer-pops",
@@ -15913,14 +16076,16 @@
    "paneer bites"
   ],
   "macros": {
-   "kcal": 436,
+   "kcal": 429,
    "protein_g": 25,
    "carbs_g": 15,
-   "fat_g": 30
+   "fat_g": 31,
+   "fiber_g": 2.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "chicken-nuggets",
@@ -16070,14 +16235,16 @@
    "protein nuggets"
   ],
   "macros": {
-   "kcal": 448,
+   "kcal": 465,
    "protein_g": 54,
    "carbs_g": 31,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 1.4
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "greek-yogurt-ranch-dip",
@@ -16225,14 +16392,16 @@
    "light ranch"
   ],
   "macros": {
-   "kcal": 103,
+   "kcal": 101,
    "protein_g": 15,
    "carbs_g": 9,
-   "fat_g": 1
+   "fat_g": 1,
+   "fiber_g": 1.0
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "hummus",
@@ -16262,7 +16431,6 @@
     "everyday"
    ],
    "nutrition": [
-    "high-fiber",
     "dairy-free",
     "gluten-free"
    ],
@@ -16304,8 +16472,9 @@
   "macros": {
    "kcal": 145,
    "protein_g": 5,
-   "carbs_g": 14,
-   "fat_g": 8
+   "carbs_g": 15,
+   "fat_g": 8,
+   "fiber_g": 4.4
   },
   "cost_band": 1,
   "rel": {
@@ -16416,7 +16585,8 @@
   "aka": [
    "hummus bi tahina",
    "chickpea dip"
-  ]
+  ],
+  "serves": 2
  },
  {
   "id": "edamame-chilli-salt",
@@ -16553,14 +16723,16 @@
    "japanese bar snack"
   ],
   "macros": {
-   "kcal": 228,
+   "kcal": 215,
    "protein_g": 17,
    "carbs_g": 16,
-   "fat_g": 11
+   "fat_g": 11,
+   "fiber_g": 8.3
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "seekh-kebabs",
@@ -16593,7 +16765,6 @@
    ],
    "nutrition": [
     "high-protein",
-    "low-cal",
     "gluten-free"
    ],
    "equipment": [
@@ -16627,10 +16798,11 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 215,
-   "protein_g": 33,
-   "carbs_g": 7,
-   "fat_g": 6
+   "kcal": 256,
+   "protein_g": 34,
+   "carbs_g": 11,
+   "fat_g": 8,
+   "fiber_g": 2.5
   },
   "cost_band": 2,
   "rel": {
@@ -16749,7 +16921,8 @@
   "aka": [
    "chicken seekh kabab",
    "skewered mince kebabs"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chocolate-mousse",
@@ -16815,10 +16988,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 245,
+   "kcal": 242,
    "protein_g": 29,
    "carbs_g": 16,
-   "fat_g": 8
+   "fat_g": 8,
+   "fiber_g": 2.8
   },
   "cost_band": 2,
   "rel": {
@@ -16918,7 +17092,8 @@
   "aka": [
    "greek yogurt mousse",
    "protein chocolate mousse"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "chocolate-mug-cake",
@@ -16986,8 +17161,9 @@
   "macros": {
    "kcal": 245,
    "protein_g": 23,
-   "carbs_g": 30,
-   "fat_g": 5
+   "carbs_g": 31,
+   "fat_g": 5,
+   "fiber_g": 5.9
   },
   "cost_band": 1,
   "rel": {
@@ -17086,7 +17262,8 @@
   "aka": [
    "90-second cake",
    "microwave brownie (pull it 10 seconds early)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "protein-ice-cream",
@@ -17116,8 +17293,7 @@
     "post-workout"
    ],
    "nutrition": [
-    "high-protein",
-    "low-cal"
+    "high-protein"
    ],
    "equipment": [
     "blender"
@@ -17227,14 +17403,16 @@
    "blender protein dessert"
   ],
   "macros": {
-   "kcal": 245,
+   "kcal": 244,
    "protein_g": 35,
    "carbs_g": 21,
-   "fat_g": 2
+   "fat_g": 2,
+   "fiber_g": 2.6
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "froyo-bark",
@@ -17302,10 +17480,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 130,
+   "kcal": 128,
    "protein_g": 17,
    "carbs_g": 11,
-   "fat_g": 2
+   "fat_g": 2,
+   "fiber_g": 1.6
   },
   "cost_band": 2,
   "rel": {
@@ -17407,7 +17586,8 @@
   "aka": [
    "frozen yogurt bark",
    "greek yogurt candy"
-  ]
+  ],
+  "serves": 2
  },
  {
   "id": "protein-tiramisu",
@@ -17564,14 +17744,16 @@
    "protein tiramisu cups"
   ],
   "macros": {
-   "kcal": 455,
+   "kcal": 444,
    "protein_g": 35,
    "carbs_g": 51,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 3.4
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "mango-panna-cotta",
@@ -17720,14 +17902,16 @@
    "set mango cream"
   ],
   "macros": {
-   "kcal": 230,
+   "kcal": 223,
    "protein_g": 15,
    "carbs_g": 36,
-   "fat_g": 3
+   "fat_g": 3,
+   "fiber_g": 1.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "cheesecake-cups",
@@ -17755,9 +17939,6 @@
    "occasion": [
     "party",
     "date-night"
-   ],
-   "nutrition": [
-    "high-protein"
    ],
    "equipment": [
     "no-cook"
@@ -17876,14 +18057,16 @@
    "mini cheesecake"
   ],
   "macros": {
-   "kcal": 397,
+   "kcal": 389,
    "protein_g": 14,
    "carbs_g": 43,
-   "fat_g": 19
+   "fat_g": 19,
+   "fiber_g": 3.1
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "protein-kheer",
@@ -17946,10 +18129,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 230,
+   "kcal": 251,
    "protein_g": 18,
-   "carbs_g": 28,
-   "fat_g": 5
+   "carbs_g": 29,
+   "fat_g": 7,
+   "fiber_g": 0.9
   },
   "cost_band": 1,
   "rel": {
@@ -18044,7 +18228,8 @@
   "aka": [
    "rice pudding",
    "payasam (south indian cousin)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "cardamom-kulfi",
@@ -18108,10 +18293,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 205,
+   "kcal": 209,
    "protein_g": 18,
-   "carbs_g": 17,
-   "fat_g": 7
+   "carbs_g": 18,
+   "fat_g": 8,
+   "fiber_g": 0.9
   },
   "cost_band": 2,
   "rel": {
@@ -18214,7 +18400,8 @@
   "aka": [
    "indian ice cream",
    "frozen kulfi pops"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "protein-gulab-jamun",
@@ -18372,14 +18559,16 @@
    "air fryer gulab jamun"
   ],
   "macros": {
-   "kcal": 480,
+   "kcal": 475,
    "protein_g": 34,
    "carbs_g": 48,
-   "fat_g": 17
+   "fat_g": 17,
+   "fiber_g": 0.4
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "protein-brownies",
@@ -18535,14 +18724,16 @@
    "gym brownies"
   ],
   "macros": {
-   "kcal": 523,
+   "kcal": 488,
    "protein_g": 49,
    "carbs_g": 55,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 9.4
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "sticky-date-cake",
@@ -18570,9 +18761,6 @@
    "occasion": [
     "date-night",
     "rainy-day"
-   ],
-   "nutrition": [
-    "high-protein"
    ],
    "equipment": [
     "oven"
@@ -18705,14 +18893,16 @@
    "warm date cake"
   ],
   "macros": {
-   "kcal": 748,
-   "protein_g": 33,
-   "carbs_g": 111,
-   "fat_g": 19
+   "kcal": 358,
+   "protein_g": 17,
+   "carbs_g": 55,
+   "fat_g": 10,
+   "fiber_g": 5.4
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 2
  },
  {
   "id": "masala-chaas",
@@ -18776,10 +18966,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 40,
+   "kcal": 54,
    "protein_g": 3,
-   "carbs_g": 4,
-   "fat_g": 1.5
+   "carbs_g": 5,
+   "fat_g": 3,
+   "fiber_g": 0.4
   },
   "cost_band": 1,
   "rel": {
@@ -18875,7 +19066,8 @@
    "salted lassi (same drink, thicker pour)",
    "buttermilk",
    "spiced chaas"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "nimbu-soda",
@@ -18939,10 +19131,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 30,
+   "kcal": 28,
    "protein_g": 0,
    "carbs_g": 8,
-   "fat_g": 0
+   "fat_g": 0,
+   "fiber_g": 0.8
   },
   "cost_band": 1,
   "rel": {
@@ -19052,7 +19245,8 @@
    "fresh lime soda",
    "shikanji (add roasted cumin)",
    "sweet-salt lime soda"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "cucumber-mint-cooler",
@@ -19117,10 +19311,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 18,
-   "protein_g": 0.5,
-   "carbs_g": 4,
-   "fat_g": 0
+   "kcal": 19,
+   "protein_g": 1,
+   "carbs_g": 5,
+   "fat_g": 0,
+   "fiber_g": 1.2
   },
   "cost_band": 1,
   "lore": [
@@ -19214,7 +19409,8 @@
   "aka": [
    "cucumber cooler",
    "spa cooler"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "cold-brew-tonic",
@@ -19279,10 +19475,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 15,
-   "protein_g": 0.5,
-   "carbs_g": 3,
-   "fat_g": 0
+   "kcal": 19,
+   "protein_g": 1,
+   "carbs_g": 4,
+   "fat_g": 0,
+   "fiber_g": 0.3
   },
   "cost_band": 2,
   "lore": [
@@ -19363,7 +19560,8 @@
   "aka": [
    "espresso tonic",
    "coffee tonic"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "virgin-mojito",
@@ -19427,10 +19625,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 40,
+   "kcal": 42,
    "protein_g": 0,
    "carbs_g": 11,
-   "fat_g": 0
+   "fat_g": 0,
+   "fiber_g": 1.3
   },
   "cost_band": 1,
   "lore": [
@@ -19519,7 +19718,8 @@
   "aka": [
    "nojito",
    "mint lime cooler"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "iced-lemon-tea",
@@ -19651,14 +19851,16 @@
    "green lemon tea"
   ],
   "macros": {
-   "kcal": 25,
+   "kcal": 21,
    "protein_g": 0,
    "carbs_g": 6,
-   "fat_g": 0
+   "fat_g": 0,
+   "fiber_g": 0.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "protein-cold-coffee",
@@ -19723,10 +19925,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 240,
-   "protein_g": 30,
-   "carbs_g": 12,
-   "fat_g": 7
+   "kcal": 247,
+   "protein_g": 31,
+   "carbs_g": 14,
+   "fat_g": 8,
+   "fiber_g": 0.1
   },
   "cost_band": 2,
   "rel": {
@@ -19813,7 +20016,8 @@
   "aka": [
    "coffee protein shake",
    "iced protein latte"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "salted-lassi",
@@ -19962,14 +20166,16 @@
    "thick chaas"
   ],
   "macros": {
-   "kcal": 138,
+   "kcal": 137,
    "protein_g": 16,
    "carbs_g": 7,
-   "fat_g": 5
+   "fat_g": 5,
+   "fiber_g": 0.4
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "whiskey-highball",
@@ -20030,11 +20236,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 105,
+   "kcal": 102,
    "protein_g": 0,
-   "carbs_g": 0,
+   "carbs_g": 1,
    "fat_g": 0,
-   "alcohol_g": 15
+   "fiber_g": 0.3,
+   "alcohol_g": 14.2
   },
   "cost_band": 3,
   "rel": {
@@ -20115,7 +20322,8 @@
   "aka": [
    "whiskey soda",
    "japanese highball"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "gin-tonic",
@@ -20178,11 +20386,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 110,
+   "kcal": 105,
    "protein_g": 0,
-   "carbs_g": 2,
+   "carbs_g": 1,
    "fat_g": 0,
-   "alcohol_g": 14
+   "fiber_g": 0.2,
+   "alcohol_g": 14.2
   },
   "cost_band": 3,
   "lore": [
@@ -20282,7 +20491,8 @@
   "aka": [
    "G and T",
    "gin tonic"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "margarita",
@@ -20347,7 +20557,8 @@
    "protein_g": 0,
    "carbs_g": 9,
    "fat_g": 0,
-   "alcohol_g": 14
+   "fiber_g": 0.9,
+   "alcohol_g": 14.2
   },
   "cost_band": 3,
   "lore": [
@@ -20453,7 +20664,8 @@
   "aka": [
    "skinny margarita",
    "tommy's margarita (the agave build)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "spritz",
@@ -20518,9 +20730,10 @@
   "macros": {
    "kcal": 140,
    "protein_g": 0,
-   "carbs_g": 10,
+   "carbs_g": 12,
    "fat_g": 0,
-   "alcohol_g": 13
+   "fiber_g": 0.5,
+   "alcohol_g": 13.0
   },
   "cost_band": 3,
   "lore": [
@@ -20608,7 +20821,8 @@
   "aka": [
    "aperol spritz",
    "veneziano"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "mojito",
@@ -20669,11 +20883,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 125,
+   "kcal": 130,
    "protein_g": 0,
    "carbs_g": 8,
    "fat_g": 0,
-   "alcohol_g": 14
+   "fiber_g": 1.3,
+   "alcohol_g": 14.2
   },
   "cost_band": 3,
   "lore": [
@@ -20773,7 +20988,8 @@
   "aka": [
    "cuban mojito",
    "rum mint cooler"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "old-fashioned",
@@ -20821,6 +21037,9 @@
     "fancy",
     "cozy",
     "winter"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -20838,11 +21057,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 170,
+   "kcal": 158,
    "protein_g": 0,
-   "carbs_g": 11,
+   "carbs_g": 6,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.1,
+   "alcohol_g": 19.3
   },
   "cost_band": 2,
   "rel": {
@@ -20959,6 +21179,11 @@
     "name": "Rye Old Fashioned",
     "swaps": "Replace bourbon with rye. Spicier, drier."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "The name is a complaint. By the 1880s bartenders were adding liqueurs and syrups to everything, so drinkers began asking for whiskey the old-fashioned way: spirit, sugar, bitters, water.",
+   "Bourbon has to be at least 51% corn and aged in new charred oak. That char is where the vanilla and caramel come from - nothing is added."
   ]
  },
  {
@@ -21019,11 +21244,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 125,
-   "protein_g": 0.5,
-   "carbs_g": 8.5,
+   "kcal": 131,
+   "protein_g": 1,
+   "carbs_g": 9,
    "fat_g": 0,
-   "alcohol_g": 12.5
+   "fiber_g": 1.6,
+   "alcohol_g": 13.4
   },
   "cost_band": 2,
   "lore": [
@@ -21117,7 +21343,8 @@
   "aka": [
    "red wine punch",
    "spanish wine cooler"
-  ]
+  ],
+  "serves": 4
  },
  {
   "id": "espresso-martini",
@@ -21166,6 +21393,9 @@
     "fancy",
     "indulgent",
     "cozy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -21183,11 +21413,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 210,
+   "kcal": 186,
    "protein_g": 0,
-   "carbs_g": 21,
+   "carbs_g": 18,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.0,
+   "alcohol_g": 16.6
   },
   "cost_band": 2,
   "rel": {
@@ -21222,11 +21453,11 @@
     "ref": "espresso",
     "qty_g": 30,
     "display": "30ml FRESH espresso (double shot)",
-    "perishable": true,
+    "perishable": false,
     "sub": "strong filter coffee at a pinch"
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 10,
     "display": "10ml sugar syrup",
     "perishable": false,
@@ -21290,7 +21521,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Dick Bradsell built it in London in the 1980s after a customer asked for something that would wake her up and mess her up. It contains no vermouth and is not a martini.",
+   "The foam on top is not cream. It is the espresso's own crema, whipped into the drink by a hard shake, which is why it collapses if you build it lazily."
+  ]
  },
  {
   "id": "negroni",
@@ -21337,6 +21573,9 @@
    "mood": [
     "fancy",
     "cozy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -21354,11 +21593,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 195,
+   "kcal": 183,
    "protein_g": 0,
-   "carbs_g": 17,
+   "carbs_g": 13,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.1,
+   "alcohol_g": 18.9
   },
   "cost_band": 2,
   "rel": {
@@ -21387,7 +21627,7 @@
     "ref": "campari",
     "qty_g": 30,
     "display": "30ml Campari",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -21456,6 +21696,11 @@
     "name": "Old Pal",
     "swaps": "Replace gin with rye. Sweet vermouth with dry vermouth."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Equal parts gin, Campari, sweet vermouth. The story goes that Count Camillo Negroni asked for his Americano stiffened with gin instead of soda, in Florence around 1919.",
+   "Campari got its red from crushed cochineal insects until 2006. It is now a synthetic dye, and nobody has been able to taste the difference."
   ]
  },
  {
@@ -21498,13 +21743,13 @@
     "fizzy",
     "citrusy"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer",
     "cozy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -21522,11 +21767,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 175,
+   "kcal": 199,
    "protein_g": 0,
-   "carbs_g": 15,
+   "carbs_g": 17,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 1.1,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -21641,6 +21887,11 @@
     "name": "Gin-Gin Mule",
     "swaps": "Replace vodka with gin. Add 8 muddled mint leaves."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Invented in 1941 to shift three lots of unsold stock at once: vodka nobody wanted, ginger beer nobody wanted, and a consignment of copper mugs.",
+   "The mug is not only theatre. Copper pulls heat out of the drink fast, so the metal at your lip is colder than the liquid behind it."
   ]
  },
  {
@@ -21681,15 +21932,18 @@
     "citrusy",
     "tangy",
     "bitter",
-    "fresh"
+    "fresh",
+    "fizzy"
    ],
    "texture": [
-    "fizzy",
     "juicy"
    ],
    "mood": [
     "fresh",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -21707,11 +21961,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 190,
-   "protein_g": 0,
-   "carbs_g": 19,
+   "kcal": 227,
+   "protein_g": 1,
+   "carbs_g": 25,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 2.7,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -21824,7 +22079,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "More popular in Mexico than the margarita by a wide margin, and far less fussy - grapefruit, lime, tequila, salt.",
+   "Blanco tequila goes into the bottle within weeks of distilling. With no barrel in the way you taste the agave itself, which is the entire point here."
+  ]
  },
  {
   "id": "whiskey-sour",
@@ -21832,7 +22092,7 @@
   "name": "Whiskey Sour",
   "tagline": "Bourbon, lemon, sugar, silky egg-white foam.",
   "core": false,
-  "veg": true,
+  "veg": false,
   "aka": [],
   "tags": {
    "meal": [
@@ -21841,7 +22101,9 @@
    "cuisine": [
     "bar"
    ],
-   "protein": [],
+   "protein": [
+    "egg"
+   ],
    "time": [
     "under-10"
    ],
@@ -21872,6 +22134,9 @@
    ],
    "mood": [
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -21889,11 +22154,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 180,
-   "protein_g": 0,
-   "carbs_g": 17,
+   "kcal": 197,
+   "protein_g": 4,
+   "carbs_g": 13,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 0.7,
+   "alcohol_g": 19.3
   },
   "cost_band": 2,
   "rel": {
@@ -21927,7 +22193,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 20,
     "display": "20ml sugar syrup (1:1)",
     "perishable": false,
@@ -22005,6 +22271,11 @@
     "name": "Amaretto Sour",
     "swaps": "60ml amaretto + 15ml bourbon instead of 60ml bourbon."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "The sour is older than cocktails as a category. Spirit, citrus, sugar was how sailors made a ration of raw liquor and anti-scurvy lime drinkable.",
+   "Egg white adds no flavour at all. It is pure texture - protein trapping air into that dense white cap, which is why the dry shake comes first."
   ]
  },
  {
@@ -22116,11 +22387,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 15,
-   "protein_g": 0.5,
-   "carbs_g": 3.0,
-   "fat_g": 0.0
-  }
+   "kcal": 14,
+   "protein_g": 0,
+   "carbs_g": 3,
+   "fat_g": 0,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "americano",
@@ -22229,11 +22502,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 10,
-   "protein_g": 0.4,
-   "carbs_g": 2.2,
-   "fat_g": 0.0
-  }
+   "kcal": 11,
+   "protein_g": 0,
+   "carbs_g": 2,
+   "fat_g": 0,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "cappuccino",
@@ -22357,10 +22632,12 @@
   "host": null,
   "macros": {
    "kcal": 80,
-   "protein_g": 4.1,
-   "carbs_g": 7.9,
-   "fat_g": 3.6
-  }
+   "protein_g": 4,
+   "carbs_g": 8,
+   "fat_g": 4,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "flat-white",
@@ -22480,10 +22757,12 @@
   "host": null,
   "macros": {
    "kcal": 90,
-   "protein_g": 4.5,
-   "carbs_g": 9.1,
-   "fat_g": 3.9
-  }
+   "protein_g": 5,
+   "carbs_g": 9,
+   "fat_g": 4,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "mocha-hot",
@@ -22619,11 +22898,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 155,
-   "protein_g": 6.6,
-   "carbs_g": 18.9,
-   "fat_g": 5.6
-  }
+   "kcal": 135,
+   "protein_g": 7,
+   "carbs_g": 19,
+   "fat_g": 6,
+   "fiber_g": 2.7
+  },
+  "serves": 1
  },
  {
   "id": "filter-coffee",
@@ -22756,10 +23037,12 @@
   "host": null,
   "macros": {
    "kcal": 105,
-   "protein_g": 4.1,
-   "carbs_g": 15.3,
-   "fat_g": 3.1
-  }
+   "protein_g": 4,
+   "carbs_g": 15,
+   "fat_g": 3,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "masala-chai",
@@ -22918,11 +23201,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 95,
-   "protein_g": 3.9,
-   "carbs_g": 12.8,
-   "fat_g": 3.2
-  }
+   "kcal": 93,
+   "protein_g": 4,
+   "carbs_g": 13,
+   "fat_g": 3,
+   "fiber_g": 0.4
+  },
+  "serves": 1
  },
  {
   "id": "matcha-latte-hot",
@@ -23055,11 +23340,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 115,
-   "protein_g": 5.6,
-   "carbs_g": 12.3,
-   "fat_g": 4.7
-  }
+   "kcal": 112,
+   "protein_g": 6,
+   "carbs_g": 12,
+   "fat_g": 5,
+   "fiber_g": 1.1
+  },
+  "serves": 1
  },
  {
   "id": "protein-hot-chocolate",
@@ -23197,11 +23484,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 235,
-   "protein_g": 20.0,
-   "carbs_g": 17.6,
-   "fat_g": 9.5
-  }
+   "kcal": 214,
+   "protein_g": 20,
+   "carbs_g": 18,
+   "fat_g": 9,
+   "fiber_g": 3.7
+  },
+  "serves": 1
  },
  {
   "id": "iced-americano",
@@ -23323,11 +23612,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 15,
-   "protein_g": 0.5,
-   "carbs_g": 3.5,
-   "fat_g": 0.0
-  }
+   "kcal": 16,
+   "protein_g": 1,
+   "carbs_g": 3,
+   "fat_g": 0,
+   "fiber_g": 0.1
+  },
+  "serves": 1
  },
  {
   "id": "iced-latte",
@@ -23444,11 +23735,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 120,
-   "protein_g": 6.1,
-   "carbs_g": 11.5,
-   "fat_g": 5.4
-  }
+   "kcal": 119,
+   "protein_g": 6,
+   "carbs_g": 11,
+   "fat_g": 5,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "cold-brew",
@@ -23573,11 +23866,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 50,
-   "protein_g": 1.8,
-   "carbs_g": 10.5,
-   "fat_g": 0.1
-  }
+   "kcal": 52,
+   "protein_g": 2,
+   "carbs_g": 10,
+   "fat_g": 0,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "iced-mocha",
@@ -23713,11 +24008,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 150,
-   "protein_g": 6.6,
-   "carbs_g": 18.0,
-   "fat_g": 5.6
-  }
+   "kcal": 131,
+   "protein_g": 7,
+   "carbs_g": 18,
+   "fat_g": 6,
+   "fiber_g": 2.7
+  },
+  "serves": 1
  },
  {
   "id": "vietnamese-iced-coffee",
@@ -23838,11 +24135,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 115,
-   "protein_g": 3.0,
-   "carbs_g": 20.1,
-   "fat_g": 2.6
-  }
+   "kcal": 114,
+   "protein_g": 3,
+   "carbs_g": 20,
+   "fat_g": 3,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "dalgona",
@@ -23976,11 +24275,13 @@
    "prep_ahead": "Whip the foam before guests, crown per glass"
   },
   "macros": {
-   "kcal": 150,
-   "protein_g": 6.1,
-   "carbs_g": 19.5,
-   "fat_g": 5.4
-  }
+   "kcal": 149,
+   "protein_g": 6,
+   "carbs_g": 19,
+   "fat_g": 5,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "protein-frappe",
@@ -24124,11 +24425,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 175,
-   "protein_g": 17.1,
-   "carbs_g": 15.2,
-   "fat_g": 5.3
-  }
+   "kcal": 176,
+   "protein_g": 17,
+   "carbs_g": 15,
+   "fat_g": 5,
+   "fiber_g": 0.1
+  },
+  "serves": 1
  },
  {
   "id": "affogato",
@@ -24252,10 +24555,12 @@
   },
   "macros": {
    "kcal": 135,
-   "protein_g": 2.5,
-   "carbs_g": 16.6,
-   "fat_g": 6.6
-  }
+   "protein_g": 2,
+   "carbs_g": 17,
+   "fat_g": 7,
+   "fiber_g": 0.4
+  },
+  "serves": 1
  },
  {
   "id": "shakerato",
@@ -24380,11 +24685,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 25,
-   "protein_g": 0.5,
-   "carbs_g": 6.3,
-   "fat_g": 0.0
-  }
+   "kcal": 26,
+   "protein_g": 0,
+   "carbs_g": 6,
+   "fat_g": 0,
+   "fiber_g": 0.0
+  },
+  "serves": 1
  },
  {
   "id": "honey-cinnamon-iced-latte",
@@ -24521,11 +24828,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 145,
-   "protein_g": 6.1,
-   "carbs_g": 18.0,
-   "fat_g": 5.4
-  }
+   "kcal": 142,
+   "protein_g": 6,
+   "carbs_g": 18,
+   "fat_g": 5,
+   "fiber_g": 0.5
+  },
+  "serves": 1
  },
  {
   "id": "coconut-cold-brew",
@@ -24648,11 +24957,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 140,
-   "protein_g": 2.3,
-   "carbs_g": 13.7,
-   "fat_g": 8.5
-  }
+   "kcal": 136,
+   "protein_g": 2,
+   "carbs_g": 14,
+   "fat_g": 9,
+   "fiber_g": 0.9
+  },
+  "serves": 1
  },
  {
   "id": "iced-matcha-latte",
@@ -24787,11 +25098,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 130,
-   "protein_g": 6.5,
-   "carbs_g": 13.7,
-   "fat_g": 5.6
-  }
+   "kcal": 129,
+   "protein_g": 6,
+   "carbs_g": 14,
+   "fat_g": 6,
+   "fiber_g": 1.1
+  },
+  "serves": 1
  },
  {
   "id": "matcha-lemonade",
@@ -24929,11 +25242,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 40,
-   "protein_g": 0.8,
-   "carbs_g": 9.1,
-   "fat_g": 0.2
-  }
+   "kcal": 37,
+   "protein_g": 1,
+   "carbs_g": 9,
+   "fat_g": 0,
+   "fiber_g": 1.3
+  },
+  "serves": 1
  },
  {
   "id": "sparkling-matcha",
@@ -25067,10 +25382,12 @@
   "host": null,
   "macros": {
    "kcal": 11,
-   "protein_g": 0.7,
-   "carbs_g": 1.9,
-   "fat_g": 0.1
-  }
+   "protein_g": 1,
+   "carbs_g": 2,
+   "fat_g": 0,
+   "fiber_g": 1.0
+  },
+  "serves": 1
  },
  {
   "id": "dirty-matcha",
@@ -25200,11 +25517,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 115,
-   "protein_g": 6.2,
-   "carbs_g": 10.9,
-   "fat_g": 5.0
-  }
+   "kcal": 113,
+   "protein_g": 6,
+   "carbs_g": 11,
+   "fat_g": 5,
+   "fiber_g": 1.1
+  },
+  "serves": 1
  },
  {
   "id": "berry-matcha-latte",
@@ -25342,11 +25661,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 135,
-   "protein_g": 5.8,
-   "carbs_g": 17.1,
-   "fat_g": 4.8
-  }
+   "kcal": 132,
+   "protein_g": 6,
+   "carbs_g": 17,
+   "fat_g": 5,
+   "fiber_g": 3.1
+  },
+  "serves": 1
  },
  {
   "id": "iced-chai-latte",
@@ -25492,11 +25813,13 @@
   },
   "host": null,
   "macros": {
-   "kcal": 130,
-   "protein_g": 6.0,
-   "carbs_g": 15.8,
-   "fat_g": 5.0
-  }
+   "kcal": 129,
+   "protein_g": 6,
+   "carbs_g": 16,
+   "fat_g": 5,
+   "fiber_g": 0.4
+  },
+  "serves": 1
  },
  {
   "core": false,
@@ -25602,10 +25925,11 @@
    "passive_min": 5
   },
   "macros": {
-   "kcal": 320,
-   "protein_g": 9,
-   "carbs_g": 54,
-   "fat_g": 8
+   "kcal": 288,
+   "protein_g": 7,
+   "carbs_g": 50,
+   "fat_g": 7,
+   "fiber_g": 4.6
   },
   "ingredients": [
    {
@@ -25633,7 +25957,7 @@
     "ref": "green-peas",
     "qty_g": 40,
     "display": "40g green peas (frozen fine)",
-    "perishable": false,
+    "perishable": true,
     "sub": null
    },
    {
@@ -25737,7 +26061,8 @@
     "cue": ""
    }
   ],
-  "no": 152
+  "no": 152,
+  "serves": 2
  },
  {
   "core": false,
@@ -25828,10 +26153,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 350,
-   "protein_g": 10,
-   "carbs_g": 58,
-   "fat_g": 9
+   "kcal": 258,
+   "protein_g": 8,
+   "carbs_g": 38,
+   "fat_g": 8,
+   "fiber_g": 3.4
   },
   "ingredients": [
    {
@@ -25859,7 +26185,7 @@
     "ref": "ginger",
     "qty_g": 5,
     "display": "1 tsp grated ginger",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -25975,7 +26301,8 @@
     "cue": ""
    }
   ],
-  "no": 153
+  "no": 153,
+  "serves": 2
  },
  {
   "core": false,
@@ -26078,10 +26405,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 280,
-   "protein_g": 8,
-   "carbs_g": 42,
-   "fat_g": 8
+   "kcal": 328,
+   "protein_g": 7,
+   "carbs_g": 59,
+   "fat_g": 7,
+   "fiber_g": 6.6
   },
   "ingredients": [
    {
@@ -26193,7 +26521,8 @@
     "cue": "Wait too long and it goes leathery. Ragi dosa is a hot-off-pan dish."
    }
   ],
-  "no": 154
+  "no": 154,
+  "serves": 1
  },
  {
   "core": false,
@@ -26257,9 +26586,7 @@
     "intermediate"
    ],
    "occasion": [
-    "everyday",
-    "cozy",
-    "comfort"
+    "everyday"
    ],
    "nutrition": [],
    "equipment": [
@@ -26288,10 +26615,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 420,
-   "protein_g": 11,
-   "carbs_g": 56,
-   "fat_g": 16
+   "kcal": 292,
+   "protein_g": 8,
+   "carbs_g": 53,
+   "fat_g": 6,
+   "fiber_g": 7.7
   },
   "ingredients": [
    {
@@ -26415,7 +26743,8 @@
     "cue": ""
    }
   ],
-  "no": 155
+  "no": 155,
+  "serves": 2
  },
  {
   "core": false,
@@ -26468,7 +26797,7 @@
     "lunch"
    ],
    "cuisine": [
-    "indian"
+    "north-indian"
    ],
    "protein": [
     "vegetarian"
@@ -26510,17 +26839,18 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 380,
-   "protein_g": 12,
-   "carbs_g": 48,
-   "fat_g": 14
+   "kcal": 446,
+   "protein_g": 13,
+   "carbs_g": 75,
+   "fat_g": 11,
+   "fiber_g": 9.7
   },
   "ingredients": [
    {
     "ref": "bread",
     "qty_g": 80,
     "display": "4 slices multigrain or whole wheat bread",
-    "perishable": false,
+    "perishable": true,
     "sub": "sourdough works"
    },
    {
@@ -26548,7 +26878,7 @@
     "ref": "garlic",
     "qty_g": 5,
     "display": "1 garlic clove",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -26634,7 +26964,8 @@
     "cue": "Golden across the whole face, not pale in patches."
    }
   ],
-  "no": 156
+  "no": 156,
+  "serves": 1
  },
  {
   "core": false,
@@ -26702,7 +27033,6 @@
     "post-workout"
    ],
    "nutrition": [
-    "high-protein",
     "gluten-free",
     "high-fiber"
    ],
@@ -26729,10 +27059,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 310,
-   "protein_g": 19,
-   "carbs_g": 32,
-   "fat_g": 11
+   "kcal": 323,
+   "protein_g": 16,
+   "carbs_g": 44,
+   "fat_g": 10,
+   "fiber_g": 9.1
   },
   "ingredients": [
    {
@@ -26781,7 +27112,7 @@
     "ref": "ginger",
     "qty_g": 3,
     "display": "1/2 tsp grated ginger",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -26857,7 +27188,8 @@
     "cue": ""
    }
   ],
-  "no": 157
+  "no": 157,
+  "serves": 1
  },
  {
   "core": false,
@@ -26970,10 +27302,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 420,
+   "kcal": 436,
    "protein_g": 22,
-   "carbs_g": 18,
-   "fat_g": 29
+   "carbs_g": 25,
+   "fat_g": 30,
+   "fiber_g": 5.5
   },
   "ingredients": [
    {
@@ -27125,7 +27458,8 @@
     "cue": "The dish should smell like a restaurant kitchen at this point."
    }
   ],
-  "no": 158
+  "no": 158,
+  "serves": 2
  },
  {
   "core": false,
@@ -27221,10 +27555,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 210,
-   "protein_g": 6,
+   "kcal": 168,
+   "protein_g": 5,
    "carbs_g": 22,
-   "fat_g": 12
+   "fat_g": 8,
+   "fiber_g": 7.3
   },
   "ingredients": [
    {
@@ -27335,7 +27670,8 @@
     "cue": ""
    }
   ],
-  "no": 159
+  "no": 159,
+  "serves": 2
  },
  {
   "core": false,
@@ -27403,8 +27739,7 @@
     "intermediate"
    ],
    "occasion": [
-    "everyday",
-    "comfort"
+    "everyday"
    ],
    "nutrition": [
     "gluten-free",
@@ -27435,9 +27770,10 @@
   },
   "macros": {
    "kcal": 190,
-   "protein_g": 5,
-   "carbs_g": 20,
-   "fat_g": 11
+   "protein_g": 6,
+   "carbs_g": 32,
+   "fat_g": 6,
+   "fiber_g": 10.9
   },
   "ingredients": [
    {
@@ -27465,14 +27801,14 @@
     "ref": "garlic",
     "qty_g": 15,
     "display": "5 cloves garlic, minced",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
     "ref": "ginger",
     "qty_g": 10,
     "display": "2cm ginger, minced",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -27528,7 +27864,7 @@
     "ref": "green-peas",
     "qty_g": 50,
     "display": "handful green peas (optional)",
-    "perishable": false,
+    "perishable": true,
     "sub": null
    }
   ],
@@ -27576,7 +27912,8 @@
     "cue": ""
    }
   ],
-  "no": 160
+  "no": 160,
+  "serves": 2
  },
  {
   "core": false,
@@ -27653,11 +27990,9 @@
    ],
    "occasion": [
     "everyday",
-    "comfort",
     "meal-prep"
    ],
    "nutrition": [
-    "high-protein",
     "high-fiber",
     "gluten-free"
    ],
@@ -27686,10 +28021,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 310,
-   "protein_g": 16,
+   "kcal": 291,
+   "protein_g": 13,
    "carbs_g": 42,
-   "fat_g": 10
+   "fat_g": 9,
+   "fiber_g": 10.8
   },
   "ingredients": [
    {
@@ -27848,7 +28184,8 @@
     "cue": ""
    }
   ],
-  "no": 161
+  "no": 161,
+  "serves": 2
  },
  {
   "core": false,
@@ -27917,11 +28254,9 @@
     "intermediate"
    ],
    "occasion": [
-    "everyday",
-    "comfort"
+    "everyday"
    ],
    "nutrition": [
-    "high-protein",
     "gluten-free"
    ],
    "equipment": [
@@ -27949,10 +28284,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 390,
-   "protein_g": 21,
+   "kcal": 367,
+   "protein_g": 18,
    "carbs_g": 22,
-   "fat_g": 25
+   "fat_g": 25,
+   "fiber_g": 5.1
   },
   "ingredients": [
    {
@@ -27966,7 +28302,7 @@
     "ref": "green-peas",
     "qty_g": 150,
     "display": "150g green peas (frozen fine, thawed)",
-    "perishable": false,
+    "perishable": true,
     "sub": null
    },
    {
@@ -27987,14 +28323,14 @@
     "ref": "ginger",
     "qty_g": 10,
     "display": "2cm ginger",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
     "ref": "garlic",
     "qty_g": 10,
     "display": "3 cloves garlic",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -28138,7 +28474,8 @@
     "cue": ""
    }
   ],
-  "no": 162
+  "no": 162,
+  "serves": 3
  },
  {
   "core": false,
@@ -28212,7 +28549,6 @@
     "meal-prep"
    ],
    "nutrition": [
-    "high-protein",
     "high-fiber",
     "gluten-free",
     "dairy-free"
@@ -28243,10 +28579,11 @@
    "passive_min": 480
   },
   "macros": {
-   "kcal": 380,
-   "protein_g": 19,
-   "carbs_g": 58,
-   "fat_g": 11
+   "kcal": 432,
+   "protein_g": 16,
+   "carbs_g": 65,
+   "fat_g": 15,
+   "fiber_g": 18.6
   },
   "ingredients": [
    {
@@ -28439,7 +28776,8 @@
     "cue": "Julienne ginger on top is not optional. It cuts through the richness."
    }
   ],
-  "no": 163
+  "no": 163,
+  "serves": 1
  },
  {
   "core": false,
@@ -28539,10 +28877,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 330,
-   "protein_g": 18,
-   "carbs_g": 42,
-   "fat_g": 10
+   "kcal": 293,
+   "protein_g": 15,
+   "carbs_g": 44,
+   "fat_g": 9,
+   "fiber_g": 13.0
   },
   "ingredients": [
    {
@@ -28577,14 +28916,14 @@
     "ref": "garlic",
     "qty_g": 15,
     "display": "5 cloves garlic",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
     "ref": "ginger",
     "qty_g": 10,
     "display": "2cm ginger",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -28681,7 +29020,8 @@
     "cue": ""
    }
   ],
-  "no": 164
+  "no": 164,
+  "serves": 2
  },
  {
   "core": false,
@@ -28780,10 +29120,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 260,
-   "protein_g": 9,
-   "carbs_g": 20,
-   "fat_g": 16
+   "kcal": 321,
+   "protein_g": 15,
+   "carbs_g": 46,
+   "fat_g": 13,
+   "fiber_g": 11.7
   },
   "ingredients": [
    {
@@ -28915,7 +29256,8 @@
     "cue": ""
    }
   ],
-  "no": 165
+  "no": 165,
+  "serves": 1
  },
  {
   "core": false,
@@ -29021,10 +29363,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 540,
-   "protein_g": 21,
-   "carbs_g": 58,
-   "fat_g": 24
+   "kcal": 402,
+   "protein_g": 22,
+   "carbs_g": 47,
+   "fat_g": 15,
+   "fiber_g": 3.4
   },
   "ingredients": [
    {
@@ -29045,7 +29388,7 @@
     "ref": "garlic",
     "qty_g": 15,
     "display": "5 cloves garlic, minced",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -29142,7 +29485,8 @@
     "cue": ""
    }
   ],
-  "no": 166
+  "no": 166,
+  "serves": 2
  },
  {
   "core": false,
@@ -29214,8 +29558,7 @@
     "date-night"
    ],
    "nutrition": [
-    "high-protein",
-    "low-cal"
+    "high-protein"
    ],
    "equipment": [
     "one-pan"
@@ -29244,10 +29587,11 @@
    "passive_min": 15
   },
   "macros": {
-   "kcal": 470,
-   "protein_g": 25,
-   "carbs_g": 26,
-   "fat_g": 28
+   "kcal": 574,
+   "protein_g": 32,
+   "carbs_g": 36,
+   "fat_g": 35,
+   "fiber_g": 3.6
   },
   "ingredients": [
    {
@@ -29282,7 +29626,7 @@
     "ref": "garlic",
     "qty_g": 5,
     "display": "2 cloves garlic, minced",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -29380,7 +29724,8 @@
     "cue": ""
    }
   ],
-  "no": 167
+  "no": 167,
+  "serves": 2
  },
  {
   "core": false,
@@ -29451,7 +29796,6 @@
     "solo"
    ],
    "nutrition": [
-    "high-protein",
     "high-fiber",
     "low-cal",
     "gluten-free"
@@ -29484,10 +29828,11 @@
    "passive_min": 0
   },
   "macros": {
-   "kcal": 420,
-   "protein_g": 18,
-   "carbs_g": 45,
-   "fat_g": 19
+   "kcal": 374,
+   "protein_g": 16,
+   "carbs_g": 42,
+   "fat_g": 17,
+   "fiber_g": 11.5
   },
   "ingredients": [
    {
@@ -29571,7 +29916,7 @@
     "ref": "garlic",
     "qty_g": 3,
     "display": "1 small garlic clove, grated",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -29608,7 +29953,8 @@
     "cue": "Eat within an hour of dressing or the cucumber weeps."
    }
   ],
-  "no": 168
+  "no": 168,
+  "serves": 2
  },
  {
   "core": false,
@@ -29702,10 +30048,11 @@
    "passive_min": 15
   },
   "macros": {
-   "kcal": 410,
-   "protein_g": 22,
-   "carbs_g": 38,
-   "fat_g": 17
+   "kcal": 426,
+   "protein_g": 29,
+   "carbs_g": 43,
+   "fat_g": 18,
+   "fiber_g": 5.5
   },
   "ingredients": [
    {
@@ -29843,7 +30190,8 @@
     "cue": "Raw cabbage sounds weird, is essential - cools and cuts the fry."
    }
   ],
-  "no": 169
+  "no": 169,
+  "serves": 2
  },
  {
   "id": "manhattan",
@@ -29889,6 +30237,9 @@
    "mood": [
     "fancy",
     "cozy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -29906,11 +30257,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 180,
+   "kcal": 195,
    "protein_g": 0,
-   "carbs_g": 10,
+   "carbs_g": 9,
    "fat_g": 0,
-   "alcohol_g": 20
+   "fiber_g": 0.1,
+   "alcohol_g": 22.9
   },
   "cost_band": 2,
   "rel": {
@@ -30014,6 +30366,11 @@
     "name": "Boulevardier",
     "swaps": "Add 30ml Campari, drop bitters."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Older than the Martini, and the drink that proved vermouth belonged in a glass with brown spirit.",
+   "Rye whiskey must be at least 51% rye grain. That grain is where the pepper comes from - the note bourbon's corn cannot give you."
   ]
  },
  {
@@ -30061,6 +30418,9 @@
     "fancy",
     "cozy",
     "winter"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -30078,11 +30438,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 220,
+   "kcal": 216,
    "protein_g": 0,
-   "carbs_g": 16,
+   "carbs_g": 13,
    "fat_g": 0,
-   "alcohol_g": 22
+   "fiber_g": 0.1,
+   "alcohol_g": 23.7
   },
   "cost_band": 2,
   "rel": {
@@ -30111,7 +30472,7 @@
     "ref": "campari",
     "qty_g": 30,
     "display": "30ml Campari",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -30167,7 +30528,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "A Negroni that swapped gin for bourbon, printed by Harry McElhone in Paris in 1927 and named for a magazine the drinker wrote for.",
+   "The whiskey rounds the edges, but Campari is still doing the work. Change the ratio and you lose the bitterness that makes it worth drinking."
+  ]
  },
  {
   "id": "penicillin",
@@ -30215,6 +30581,9 @@
     "cozy",
     "winter",
     "comfort"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -30232,11 +30601,12 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 200,
+   "kcal": 208,
    "protein_g": 0,
    "carbs_g": 15,
    "fat_g": 0,
-   "alcohol_g": 20
+   "fiber_g": 0.7,
+   "alcohol_g": 21.7
   },
   "cost_band": 2,
   "rel": {
@@ -30276,7 +30646,7 @@
     "sub": null
    },
    {
-    "ref": "honey",
+    "ref": "honey-syrup",
     "qty_g": 22,
     "display": "22ml honey-ginger syrup (recipe below)",
     "perishable": false,
@@ -30287,14 +30657,16 @@
     "qty_g": 30,
     "display": "30g honey (for syrup)",
     "perishable": false,
-    "sub": null
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "ginger",
     "qty_g": 15,
     "display": "15g fresh ginger, sliced (for syrup)",
-    "perishable": true,
-    "sub": null
+    "perishable": false,
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "candied-ginger",
@@ -30354,7 +30726,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Sam Ross made it at Milk & Honey in New York in 2005. One of the very few modern drinks to earn the word classic.",
+   "The Islay float is poured gently over the back of a spoon so it sits on top. You smell the smoke before you taste anything at all."
+  ]
  },
  {
   "id": "paper-plane",
@@ -30402,6 +30779,9 @@
    "mood": [
     "fancy",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -30419,11 +30799,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 210,
+   "kcal": 142,
    "protein_g": 0,
-   "carbs_g": 21,
+   "carbs_g": 10,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.6,
+   "alcohol_g": 14.9
   },
   "cost_band": 2,
   "rel": {
@@ -30452,14 +30833,14 @@
     "ref": "aperol",
     "qty_g": 22,
     "display": "22ml Aperol",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
     "ref": "amaro",
     "qty_g": 22,
     "display": "22ml Amaro Nonino (any amaro)",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -30508,7 +30889,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Equal parts bourbon, Aperol, Amaro Nonino and lemon. Sam Ross again, named after the M.I.A. song.",
+   "Equal-parts drinks are the ones worth memorising. Nothing to measure, nothing to misjudge, and they scale to a jug without arithmetic."
+  ]
  },
  {
   "id": "sazerac",
@@ -30553,6 +30939,9 @@
    ],
    "mood": [
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -30570,11 +30959,12 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 175,
+   "kcal": 166,
    "protein_g": 0,
-   "carbs_g": 10,
+   "carbs_g": 6,
    "fat_g": 0,
-   "alcohol_g": 19
+   "fiber_g": 0.1,
+   "alcohol_g": 20.7
   },
   "cost_band": 2,
   "rel": {
@@ -30676,7 +31066,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "The official cocktail of New Orleans. It began with cognac and changed to rye after phylloxera wiped out the French vineyards in the 1870s.",
+   "The absinthe is a rinse, not an ingredient. Coat the inside of the glass, tip the rest away, and what is left is only the smell."
+  ]
  },
  {
   "id": "daiquiri",
@@ -30725,6 +31120,9 @@
     "fresh",
     "summer",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -30742,11 +31140,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 160,
+   "kcal": 169,
    "protein_g": 0,
    "carbs_g": 10,
    "fat_g": 0,
-   "alcohol_g": 17
+   "fiber_g": 0.7,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -30779,7 +31178,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
@@ -30843,6 +31242,11 @@
     "name": "Frozen Daiquiri",
     "swaps": "Blend all + 1 cup ice till slushy."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Named after a beach near a Cuban iron mine. Three ingredients and nowhere to hide a bad one.",
+   "Hemingway took his with no sugar and double rum, which is why that version carries his name and why it is not to everyone's taste."
   ]
  },
  {
@@ -30886,12 +31290,14 @@
     "sticky-sweet"
    ],
    "texture": [
-    "fizzy",
     "juicy"
    ],
    "mood": [
     "summer",
     "fresh"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -30909,11 +31315,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 190,
+   "kcal": 197,
    "protein_g": 0,
-   "carbs_g": 19,
+   "carbs_g": 17,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 0.7,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -31004,7 +31411,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "One of the only cocktails with a trademark behind it. Gosling's owns the name and is unambiguous about which rum you should use.",
+   "Pour the rum last and do not stir. The dark layer sitting on pale ginger beer is where the drink gets its name."
+  ]
  },
  {
   "id": "pina-colada",
@@ -31053,6 +31465,9 @@
     "summer",
     "fresh",
     "indulgent"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -31070,11 +31485,12 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 320,
-   "protein_g": 0,
-   "carbs_g": 52,
-   "fat_g": 0,
-   "alcohol_g": 16
+   "kcal": 394,
+   "protein_g": 2,
+   "carbs_g": 20,
+   "fat_g": 20,
+   "fiber_g": 3.3,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -31177,7 +31593,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Puerto Rico's national drink since 1978, and the reason blenders exist behind bars at all.",
+   "Coconut cream is not coconut milk. It is thicker and sweetened, and swapping one for the other gives you a thin, sad version of this."
+  ]
  },
  {
   "id": "mai-tai",
@@ -31226,6 +31647,9 @@
     "summer",
     "fancy",
     "indulgent"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -31243,11 +31667,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 220,
+   "kcal": 231,
    "protein_g": 0,
-   "carbs_g": 13,
+   "carbs_g": 19,
    "fat_g": 0,
-   "alcohol_g": 24
+   "fiber_g": 1.5,
+   "alcohol_g": 22.5
   },
   "cost_band": 2,
   "rel": {
@@ -31359,7 +31784,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Trader Vic's, 1944. The name is Tahitian - maita'i, meaning good - reportedly the first thing a guest said after tasting it.",
+   "Orgeat is an almond syrup. It is the ingredient nobody can ever place, and the one that makes the drink taste like a Mai Tai rather than a rum sour."
+  ]
  },
  {
   "id": "cuba-libre",
@@ -31401,12 +31831,12 @@
     "citrusy",
     "fizzy"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -31424,11 +31854,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 210,
+   "kcal": 203,
    "protein_g": 0,
-   "carbs_g": 24,
+   "carbs_g": 19,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 0.7,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -31513,7 +31944,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Rum and cola named for the Cuban independence slogan, and poured since the very early 1900s.",
+   "The lime is not a garnish. Leave it out and you have a rum and coke, which is a different and markedly worse drink."
+  ]
  },
  {
   "id": "kokum-rum-cooler",
@@ -31553,15 +31989,18 @@
     "tangy",
     "sweet",
     "fresh",
-    "citrusy"
+    "citrusy",
+    "fizzy"
    ],
    "texture": [
-    "fizzy",
     "juicy"
    ],
    "mood": [
     "fresh",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -31579,11 +32018,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 180,
+   "kcal": 197,
    "protein_g": 0,
    "carbs_g": 17,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 0.7,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -31609,7 +32049,7 @@
     "sub": null
    },
    {
-    "ref": "kokum",
+    "ref": "kokum-syrup",
     "qty_g": 30,
     "display": "30ml kokum syrup (recipe below)",
     "perishable": false,
@@ -31620,14 +32060,16 @@
     "qty_g": 10,
     "display": "4 dry kokum petals (for syrup)",
     "perishable": false,
-    "sub": null
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "sugar",
     "qty_g": 30,
     "display": "30g sugar (for syrup)",
     "perishable": false,
-    "sub": null
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "lime",
@@ -31714,7 +32156,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Kokum is a fruit from India's west coast, dried to a dark leathery rind and used through Konkani and Goan cooking for sourness.",
+   "The sourness is not citrus. It is rounder and faintly savoury, which is why it sits with aged rum better than lime does."
+  ]
  },
  {
   "id": "tommys-margarita",
@@ -31762,6 +32209,9 @@
     "fresh",
     "summer",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -31779,11 +32229,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 170,
+   "kcal": 176,
    "protein_g": 0,
-   "carbs_g": 11,
+   "carbs_g": 12,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 1.1,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -31816,7 +32267,7 @@
     "sub": null
    },
    {
-    "ref": "agave",
+    "ref": "agave-syrup",
     "qty_g": 15,
     "display": "15ml agave syrup (2:1 agave and water)",
     "perishable": false,
@@ -31894,6 +32345,11 @@
     "name": "Frozen Margarita",
     "swaps": "Blend with 1 cup ice."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Julio Bermejo's version at Tommy's in San Francisco: agave instead of orange liqueur, and now poured more often than the original.",
+   "Losing the liqueur removes a layer of sugar and orange, so what you taste is the agave in the tequila rather than the bottle it was mixed with."
   ]
  },
  {
@@ -31941,6 +32397,9 @@
    "mood": [
     "fancy",
     "cozy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -31958,11 +32417,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 180,
+   "kcal": 231,
    "protein_g": 0,
-   "carbs_g": 13,
+   "carbs_g": 14,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.7,
+   "alcohol_g": 25.5
   },
   "cost_band": 2,
   "rel": {
@@ -32067,7 +32527,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Mezcal can be made from dozens of agave species. Tequila is legally restricted to blue agave, which is the whole difference.",
+   "The smoke is not an additive. Agave hearts are roasted in earth pits over wood before fermenting, and that is what you are tasting."
+  ]
  },
  {
   "id": "ranch-water",
@@ -32108,13 +32573,13 @@
     "citrusy",
     "fresh"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer",
     "healthy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -32136,7 +32601,8 @@
    "protein_g": 0,
    "carbs_g": 3,
    "fat_g": 0,
-   "alcohol_g": 15
+   "fiber_g": 0.8,
+   "alcohol_g": 15.8
   },
   "cost_band": 2,
   "rel": {
@@ -32220,7 +32686,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "West Texas, and barely a recipe: tequila, lime, and a bottle of Topo Chico drunk from the bottle it came in.",
+   "It is a highball that does not pretend otherwise, which is why it works in heat where a margarita is too much."
+  ]
  },
  {
   "id": "guava-chilli-margarita",
@@ -32269,6 +32740,9 @@
    "mood": [
     "fresh",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -32286,11 +32760,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 210,
-   "protein_g": 0,
-   "carbs_g": 21,
+   "kcal": 204,
+   "protein_g": 1,
+   "carbs_g": 17,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 3.3,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -32401,7 +32876,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Guava with chilli and salt is street-cart standard in Mexico and India both, entirely independently of each other.",
+   "Capsaicin is fat-soluble and does not rinse away with a sip, so chilli heat in a drink accumulates. Build it lighter than you think."
+  ]
  },
  {
   "id": "cosmopolitan",
@@ -32447,6 +32927,9 @@
    ],
    "mood": [
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -32464,11 +32947,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 175,
+   "kcal": 184,
    "protein_g": 0,
-   "carbs_g": 12,
+   "carbs_g": 11,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 1.6,
+   "alcohol_g": 20.5
   },
   "cost_band": 2,
   "rel": {
@@ -32565,7 +33049,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Citron vodka, Cointreau, cranberry, lime. For about a decade it was shorthand for an entire city.",
+   "The colour should be pink and translucent. If it is opaque red, it has too much cranberry and is really a juice drink."
+  ]
  },
  {
   "id": "vodka-martini",
@@ -32609,6 +33098,9 @@
    ],
    "mood": [
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -32626,11 +33118,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 190,
+   "kcal": 179,
    "protein_g": 0,
-   "carbs_g": 9,
+   "carbs_g": 1,
    "fat_g": 0,
-   "alcohol_g": 22
+   "fiber_g": 0.1,
+   "alcohol_g": 25.1
   },
   "cost_band": 2,
   "rel": {
@@ -32731,6 +33224,11 @@
     "name": "Vesper",
     "swaps": "60ml vodka + 20ml gin + 10ml Lillet Blanc. Lemon peel."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "The only genuine argument is how much vermouth, and the answer has been trending towards more for twenty years now.",
+   "Stir, do not shake. Shaking aerates the drink and clouds it - fine for citrus, wrong for something meant to be clear and cold and heavy."
   ]
  },
  {
@@ -32780,6 +33278,9 @@
    "mood": [
     "comfort",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -32797,11 +33298,12 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 150,
-   "protein_g": 0,
-   "carbs_g": 9,
+   "kcal": 178,
+   "protein_g": 2,
+   "carbs_g": 11,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 2.1,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -32828,7 +33330,7 @@
     "ref": "tomato-juice",
     "qty_g": 150,
     "display": "150ml tomato juice",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -32856,7 +33358,7 @@
     "ref": "horseradish",
     "qty_g": 3,
     "display": "1/2 tsp horseradish (classic)",
-    "perishable": false,
+    "perishable": true,
     "sub": null
    },
    {
@@ -32945,6 +33447,11 @@
     "name": "Red Snapper",
     "swaps": "Replace vodka with gin."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "The only classic cocktail that doubles as a food group, and the only one routinely served with a snack balanced on top.",
+   "Vodka's neutrality is the reason it works. The spirit carries the tomato, spice and salt without adding an opinion of its own."
   ]
  },
  {
@@ -32992,6 +33499,9 @@
     "fancy",
     "fresh",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -33009,11 +33519,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 160,
+   "kcal": 170,
    "protein_g": 0,
-   "carbs_g": 8,
+   "carbs_g": 10,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.8,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -33025,7 +33536,8 @@
    "similar_to": [
     "daiquiri",
     "tommys-margarita",
-    "whiskey-sour"
+    "whiskey-sour",
+    "french-75"
    ],
    "leftovers_become": [],
    "drink": []
@@ -33046,7 +33558,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
@@ -33107,6 +33619,11 @@
     "name": "Rangpur Gimlet",
     "swaps": "Use Rangpur gin OR add 5ml orange juice."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Lime cordial was issued through the Royal Navy against scurvy, and gin was what the officers had to hand. The drink is the arithmetic of those two facts.",
+   "Fresh lime and sugar syrup makes a brighter, sharper drink than the bottled cordial original. They are related, not the same."
   ]
  },
  {
@@ -33149,12 +33666,14 @@
     "fizzy"
    ],
    "texture": [
-    "fizzy",
     "silky"
    ],
    "mood": [
     "fancy",
     "fresh"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -33172,11 +33691,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 170,
+   "kcal": 156,
    "protein_g": 0,
-   "carbs_g": 11,
+   "carbs_g": 8,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.6,
+   "alcohol_g": 18.0
   },
   "cost_band": 2,
   "rel": {
@@ -33187,7 +33707,8 @@
    "similar_to": [
     "bellini",
     "mimosa",
-    "tom-collins"
+    "tom-collins",
+    "gimlet"
    ],
    "leftovers_become": [],
    "drink": []
@@ -33208,7 +33729,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 10,
     "display": "10ml sugar syrup",
     "perishable": false,
@@ -33279,7 +33800,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Named after the French 75mm field gun, on the grounds that it hit with roughly the same force.",
+   "Gin under champagne is the unusual move. Most sparkling cocktails stop at the wine; this one insists on a base spirit underneath."
+  ]
  },
  {
   "id": "bees-knees",
@@ -33325,6 +33851,9 @@
    "mood": [
     "fancy",
     "cozy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -33342,11 +33871,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 190,
+   "kcal": 174,
    "protein_g": 0,
-   "carbs_g": 16,
+   "carbs_g": 11,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.8,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -33377,7 +33907,7 @@
     "sub": null
    },
    {
-    "ref": "honey",
+    "ref": "honey-syrup",
     "qty_g": 22,
     "display": "22ml honey syrup",
     "perishable": false,
@@ -33388,7 +33918,8 @@
     "qty_g": 30,
     "display": "30g honey (for syrup)",
     "perishable": false,
-    "sub": null
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "lemon",
@@ -33442,7 +33973,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "A Prohibition drink. Honey and lemon were there to hide gin that had been made in somebody's bath a fortnight earlier.",
+   "Honey will not dissolve in a cold glass. It has to go in as a syrup, cut with warm water first, or it sits in a lump at the bottom."
+  ]
  },
  {
   "id": "tom-collins",
@@ -33484,12 +34020,12 @@
     "sweet",
     "fizzy"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -33507,11 +34043,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 170,
+   "kcal": 198,
    "protein_g": 0,
-   "carbs_g": 14,
+   "carbs_g": 17,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 1.1,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -33544,7 +34081,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 20,
     "display": "20ml sugar syrup",
     "perishable": false,
@@ -33616,7 +34153,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Named after an 1874 hoax, where New Yorkers were told a man called Tom Collins was slandering them in a bar across town and went looking for him.",
+   "It is a gin sour lengthened with soda. The Collins glass takes its name from the drink, not the other way round."
+  ]
  },
  {
   "id": "basil-smash",
@@ -33666,6 +34208,9 @@
     "fresh",
     "summer",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -33683,11 +34228,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 170,
-   "protein_g": 0,
-   "carbs_g": 11,
+   "kcal": 171,
+   "protein_g": 1,
+   "carbs_g": 10,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.9,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -33727,7 +34273,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
@@ -33785,7 +34331,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Jörg Meyer made it in Hamburg in 2008 and it spread across Europe within a couple of years - very fast for a drink with four ingredients.",
+   "Smash the basil, do not blend it. Working the leaves too hard tears them and the drink turns bitter and grassy within minutes."
+  ]
  },
  {
   "id": "chilli-lime-gt",
@@ -33831,13 +34382,13 @@
     "fizzy",
     "bitter"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -33855,11 +34406,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 150,
+   "kcal": 192,
    "protein_g": 0,
-   "carbs_g": 9,
+   "carbs_g": 16,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 0.7,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -33986,7 +34538,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Tonic was medicine first. The quinine was an anti-malarial and the gin was added to make the dose drinkable.",
+   "There is still enough quinine in tonic that it glows faintly blue under UV light - the only cocktail ingredient that does."
+  ]
  },
  {
   "id": "bellini",
@@ -34029,13 +34586,15 @@
     "fresh"
    ],
    "texture": [
-    "fizzy",
     "silky"
    ],
    "mood": [
     "fresh",
     "summer",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -34053,11 +34612,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 130,
-   "protein_g": 0,
-   "carbs_g": 13,
+   "kcal": 91,
+   "protein_g": 1,
+   "carbs_g": 7,
    "fat_g": 0,
-   "alcohol_g": 11
+   "fiber_g": 1.0,
+   "alcohol_g": 8.7
   },
   "cost_band": 2,
   "rel": {
@@ -34078,7 +34638,7 @@
     "ref": "prosecco",
     "qty_g": 100,
     "display": "100ml prosecco, chilled",
-    "perishable": false,
+    "perishable": true,
     "sub": null
    },
    {
@@ -34136,6 +34696,11 @@
     "name": "Puccini",
     "swaps": "Replace peach with mandarin juice."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Invented at Harry's Bar in Venice and named for the pink in a Giovanni Bellini painting the barman had been looking at.",
+   "White peach, not yellow. The colour and the perfume both depend on it, and a yellow peach version is a different drink wearing the name."
   ]
  },
  {
@@ -34177,12 +34742,12 @@
     "sweet",
     "fizzy"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -34200,11 +34765,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 140,
-   "protein_g": 0,
-   "carbs_g": 15,
+   "kcal": 109,
+   "protein_g": 1,
+   "carbs_g": 9,
    "fat_g": 0,
-   "alcohol_g": 11
+   "fiber_g": 1.4,
+   "alcohol_g": 10.3
   },
   "cost_band": 2,
   "rel": {
@@ -34225,7 +34791,7 @@
     "ref": "prosecco",
     "qty_g": 100,
     "display": "100ml prosecco, chilled",
-    "perishable": false,
+    "perishable": true,
     "sub": null
    },
    {
@@ -34268,7 +34834,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Named after the mimosa flower, for the yellow rather than for any botanical connection.",
+   "Fresh orange juice or do not bother. Bottled juice has been heated and stabilised, and under sparkling wine it reads flat and syrupy."
+  ]
  },
  {
   "id": "hugo-spritz",
@@ -34312,13 +34883,13 @@
     "fizzy",
     "herby"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -34336,11 +34907,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 150,
+   "kcal": 139,
    "protein_g": 0,
-   "carbs_g": 14,
+   "carbs_g": 13,
    "fat_g": 0,
-   "alcohol_g": 13
+   "fiber_g": 0.7,
+   "alcohol_g": 12.6
   },
   "cost_band": 2,
   "rel": {
@@ -34362,7 +34934,7 @@
     "ref": "prosecco",
     "qty_g": 90,
     "display": "90ml prosecco, chilled",
-    "perishable": false,
+    "perishable": true,
     "sub": null
    },
    {
@@ -34438,7 +35010,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "From South Tyrol in 2005, which makes it younger than almost everyone assumes - a modern drink that arrived pre-aged.",
+   "Elderflower is picked over a few weeks in early summer and the aroma does not survive drying, so the liqueur is the only practical way to keep it."
+  ]
  },
  {
   "id": "frose",
@@ -34486,6 +35063,9 @@
     "fresh",
     "summer",
     "fancy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -34503,11 +35083,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 180,
+   "kcal": 144,
    "protein_g": 0,
-   "carbs_g": 24,
+   "carbs_g": 12,
    "fat_g": 0,
-   "alcohol_g": 12
+   "fiber_g": 0.8,
+   "alcohol_g": 14.2
   },
   "cost_band": 2,
   "rel": {
@@ -34546,7 +35127,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 40,
     "display": "40ml sugar syrup",
     "perishable": false,
@@ -34598,7 +35179,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 4,
+  "lore": [
+   "Frozen rosé, invented at Bar Primi in New York in 2016 and everywhere by the following summer.",
+   "Alcohol lowers the freezing point of water, which is why this goes slushy instead of solid and why a splash of vodka keeps it scoopable."
+  ]
  },
  {
   "id": "michelada",
@@ -34642,13 +35228,13 @@
     "fizzy",
     "citrusy"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer",
     "comfort"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -34666,11 +35252,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 180,
-   "protein_g": 0,
-   "carbs_g": 20,
+   "kcal": 162,
+   "protein_g": 3,
+   "carbs_g": 17,
    "fat_g": 0,
-   "alcohol_g": 14
+   "fiber_g": 1.2,
+   "alcohol_g": 12.9
   },
   "cost_band": 2,
   "rel": {
@@ -34698,7 +35285,7 @@
     "ref": "tomato-juice",
     "qty_g": 60,
     "display": "60ml tomato juice",
-    "perishable": true,
+    "perishable": false,
     "sub": "Clamato traditional"
    },
    {
@@ -34788,7 +35375,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Mexican beer built out with lime, salt and spice into something closer to a savoury cocktail than a beer.",
+   "The salt rim is structural, not decorative. Salt suppresses bitterness, so the beer underneath tastes rounder than it does from the bottle."
+  ]
  },
  {
   "id": "shandy",
@@ -34830,12 +35422,12 @@
     "fizzy",
     "citrusy"
    ],
-   "texture": [
-    "fizzy"
-   ],
    "mood": [
     "fresh",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -34853,11 +35445,12 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 150,
-   "protein_g": 0,
-   "carbs_g": 20,
+   "kcal": 165,
+   "protein_g": 1,
+   "carbs_g": 23,
    "fat_g": 0,
-   "alcohol_g": 10
+   "fiber_g": 0.3,
+   "alcohol_g": 9.8
   },
   "cost_band": 2,
   "rel": {
@@ -34929,6 +35522,11 @@
     "name": "Ginger Shandy",
     "swaps": "Use ginger beer instead."
    }
+  ],
+  "serves": 1,
+  "lore": [
+   "Beer cut with lemonade. British, unglamorous, and considerably older than most of the drinks on this list.",
+   "Halving the beer halves the alcohol. That is not a compromise in the recipe, it is the entire reason the drink exists."
   ]
  },
  {
@@ -34975,13 +35573,15 @@
     "citrusy"
    ],
    "texture": [
-    "fizzy",
     "silky"
    ],
    "mood": [
     "fresh",
     "fancy",
     "summer"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -34999,11 +35599,12 @@
   },
   "smell": "high",
   "macros": {
-   "kcal": 170,
-   "protein_g": 0,
-   "carbs_g": 14,
+   "kcal": 173,
+   "protein_g": 1,
+   "carbs_g": 10,
    "fat_g": 0,
-   "alcohol_g": 16
+   "fiber_g": 0.9,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -35043,7 +35644,7 @@
     "sub": null
    },
    {
-    "ref": "sugar",
+    "ref": "sugar-syrup",
     "qty_g": 15,
     "display": "15ml sugar syrup",
     "perishable": false,
@@ -35114,7 +35715,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Curry leaf has no relationship to curry powder. It is a citrus-family leaf, which is exactly why it sits so easily next to gin.",
+   "Bruise the leaves between your palms rather than muddling them. The aromatic oil is on the surface and tearing the leaf releases bitterness instead."
+  ]
  },
  {
   "id": "tamarind-highball",
@@ -35157,13 +35763,15 @@
     "sticky-sweet"
    ],
    "texture": [
-    "fizzy",
     "silky"
    ],
    "mood": [
     "fancy",
     "comfort",
     "cozy"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -35181,11 +35789,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 200,
-   "protein_g": 0,
-   "carbs_g": 18,
+   "kcal": 285,
+   "protein_g": 1,
+   "carbs_g": 39,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 1.9,
+   "alcohol_g": 19.0
   },
   "cost_band": 2,
   "rel": {
@@ -35214,7 +35823,7 @@
     "ref": "tamarind",
     "qty_g": 20,
     "display": "20g tamarind pulp",
-    "perishable": true,
+    "perishable": false,
     "sub": null
    },
    {
@@ -35316,7 +35925,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Tamarind is the sourness hiding in Worcestershire sauce, HP sauce and most Indian chutneys. You have been drinking it in cocktails for years without noticing.",
+   "Its acidity is tartaric rather than citric, which reads rounder and less sharp than lemon and holds up better against brown spirit."
+  ]
  },
  {
   "id": "turmeric-old-fashioned",
@@ -35364,6 +35978,9 @@
     "fancy",
     "cozy",
     "winter"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -35381,11 +35998,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 190,
+   "kcal": 162,
    "protein_g": 0,
-   "carbs_g": 12,
+   "carbs_g": 7,
    "fat_g": 0,
-   "alcohol_g": 20
+   "fiber_g": 0.7,
+   "alcohol_g": 19.3
   },
   "cost_band": 2,
   "rel": {
@@ -35410,7 +36028,7 @@
     "sub": null
    },
    {
-    "ref": "turmeric",
+    "ref": "honey-syrup",
     "qty_g": 12,
     "display": "12ml turmeric-ginger syrup",
     "perishable": false,
@@ -35421,21 +36039,24 @@
     "qty_g": 3,
     "display": "1/4 tsp ground turmeric (for syrup)",
     "perishable": false,
-    "sub": null
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "ginger",
     "qty_g": 10,
     "display": "10g fresh ginger sliced (for syrup)",
-    "perishable": true,
-    "sub": null
+    "perishable": false,
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "honey",
     "qty_g": 30,
     "display": "30g honey (for syrup)",
     "perishable": false,
-    "sub": null
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "cardamom",
@@ -35503,7 +36124,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Turmeric's colour is curcumin, and it is fat-soluble - it barely dissolves in water at all, which is why a dash of powder just sinks.",
+   "Cooking it into a syrup with honey gets it into suspension properly. It also takes the raw earthiness off, which neat turmeric brings in hard."
+  ]
  },
  {
   "id": "jaggery-bourbon-sour",
@@ -35511,7 +36137,7 @@
   "name": "Jaggery Bourbon Sour",
   "tagline": "Dark unrefined sweetness meets bourbon meets lime.",
   "core": false,
-  "veg": true,
+  "veg": false,
   "aka": [],
   "tags": {
    "meal": [
@@ -35520,7 +36146,9 @@
    "cuisine": [
     "bar"
    ],
-   "protein": [],
+   "protein": [
+    "egg"
+   ],
    "time": [
     "under-10"
    ],
@@ -35553,6 +36181,9 @@
     "fancy",
     "cozy",
     "comfort"
+   ],
+   "temp": [
+    "cold"
    ]
   },
   "time": {
@@ -35570,11 +36201,12 @@
   },
   "smell": "medium",
   "macros": {
-   "kcal": 200,
-   "protein_g": 0,
-   "carbs_g": 18,
+   "kcal": 195,
+   "protein_g": 3,
+   "carbs_g": 12,
    "fat_g": 0,
-   "alcohol_g": 18
+   "fiber_g": 0.6,
+   "alcohol_g": 19.3
   },
   "cost_band": 2,
   "rel": {
@@ -35600,7 +36232,7 @@
     "sub": null
    },
    {
-    "ref": "jaggery",
+    "ref": "jaggery-syrup",
     "qty_g": 20,
     "display": "20ml jaggery syrup",
     "perishable": false,
@@ -35611,7 +36243,8 @@
     "qty_g": 30,
     "display": "30g jaggery (for syrup)",
     "perishable": false,
-    "sub": null
+    "sub": null,
+    "batch_prep": true
    },
    {
     "ref": "lime",
@@ -35685,7 +36318,12 @@
    "plating": "",
    "prep_ahead": ""
   },
-  "variants": []
+  "variants": [],
+  "serves": 1,
+  "lore": [
+   "Jaggery is cane sugar with the molasses left in rather than refined out, which is why it tastes of something and white sugar does not.",
+   "That molasses is the bridge to bourbon. The barrel gives caramel, the jaggery answers it, and the lime keeps the whole thing from cloying."
+  ]
  },
  {
   "id": "air-fryer-potatoes",
@@ -35820,14 +36458,16 @@
    "roast potatoes air fryer"
   ],
   "macros": {
-   "kcal": 206,
+   "kcal": 203,
    "protein_g": 4,
    "carbs_g": 35,
-   "fat_g": 5
+   "fat_g": 5,
+   "fiber_g": 5.1
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "aloo-gobi",
@@ -35978,14 +36618,16 @@
    "punjabi aloo gobi"
   ],
   "macros": {
-   "kcal": 198,
+   "kcal": 187,
    "protein_g": 5,
    "carbs_g": 30,
-   "fat_g": 6
+   "fat_g": 6,
+   "fiber_g": 6.2
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "boondi-raita",
@@ -36132,14 +36774,16 @@
    "crunchy raita"
   ],
   "macros": {
-   "kcal": 179,
+   "kcal": 176,
    "protein_g": 6,
    "carbs_g": 18,
-   "fat_g": 9
+   "fat_g": 9,
+   "fiber_g": 0.6
   },
   "cost_band": 1,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "bruschetta",
@@ -36167,9 +36811,6 @@
    "occasion": [
     "party",
     "date-night"
-   ],
-   "nutrition": [
-    "low-cal"
    ],
    "equipment": [
     "oven"
@@ -36287,14 +36928,16 @@
    "italian tomato toast"
   ],
   "macros": {
-   "kcal": 246,
+   "kcal": 237,
    "protein_g": 9,
    "carbs_g": 30,
-   "fat_g": 10
+   "fat_g": 10,
+   "fiber_g": 5.2
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "caprese-salad",
@@ -36324,7 +36967,6 @@
     "party"
    ],
    "nutrition": [
-    "low-cal",
     "gluten-free"
    ],
    "equipment": [
@@ -36438,14 +37080,16 @@
    "italian caprese"
   ],
   "macros": {
-   "kcal": 224,
+   "kcal": 220,
    "protein_g": 16,
    "carbs_g": 7,
-   "fat_g": 15
+   "fat_g": 15,
+   "fiber_g": 1.6
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "charred-corn",
@@ -36591,14 +37235,16 @@
    "smoky corn side"
   ],
   "macros": {
-   "kcal": 203,
+   "kcal": 175,
    "protein_g": 5,
    "carbs_g": 31,
-   "fat_g": 6
+   "fat_g": 6,
+   "fiber_g": 5.0
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "garlic-parmesan-potatoes",
@@ -36744,14 +37390,16 @@
    "baby potato side"
   ],
   "macros": {
-   "kcal": 315,
+   "kcal": 312,
    "protein_g": 8,
    "carbs_g": 37,
-   "fat_g": 15
+   "fat_g": 15,
+   "fiber_g": 4.6
   },
   "cost_band": 3,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "guacamole",
@@ -36821,10 +37469,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 155,
+   "kcal": 143,
    "protein_g": 2,
    "carbs_g": 11,
-   "fat_g": 12
+   "fat_g": 12,
+   "fiber_g": 6.3
   },
   "cost_band": 3,
   "rel": {
@@ -36926,7 +37575,8 @@
    "guac",
    "avocado dip",
    "smashed avocado (spread it on toast)"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "jeera-rice",
@@ -36989,10 +37639,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 195,
-   "protein_g": 3,
-   "carbs_g": 35,
-   "fat_g": 4
+   "kcal": 204,
+   "protein_g": 4,
+   "carbs_g": 36,
+   "fat_g": 5,
+   "fiber_g": 0.8
   },
   "cost_band": 1,
   "rel": {
@@ -37074,7 +37725,8 @@
   "aka": [
    "cumin rice",
    "zeera rice"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "masala-popcorn",
@@ -37103,9 +37755,6 @@
    "occasion": [
     "party",
     "solo"
-   ],
-   "nutrition": [
-    "high-fiber"
    ],
    "equipment": [
     "one-pan"
@@ -37209,14 +37858,16 @@
    "indian masala popcorn"
   ],
   "macros": {
-   "kcal": 175,
+   "kcal": 167,
    "protein_g": 4,
    "carbs_g": 24,
-   "fat_g": 7
+   "fat_g": 7,
+   "fiber_g": 4.9
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "mint-raita",
@@ -37282,10 +37933,11 @@
   },
   "smell": "low",
   "macros": {
-   "kcal": 55,
+   "kcal": 67,
    "protein_g": 4,
-   "carbs_g": 5,
-   "fat_g": 2
+   "carbs_g": 6,
+   "fat_g": 4,
+   "fiber_g": 0.7
   },
   "cost_band": 1,
   "rel": {
@@ -37376,7 +38028,8 @@
   "aka": [
    "tzatziki (add grated cucumber and a drizzle of olive oil)",
    "pudina raita"
-  ]
+  ],
+  "serves": 1
  },
  {
   "id": "roasted-vegetables",
@@ -37529,14 +38182,16 @@
    "oven roasted vegetables"
   ],
   "macros": {
-   "kcal": 145,
+   "kcal": 135,
    "protein_g": 2,
    "carbs_g": 17,
-   "fat_g": 7
+   "fat_g": 7,
+   "fiber_g": 5.0
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  },
  {
   "id": "tzatziki",
@@ -37693,13 +38348,15 @@
    "yogurt cucumber sauce"
   ],
   "macros": {
-   "kcal": 141,
+   "kcal": 137,
    "protein_g": 16,
    "carbs_g": 11,
-   "fat_g": 4
+   "fat_g": 4,
+   "fiber_g": 1.2
   },
   "cost_band": 2,
   "host": null,
-  "variants": []
+  "variants": [],
+  "serves": 1
  }
 ]

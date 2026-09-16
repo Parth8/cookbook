@@ -4,33 +4,34 @@ A personal high-protein cookbook and bar - a retrieval-first static site for ans
 
 ## Current Roster
 
-**164 recipe cards** — full v5 plan (slots 1–120), café expansion (121–151), extra cocktails, and 13 unnumbered sides.
+**216 recipe cards**, 58 in core rotation.
 
 | Section | Count |
 |---|---|
-| Breakfast | 13 |
-| Quick Lunches | 17 |
+| Breakfast | 19 |
+| Quick Lunches | 18 |
 | Soups | 5 |
-| Mains | 51 |
+| Mains | 62 |
 | Snacks | 7 |
 | Desserts | 12 |
 | Sides & Pairings | 13 |
 | Café | 27 (9 hot / 18 cold) |
-| Bar | 19 |
-| **Total** | **164** |
+| Bar | 53 |
+| **Total** | **216** |
 
-133 ingredients, 431 aka aliases, 0 broken refs. Run `python3 scripts/validate.py` before deploy.
+228 ingredients, 421 aka aliases, 0 broken refs. Run `python3 scripts/validate.py` before deploy — it must exit 0.
 
 Highlights now in as real cards (not just aliases): **Chicken Katsu**, **Chilli Chicken**, **Chicken Alfredo**, **Pink Sauce Pasta**, **Skillet Lasagna**, **Shakshuka**, **Dal Makhani**, **Souvlaki**, **Gulab Jamun**, **Protein Tiramisu**, **Salted Lassi**, **Iced Lemon Tea**, plus all five soups and ten sides from the plan.
 
 ## Features
 
-- **11 Entry Points**: Start from context (time, mood, ingredients, soup weather, coffee o'clock, behind the bar) not chapters
+- **6 Entry Points**: Start from context (time, ingredients, cleanup, guests, post-workout, behind the bar) not chapters
+- **Collapsed-by-default board**: The menu opens as a one-screen index of all nine sections. Click a section head to unfold it; applying a filter unfolds whatever holds results, and `EXPAND ALL` opens everything at once. Your own open/closed choices persist in localStorage
 - **Faceted Filtering**: AND across facets, OR within, with tri-state chips - including temp (hot/cold) and drink strength (zero-proof / light pour / strong pour)
 - **Alias Search**: `aka` fields make every card findable by its other names, including near-miss dishes ("chicken katsu" → Chicken Parmesan) with the swap spelled out
 - **Fridge Matcher**: Tap what you have, get ranked recipes with honest set math
-- **Cook Mode**: Full-screen step player with timers and wake lock (drinks get Pour Mode)
-- **Two Visual Modes**: Studio (full indie expression) and Reading (quiet twin for cooking)
+- **Cook Mode**: Full-screen step player with a progress rail, pausable timers, screen wake lock, and arrow-key / swipe navigation (drinks get Pour Mode)
+- **Command Palette**: ⌘K / Ctrl-K search over names, aliases and taglines, fully keyboard-driven
 - **Progressive Disclosure**: Recipe cards unfold from menu line → full detail
 - **Relationship Graph**: Pairs-with, similar-to, leftovers-become, drink pairings, computed backlinks - rendered as a Related accordion on every card
 - **Lore**: "Worth knowing" fact blocks so the site reads like a bar conversation, not a textbook
@@ -77,19 +78,21 @@ cookbook/
 │   │   ├── filters.js      # Faceted filtering engine
 │   │   ├── match.js        # Fridge matcher logic
 │   │   ├── macros.js       # Macro calculations
+│   │   ├── grocery.js      # Plan -> grouped, summed shopping list
 │   │   └── rel.js          # Relationship graph builder
 │   └── views/
 │       ├── menu.js         # Start strip + board + filters
 │       ├── recipe.js       # Recipe detail with accordions
-│       ├── cook.js         # Cook mode (full screen)
+│       ├── cook.js         # Cook mode (full screen, keyboard + swipe)
 │       ├── fridge.js       # Fridge matcher
-│       ├── tonight.js      # Context picker (stub)
-│       ├── planner.js      # Meal planner (stub)
-│       └── host.js         # Date/party menus (stub)
+│       ├── tonight.js      # Three-question dish picker
+│       ├── planner.js      # 14-day meal planner + grocery list
+│       └── host.js         # Date/party menus with runsheets
 ├── data/
-│   ├── recipes.json        # Full roster (164 cards)
-│   ├── ingredients.json    # 133 ingredients with macros per 100g
-│   └── tags.json           # Controlled vocabulary (14 facets incl. temp, soup)
+│   ├── recipes.json        # Full roster (216 cards)
+│   ├── ingredients.json    # 228 ingredients with macros per 100g
+│   ├── host-menus.json     # Curated date/party menus + runsheets
+│   └── tags.json           # Controlled vocabulary (15 facets incl. temp, diet)
 ├── scripts/
 │   ├── validate.py         # Data QA: refs, tags, rel graph, macro identity, dedup scan
 │   └── build_gap.py        # Idempotent gap-filler (re-run safe)
@@ -103,7 +106,42 @@ cookbook/
 python3 scripts/validate.py
 ```
 
-Checks every ingredient ref, tag value, and relationship id; verifies stated macros against the 4P + 4C + 9F + 7A identity (alcohol counts its 7 kcal/g) and against macros recomputed from `ingredients.json`; enforces drink rules (strength tag, alcohol_g, the 180 kcal cocktail budget); and runs a near-duplicate scan using ingredient-set overlap so redundant dishes get caught even when the names differ.
+Checks every ingredient ref, tag value, and relationship id; asserts that each
+card's macros **equal** the ingredient database (not merely resemble it);
+sanity-checks kcal against fibre-aware Atwater; verifies every nutrition claim
+against the numbers; enforces drink rules (strength, temp, alcohol_g, the
+220 kcal cocktail budget); and runs a near-duplicate scan on ingredient-set
+overlap so redundant dishes get caught even when the names differ.
+
+## Nutrition
+
+Every number on every card is computed from `ingredients.json` and divided by
+`serves`. Nothing is estimated, and `validate.py` fails the build if a card
+and the database disagree by more than rounding.
+
+Four things make the figures trustworthy rather than merely present:
+
+- **kcal comes from each ingredient's own kcal**, not from re-deriving
+  4P + 4C + 9F. USDA figures already apply food-specific Atwater factors, which
+  is why cocoa powder is 228 kcal and not the 438 the generic formula gives.
+- **Fibre is tracked** (`fiber_g`) and yields ~2 kcal/g, so the sanity check
+  does not overstate anything fibrous. It also means the `high-fiber` tag is
+  verified against a 5g bar rather than asserted.
+- **Alcohol is derived from ABV.** Ethanol is 0.789 g/mL at 7 kcal/g, so 100ml
+  of a 40% spirit carries 31.6g and 221 kcal. Every spirit, liqueur, wine and
+  beer in the database is on that one formula.
+- **Syrups are not neat sugar.** "20ml sugar syrup" is 1:1 simple syrup — half
+  water — so it is its own ingredient at half the density. Lines that make a
+  keeping batch of syrup carry `batch_prep` and are bought but not counted in
+  one serving.
+
+Nutrition tags are enforced, not decorative: `high-protein` means at least 20%
+of calories come from protein, `high-fiber` means 5g or more, `low-cal` means
+under 450 for a meal or 200 otherwise, `low-fat` means 15g or less. Twenty-three
+tags that the recomputed numbers did not support were removed.
+
+Variant macros (the `variants[]` swaps) are still author-stated — the swaps are
+described in prose, so they cannot be derived.
 
 ## Data Architecture
 
@@ -119,26 +157,39 @@ data/recipes.json + tags.json + ingredients.json  (assets)
 
 Every view is a query. Adding a lens never touches the data.
 
-## Design Modes
+## Design
 
-### Studio Mode (default)
-- Paper grain, pastel washes, wobble sketches
-- Shantell Sans margin notes
-- Full motion budget: spring animations, hover lifts, steam curls
-- Body 16px, 65-70ch
+One design, no mode toggle. Palette is **newsprint**: warm grey paper, near-black
+ink, a single vermilion accent. Fraunces (with its SOFT/WONK/opsz axes) carries
+display type, Karla carries body and all tabular figures.
 
-### Reading Mode
-- Grain off, washes at 4-5%
-- Clean SVGs, motion cut to essentials
-- Hanken Grotesk italic (no handwriting)
-- Body 18px, 60ch, AAA contrast (7:1)
+Motion is a closed vocabulary defined in `tokens.css` — three easings
+(`--ease-fluid`, `--ease-soft`, `--ease-swell`) and three durations
+(`--d-quick`, `--d-flow`, `--d-drape`). Nothing invents its own numbers, and
+`motion.css` lists every animation on the site. Anything not on that list is a
+bug. `prefers-reduced-motion` cuts all of it.
 
-Toggle persists in localStorage. Cook Mode uses one high-contrast design regardless of mode.
+## Responsive
+
+Five bands, all verified in-browser:
+
+| Band | Behaviour |
+|---|---|
+| ≥1440px | Measure widens to 66rem |
+| 1025–1439px | Baseline laptop layout |
+| 721–1024px (iPad) | Keeps the top nav, tightens gutters and gaps |
+| ≤720px (phone) | Tab bar replaces top nav, leader dots drop, planner days stack, 44px touch targets, safe-area insets |
+| ≤420px | Macro strip goes 2×2, buttons go full-width |
+
+Landscape phones get their own height-based rule so the masthead does not eat
+the screen.
 
 ## Tag Taxonomy
 
-13 facets with closed vocabularies:
+15 facets with closed vocabularies (`diet` is derived at load time from
+`veg` + `protein`, the other 14 are authored):
 
+- **diet** *(derived)*: veg, egg-veg, non-veg
 - **meal**: breakfast, lunch, soup, dinner, snack, dessert, side, drink
 - **cuisine**: north-indian, punjabi, italian, mexican, thai, korean, cafe, bar, etc.
 - **temp**: hot, cold (drinks)
@@ -168,11 +219,12 @@ Each recipe is one JSON object:
   "tagline": "Charred at home, no tandoor required.",
   "core": true,
   "veg": false,
+  "serves": 1,
   "tags": { "meal": ["dinner"], "cuisine": ["north-indian"], ... },
   "time": { "active_min": 10, "passive_min": 20 },
   "cleanup": { "vessels": 1, "boards": 1 },
   "aka": ["boneless tandoori bites", "chicken tikka skewers"],
-  "macros": { "kcal": 355, "protein_g": 54, "carbs_g": 9, "fat_g": 11 },
+  "macros": { "kcal": 355, "protein_g": 54, "carbs_g": 9, "fat_g": 11, "fiber_g": 1.2 },
   "cost_band": 2,
   "lore": ["Optional fun facts - drinks carry two: one on the drink, one on the spirit"],
   "rel": {
@@ -189,7 +241,11 @@ Each recipe is one JSON object:
 }
 ```
 
-Macros are computed from `ingredients.json`, never estimated. Every rel ID must resolve (QA-enforced).
+Macros are computed from `ingredients.json` and divided by `serves`, never
+estimated — see [Nutrition](#nutrition). Ingredient lines may carry
+`batch_prep: true` to mean "you buy this, but it makes a batch that keeps";
+those are excluded from per-serving macros. Every rel ID must resolve
+(QA-enforced).
 
 ## Browser Support
 

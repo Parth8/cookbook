@@ -1,6 +1,8 @@
 // Recipe view - the detail page for a single dish.
-// Renders: header, decide zone, ingredients (scalable), steps, variants,
+// Renders: header, decide zone, lore, ingredients (scalable), steps, variants,
 // rescues, related dishes, drink pairings, host notes.
+
+import { getRelatedRecipes } from '../lib/rel.js';
 
 export function renderRecipe(container, id, param) {
   const { recipes, graph } = window.cookbook;
@@ -33,6 +35,8 @@ export function renderRecipe(container, id, param) {
         const open = t.getAttribute('aria-expanded') === 'true';
         t.setAttribute('aria-expanded', String(!open));
         body.hidden = open;
+        const icon = t.querySelector('.accordion-icon');
+        if (icon) icon.textContent = open ? '+' : '−';
       });
     });
   }
@@ -44,6 +48,14 @@ function template(r, servings, graph) {
   const passive = r.time?.passive_min || 0;
   const total = active + passive;
   const cleanup = r.cleanup?.vessels ?? 1;
+  const serves = r.serves || 1;
+
+  // Read relationships off the graph, not off r.rel: the graph carries the
+  // computed backlinks (a pairing authored on the other card, dishes that
+  // want this one's leftovers) that the raw field doesn't know about.
+  const related = getRelatedRecipes(r, graph || {}, window.cookbook.recipes);
+  const hasRelated = related.pairs_with?.length || related.similar_to?.length ||
+                     related.drink?.length || related.wanted_by?.length;
 
   return `
     <article class="recipe-view">
@@ -73,7 +85,9 @@ function template(r, servings, graph) {
             : `<div class="macro-item"><div class="macro-value">${r.macros.protein_g}g</div><div class="macro-label">protein</div></div>`}
           <div class="macro-item"><div class="macro-value">${r.macros.carbs_g}g</div><div class="macro-label">carbs</div></div>
           <div class="macro-item"><div class="macro-value">${r.macros.fat_g}g</div><div class="macro-label">fat</div></div>
+          ${r.macros.fiber_g ? `<div class="macro-item"><div class="macro-value">${r.macros.fiber_g}g</div><div class="macro-label">fibre</div></div>` : ''}
         </div>
+        <p class="macro-basis text-margin">Per serving${serves > 1 ? `, and this makes ${serves}` : ''}. Computed from the ingredient list, not estimated.</p>
 
         <div class="effort-bar">
           <div class="effort-item"><b>${total}</b> min total ${passive ? `(${active} active, ${passive} passive)` : ''}</div>
@@ -93,10 +107,16 @@ function template(r, servings, graph) {
         </div>
 
         <div class="recipe-actions">
-          <a href="#/cook/${r.id}" class="btn btn-primary">Cook now →</a>
+          <a href="#/cook/${r.id}" class="btn btn-primary">${isDrink ? 'Pour now →' : 'Cook now →'}</a>
           <a href="#/" class="btn btn-ghost">Back to menu</a>
         </div>
       </section>
+
+      ${r.lore?.length ? `
+        <section class="lore-block recipe-lore">
+          <div class="lore-heading">Worth knowing</div>
+          ${r.lore.map(l => `<p class="lore-note">${l}</p>`).join('')}
+        </section>` : ''}
 
       <div class="accordions">
         <section class="accordion">
@@ -105,15 +125,17 @@ function template(r, servings, graph) {
           </button>
           <div class="accordion-content">
             <div class="scaler">
-              <span class="text-margin">Scale:</span>
+              <span class="text-margin">${serves > 1 ? `Makes ${serves} · Scale:` : 'Scale:'}</span>
               ${[1, 2, 4].map(s => `<button class="scale-btn" data-scale="${s}" data-active="${s === servings}">${s}×</button>`).join('')}
             </div>
-            <ul class="ingredient-list">
+            ${servings !== 1 ? `<p class="scale-note text-margin">Scaled to ${servings}× — go by the amounts on the left; the descriptions still read at 1×.</p>` : ''}
+            <ul class="ingredient-list" data-scaled="${servings !== 1}">
               ${(r.ingredients || []).map(i => `
-                <li class="ingredient-item">
+                <li class="ingredient-item"${i.batch_prep ? ' data-batch="true"' : ''}>
                   <span class="ingredient-qty">${scaleDisplay(i, servings)}</span>
                   <span class="ingredient-name">${i.display || i.ref}</span>
                   ${i.sub ? `<span class="ingredient-sub">— sub: ${i.sub}</span>` : ''}
+                  ${i.batch_prep ? '<span class="ingredient-sub">— makes a batch; keeps</span>' : ''}
                 </li>`).join('')}
             </ul>
           </div>
@@ -168,16 +190,17 @@ function template(r, servings, graph) {
             </div>
           </section>` : ''}
 
-        ${(r.rel?.pairs_with?.length || r.rel?.similar_to?.length || r.rel?.drink?.length) ? `
+        ${hasRelated ? `
           <section class="accordion">
             <button class="accordion-trigger" aria-expanded="false">
               Goes well with <span class="accordion-icon">+</span>
             </button>
             <div class="accordion-content" hidden>
               <div class="related-links">
-                ${relatedGroup('Pair with', r.rel.pairs_with)}
-                ${relatedGroup('Similar', r.rel.similar_to)}
-                ${relatedGroup('Drink', r.rel.drink)}
+                ${relatedGroup('Pair with', related.pairs_with)}
+                ${relatedGroup('Similar', related.similar_to)}
+                ${relatedGroup('Drink', related.drink)}
+                ${wantedByGroup(related.wanted_by)}
               </div>
             </div>
           </section>` : ''}
@@ -218,17 +241,13 @@ function template(r, servings, graph) {
     </article>`;
 }
 
-function relatedGroup(label, ids) {
-  if (!ids?.length) return '';
-  const items = ids
-    .map(id => window.cookbook.recipes.find(x => x.id === id))
-    .filter(Boolean)
-    .slice(0, 8);
-  if (!items.length) return '';
+function relatedGroup(label, items) {
+  const list = (items || []).filter(Boolean).slice(0, 8);
+  if (!list.length) return '';
   return `
     <div class="related-group">
       <div class="lore-heading">${label}</div>
-      ${items.map(x => `
+      ${list.map(x => `
         <a href="#/recipe/${x.id}" class="related-link">
           <span class="veg-indicator" data-veg="${x.veg}" style="vertical-align:0.1em;margin-right:0.4rem"></span>
           ${x.name}
@@ -237,6 +256,28 @@ function relatedGroup(label, ids) {
     </div>`;
 }
 
+/** Computed backlink: dishes that list THIS one as what their leftovers become. */
+function wantedByGroup(entries) {
+  const list = (entries || [])
+    .map(e => ({ from: window.cookbook.recipes.find(x => x.id === e.from), note: e.note }))
+    .filter(e => e.from)
+    .slice(0, 8);
+  if (!list.length) return '';
+  return `
+    <div class="related-group">
+      <div class="lore-heading">Made from leftovers of</div>
+      ${list.map(e => `
+        <a href="#/recipe/${e.from.id}" class="related-link">
+          <span class="veg-indicator" data-veg="${e.from.veg}" style="vertical-align:0.1em;margin-right:0.4rem"></span>
+          ${e.from.name}
+          ${e.note ? `<span class="related-kcal">${e.note}</span>` : ''}
+        </a>`).join('')}
+    </div>`;
+}
+
+// At 1x the authored `display` string already carries the quantity
+// ("150g chicken breast, cubed"), so the column stays empty rather than
+// saying it twice. Scaling up is where the column earns its keep.
 function scaleDisplay(ing, factor) {
   if (factor === 1) return '';
   const g = ing.qty_g;
