@@ -41,6 +41,14 @@
 .filter-btn:hover, .filter-btn[aria-expanded="true"] {
   background: var(--ink); color: var(--paper); border-color: var(--ink);
 }
+.expand-all {
+  font-family: var(--body); font-size: var(--t-xs); font-weight: 600;
+  letter-spacing: .08em; color: var(--muted);
+  border: 1px solid var(--rule); background: none;
+  padding: .5rem .7rem; border-radius: var(--radius); cursor: pointer;
+  white-space: nowrap;
+}
+.expand-all:hover { color: var(--accent); border-color: var(--accent); }
 .pills { display: inline-flex; flex-wrap: wrap; gap: var(--s2); align-items: center; }
 .pill {
   font-family: var(--body); font-size: var(--t-xs); font-weight: 500;
@@ -95,8 +103,14 @@
 /* ---------------- Board ---------------- */
 .board { padding-bottom: var(--s7); }
 .menu-section[hidden] { display: none; }
-.section-body { /* motion.css handles collapse transitions */ }
 .section-inner { display: block; }
+
+/* `.line` sets `display: grid` below, which outranks the UA sheet's
+   [hidden] { display: none }. Without this rule menu.js can set
+   el.hidden all it likes and nothing ever disappears — which is exactly
+   why filtering looked broken. Every element we hide by property needs
+   an author-level [hidden] rule to match. */
+.line[hidden] { display: none; }
 
 /* Section head is a button (collapsible) */
 .section-head {
@@ -105,6 +119,11 @@
   width: 100%; background: none; border: none; cursor: pointer;
   text-align: left; color: inherit; font: inherit;
 }
+/* Collapsed is the default state, so the board reads as an index. The airy
+   --s7 gap is for separating open sections; folded ones sit closer. */
+.menu-section[data-collapsed="true"] .section-head { padding-top: var(--s4); }
+.menu-section:first-child .section-head { padding-top: var(--s5); }
+.section-head { transition: padding-top var(--d-flow) var(--ease-fluid); }
 .section-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: var(--radius); }
 .section-head:hover .chev { color: var(--accent); }
 .section-head h2 {
@@ -357,6 +376,10 @@
 .ingredient-qty { font-size: var(--t-sm); color: var(--accent); font-weight: 600; min-width: 5rem; font-variant-numeric: tabular-nums; }
 .ingredient-name { flex: 1; }
 .ingredient-sub { font-size: var(--t-xs); color: var(--muted); font-style: italic; }
+/* Once scaled, the authored description is the stale number - let the
+   computed amount on the left carry the weight. */
+.ingredient-list[data-scaled="true"] .ingredient-name { color: var(--muted); }
+.scale-note { font-size: var(--t-sm); }
 .step-item { display: grid; gap: var(--s1); padding-bottom: var(--s3); border-bottom: 1px solid var(--hairline); }
 .step-title { font-family: var(--display); font-size: var(--t-md); font-weight: 500; font-variation-settings: var(--wonk), "opsz" 18; }
 .step-cue { font-family: var(--display); font-style: italic; font-size: var(--t-sm); color: var(--muted); border-left: 3px solid var(--honey); padding-left: var(--s3); font-variation-settings: var(--wonk), "opsz" 14; }
@@ -390,13 +413,147 @@
 .cook-nav-btn { flex: 1; font-size: var(--t-sm); font-weight: 600; border: 1px solid var(--ink); padding: 1rem; border-radius: var(--radius); background: none; cursor: pointer; }
 .cook-nav-btn:hover { background: var(--ink); color: var(--paper); }
 
-.view-fridge { padding-top: var(--s6); }
+/* Cook mode progress rail + hints */
+.cook-rail { height: 3px; background: var(--rule); border-radius: 2px; margin: var(--s4) 0 var(--s5); overflow: hidden; }
+.cook-rail-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width var(--d-flow) var(--ease-fluid); }
+.cook-hint { font-size: var(--t-xs); text-align: center; padding-top: var(--s3); opacity: .7; }
+.timer-reset-btn { font-size: var(--t-sm); font-weight: 600; border: 1px solid var(--rule); color: var(--muted); padding: .5rem .9rem; border-radius: var(--radius); background: none; cursor: pointer; }
+.timer-reset-btn:hover { border-color: var(--ink); color: var(--ink); }
+.cook-nav-btn.cook-done { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.cook-nav-btn.cook-done:hover { background: var(--ink); border-color: var(--ink); }
+.cook-nav-btn:disabled { opacity: .35; cursor: not-allowed; }
+
+/* Recipe lore */
+.recipe-lore { margin: var(--s5) 0; }
+
+.view-fridge { padding-top: 0; }
+.fridge-controls { display: flex; gap: var(--s3); align-items: center; flex-wrap: wrap; padding-bottom: var(--s4); border-bottom: 1px solid var(--rule); }
+.fridge-search {
+  font-family: var(--body); font-size: var(--t-sm); color: var(--ink);
+  border: 1px solid var(--rule); border-radius: var(--radius);
+  padding: .55rem .8rem; background: var(--paper); min-width: 14rem; flex: 1 1 14rem;
+}
+.fridge-search:focus { outline: none; border-color: var(--accent); }
+.fridge-count { margin-left: auto; }
 .fridge-grid { display: flex; flex-wrap: wrap; gap: var(--s2); padding: var(--s4) 0 var(--s6); }
 .fridge-chip { font-size: var(--t-sm); padding: .4rem .7rem; border: 1px solid var(--rule); border-radius: var(--radius); color: var(--muted); background: var(--paper); cursor: pointer; }
 .fridge-chip:hover { border-color: var(--accent); color: var(--accent); }
 .fridge-chip[data-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.fridge-heading { font-size: var(--t-lg); padding-bottom: var(--s3); }
 .match-results { display: grid; }
 .match-card { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s4); padding: var(--s3) 0; border-bottom: 1px solid var(--hairline); color: var(--ink); text-decoration: none; }
 .match-card:hover { background: var(--hover); }
-.match-name { font-family: var(--display); font-size: var(--t-md); font-weight: 500; font-variation-settings: var(--wonk), "opsz" 18; }
+.match-name { font-family: var(--display); font-size: var(--t-md); font-weight: 500; font-variation-settings: var(--wonk), "opsz" 18; display: flex; align-items: center; gap: var(--s2); }
+.match-detail { display: grid; gap: 2px; text-align: right; }
 .match-line, .match-meta { font-size: var(--t-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.match-meta { font-size: var(--t-xs); }
+
+/* ============================================================
+   RESPONSIVE
+   Four bands, in order: wide desktop, tablet/iPad, phone, small phone.
+   The 720px band is the one that also swaps the top nav for the tab bar
+   (see base.css) — everything here assumes that swap has happened.
+   ============================================================ */
+
+/* ---- Wide desktop: let the measure breathe, nothing else changes ---- */
+@media (min-width: 1440px) {
+  :root { --measure: 66rem; --gutter: 2.5rem; }
+}
+
+/* ---- Tablet / iPad: keeps the desktop nav, just tightens it ---- */
+@media (min-width: 721px) and (max-width: 1024px) {
+  :root { --gutter: 1.75rem; }
+  .masthead-inner { gap: var(--s4); }
+  .nav { gap: var(--s4); }
+  .host-menus { gap: var(--s5); }
+  .macro-strip { gap: var(--s5); }
+}
+
+/* ---- Below 900px the leader dots have nowhere to go ---- */
+@media (max-width: 900px) {
+  .leader { display: none; }
+}
+
+/* ---- Phone ---- */
+@media (max-width: 720px) {
+  /* The tab bar grows by the safe-area inset, so the body padding must too,
+     or the last row of content hides behind it on a notched phone. */
+  body { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
+
+  .filters { gap: var(--s2); padding: var(--s3) 0; }
+  .filter-count { font-size: var(--t-xs); }
+  .start { padding-block: var(--s4); }
+  .start-card { min-width: 8.5rem; padding: var(--s3); }
+  .section-head { padding-top: var(--s6); }
+
+  /* Touch targets. 44px is the floor, and these were all under it. */
+  .chip, .fridge-chip, .plan-slot, .scale-btn, .expand-all,
+  .filter-btn, .pill, .btn { min-height: 44px; }
+  .chip, .fridge-chip { display: inline-flex; align-items: center; }
+  .btn { padding-inline: 1rem; }
+
+  /* Recipe page */
+  .recipe-view { padding-top: var(--s5); }
+  .macro-strip { gap: var(--s5) var(--s6); }
+  .effort-bar { gap: var(--s2) var(--s5); }
+  .recipe-actions { display: grid; grid-template-columns: 1fr; gap: var(--s2); }
+  .recipe-actions .btn { justify-content: center; }
+  .ingredient-item { flex-wrap: wrap; }
+  .ingredient-qty { min-width: 4rem; }
+
+  /* Planner: three columns will not fit, so the day becomes a stack */
+  .plan-day { grid-template-columns: 1fr; gap: var(--s2); }
+  .plan-date { display: flex; align-items: baseline; gap: var(--s2); }
+  .plan-totals { text-align: left; }
+  .plan-slot { flex: 1 1 auto; justify-content: center; }
+  .plan-slots { gap: var(--s2); }
+
+  /* Overlays sit higher and taller - 12vh of dead space is a lot on a phone */
+  .search-modal { padding: 5vh var(--s3) 0; }
+  .search-panel { max-height: 80vh; }
+  .picker-overlay { padding: 4vh var(--s3) 0; }
+  .picker { max-height: 86vh; }
+  .picker-item { padding-inline: var(--s4); }
+
+  /* Fridge + host */
+  .fridge-count { margin-left: 0; }
+  .match-card { flex-direction: column; align-items: flex-start; gap: var(--s1); }
+  .match-detail { text-align: left; }
+  .host-dish { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .run-row { grid-template-columns: 3.75rem 1fr; gap: var(--s2); }
+  .host-body, .host-head { padding: var(--s4); }
+  .grocery-item { flex-wrap: wrap; }
+
+  /* Cook mode: scrollable, and clear of the home indicator */
+  .cook-mode {
+    padding: var(--s4) var(--gutter) calc(var(--s4) + env(safe-area-inset-bottom, 0px));
+    overflow-y: auto;
+  }
+  .cook-content { justify-content: flex-start; padding-top: var(--s5); }
+  .cook-nav { position: sticky; bottom: 0; background: var(--paper); padding-bottom: var(--s2); }
+  .cook-nav-btn { padding: .9rem; }
+  .cook-timer { flex-wrap: wrap; }
+}
+
+/* ---- Small phone ---- */
+@media (max-width: 420px) {
+  :root { --gutter: 1rem; }
+  .masthead-inner { gap: var(--s3); padding-top: var(--s4); }
+  .colophon { font-size: var(--t-xs); }
+  .start-card { min-width: 7.5rem; }
+  .macro-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s4); }
+  .macro-value { font-size: var(--t-lg); }
+  .deal-bar, .plan-toolbar { gap: var(--s2); }
+  .deal-bar .btn, .plan-toolbar .btn { flex: 1 1 auto; justify-content: center; }
+  .pick { padding: var(--s4); }
+  .pick-meta { gap: var(--s4); }
+  .filters .expand-all { font-size: .625rem; padding-inline: .5rem; }
+}
+
+/* ---- Landscape phone: the masthead eats the whole screen otherwise ---- */
+@media (max-height: 460px) and (orientation: landscape) {
+  .masthead-inner { padding-top: var(--s3); padding-bottom: var(--s2); }
+  .colophon { display: none; }
+  .view-head, .section-head { padding-top: var(--s4); }
+  .cook-content { justify-content: flex-start; }
+}

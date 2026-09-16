@@ -157,8 +157,19 @@ function setupSearch() {
   const results = document.querySelector('.search-results');
   if (!modal || !input || !results) return;
 
+  let active = -1;
+  const items = () => [...results.querySelectorAll('.search-result')];
+
   const open = () => { modal.hidden = false; input.focus(); };
-  const close = () => { modal.hidden = true; input.value = ''; results.innerHTML = ''; };
+  const close = () => { modal.hidden = true; input.value = ''; results.innerHTML = ''; active = -1; };
+
+  const highlight = i => {
+    const list = items();
+    if (!list.length) return;
+    active = (i + list.length) % list.length;
+    list.forEach((el, n) => { el.dataset.active = String(n === active); });
+    list[active].scrollIntoView({ block: 'nearest' });
+  };
 
   const trigger = document.querySelector('.search-trigger');
   if (trigger) trigger.addEventListener('click', open);
@@ -168,7 +179,27 @@ function setupSearch() {
   input.addEventListener('input', e => {
     const q = e.target.value.trim().toLowerCase();
     results.innerHTML = q ? render(search(q), q) : '';
+    active = -1;
   });
+
+  // A palette you can only click is half a palette.
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); highlight(active + 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); highlight(active - 1); }
+    else if (e.key === 'Enter') {
+      const el = items()[active] || items()[0];
+      if (!el) return;
+      e.preventDefault();
+      location.hash = el.getAttribute('href').slice(1);
+      close();
+    }
+  });
+
+  // ⌘K is a lie on Windows and Linux.
+  const kbd = document.querySelector('.search-trigger .kbd');
+  if (kbd && !/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) {
+    kbd.textContent = 'Ctrl K';
+  }
 
   window.__cookbookSearch = { open, close };
 }

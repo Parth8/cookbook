@@ -4,33 +4,34 @@ A personal high-protein cookbook and bar - a retrieval-first static site for ans
 
 ## Current Roster
 
-**164 recipe cards** — full v5 plan (slots 1–120), café expansion (121–151), extra cocktails, and 13 unnumbered sides.
+**216 recipe cards**, 58 in core rotation.
 
 | Section | Count |
 |---|---|
-| Breakfast | 13 |
-| Quick Lunches | 17 |
+| Breakfast | 19 |
+| Quick Lunches | 18 |
 | Soups | 5 |
-| Mains | 51 |
+| Mains | 62 |
 | Snacks | 7 |
 | Desserts | 12 |
 | Sides & Pairings | 13 |
 | Café | 27 (9 hot / 18 cold) |
-| Bar | 19 |
-| **Total** | **164** |
+| Bar | 53 |
+| **Total** | **216** |
 
-133 ingredients, 431 aka aliases, 0 broken refs. Run `python3 scripts/validate.py` before deploy.
+228 ingredients, 421 aka aliases, 0 broken refs. Run `python3 scripts/validate.py` before deploy — it must exit 0.
 
 Highlights now in as real cards (not just aliases): **Chicken Katsu**, **Chilli Chicken**, **Chicken Alfredo**, **Pink Sauce Pasta**, **Skillet Lasagna**, **Shakshuka**, **Dal Makhani**, **Souvlaki**, **Gulab Jamun**, **Protein Tiramisu**, **Salted Lassi**, **Iced Lemon Tea**, plus all five soups and ten sides from the plan.
 
 ## Features
 
-- **11 Entry Points**: Start from context (time, mood, ingredients, soup weather, coffee o'clock, behind the bar) not chapters
+- **6 Entry Points**: Start from context (time, ingredients, cleanup, guests, post-workout, behind the bar) not chapters
+- **Collapsed-by-default board**: The menu opens as a one-screen index of all nine sections. Click a section head to unfold it; applying a filter unfolds whatever holds results, and `EXPAND ALL` opens everything at once. Your own open/closed choices persist in localStorage
 - **Faceted Filtering**: AND across facets, OR within, with tri-state chips - including temp (hot/cold) and drink strength (zero-proof / light pour / strong pour)
 - **Alias Search**: `aka` fields make every card findable by its other names, including near-miss dishes ("chicken katsu" → Chicken Parmesan) with the swap spelled out
 - **Fridge Matcher**: Tap what you have, get ranked recipes with honest set math
-- **Cook Mode**: Full-screen step player with timers and wake lock (drinks get Pour Mode)
-- **Two Visual Modes**: Studio (full indie expression) and Reading (quiet twin for cooking)
+- **Cook Mode**: Full-screen step player with a progress rail, pausable timers, screen wake lock, and arrow-key / swipe navigation (drinks get Pour Mode)
+- **Command Palette**: ⌘K / Ctrl-K search over names, aliases and taglines, fully keyboard-driven
 - **Progressive Disclosure**: Recipe cards unfold from menu line → full detail
 - **Relationship Graph**: Pairs-with, similar-to, leftovers-become, drink pairings, computed backlinks - rendered as a Related accordion on every card
 - **Lore**: "Worth knowing" fact blocks so the site reads like a bar conversation, not a textbook
@@ -77,19 +78,21 @@ cookbook/
 │   │   ├── filters.js      # Faceted filtering engine
 │   │   ├── match.js        # Fridge matcher logic
 │   │   ├── macros.js       # Macro calculations
+│   │   ├── grocery.js      # Plan -> grouped, summed shopping list
 │   │   └── rel.js          # Relationship graph builder
 │   └── views/
 │       ├── menu.js         # Start strip + board + filters
 │       ├── recipe.js       # Recipe detail with accordions
-│       ├── cook.js         # Cook mode (full screen)
+│       ├── cook.js         # Cook mode (full screen, keyboard + swipe)
 │       ├── fridge.js       # Fridge matcher
-│       ├── tonight.js      # Context picker (stub)
-│       ├── planner.js      # Meal planner (stub)
-│       └── host.js         # Date/party menus (stub)
+│       ├── tonight.js      # Three-question dish picker
+│       ├── planner.js      # 14-day meal planner + grocery list
+│       └── host.js         # Date/party menus with runsheets
 ├── data/
-│   ├── recipes.json        # Full roster (164 cards)
-│   ├── ingredients.json    # 133 ingredients with macros per 100g
-│   └── tags.json           # Controlled vocabulary (14 facets incl. temp, soup)
+│   ├── recipes.json        # Full roster (216 cards)
+│   ├── ingredients.json    # 228 ingredients with macros per 100g
+│   ├── host-menus.json     # Curated date/party menus + runsheets
+│   └── tags.json           # Controlled vocabulary (15 facets incl. temp, diet)
 ├── scripts/
 │   ├── validate.py         # Data QA: refs, tags, rel graph, macro identity, dedup scan
 │   └── build_gap.py        # Idempotent gap-filler (re-run safe)
@@ -119,26 +122,39 @@ data/recipes.json + tags.json + ingredients.json  (assets)
 
 Every view is a query. Adding a lens never touches the data.
 
-## Design Modes
+## Design
 
-### Studio Mode (default)
-- Paper grain, pastel washes, wobble sketches
-- Shantell Sans margin notes
-- Full motion budget: spring animations, hover lifts, steam curls
-- Body 16px, 65-70ch
+One design, no mode toggle. Palette is **newsprint**: warm grey paper, near-black
+ink, a single vermilion accent. Fraunces (with its SOFT/WONK/opsz axes) carries
+display type, Karla carries body and all tabular figures.
 
-### Reading Mode
-- Grain off, washes at 4-5%
-- Clean SVGs, motion cut to essentials
-- Hanken Grotesk italic (no handwriting)
-- Body 18px, 60ch, AAA contrast (7:1)
+Motion is a closed vocabulary defined in `tokens.css` — three easings
+(`--ease-fluid`, `--ease-soft`, `--ease-swell`) and three durations
+(`--d-quick`, `--d-flow`, `--d-drape`). Nothing invents its own numbers, and
+`motion.css` lists every animation on the site. Anything not on that list is a
+bug. `prefers-reduced-motion` cuts all of it.
 
-Toggle persists in localStorage. Cook Mode uses one high-contrast design regardless of mode.
+## Responsive
+
+Five bands, all verified in-browser:
+
+| Band | Behaviour |
+|---|---|
+| ≥1440px | Measure widens to 66rem |
+| 1025–1439px | Baseline laptop layout |
+| 721–1024px (iPad) | Keeps the top nav, tightens gutters and gaps |
+| ≤720px (phone) | Tab bar replaces top nav, leader dots drop, planner days stack, 44px touch targets, safe-area insets |
+| ≤420px | Macro strip goes 2×2, buttons go full-width |
+
+Landscape phones get their own height-based rule so the masthead does not eat
+the screen.
 
 ## Tag Taxonomy
 
-13 facets with closed vocabularies:
+15 facets with closed vocabularies (`diet` is derived at load time from
+`veg` + `protein`, the other 14 are authored):
 
+- **diet** *(derived)*: veg, egg-veg, non-veg
 - **meal**: breakfast, lunch, soup, dinner, snack, dessert, side, drink
 - **cuisine**: north-indian, punjabi, italian, mexican, thai, korean, cafe, bar, etc.
 - **temp**: hot, cold (drinks)

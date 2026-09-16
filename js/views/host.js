@@ -8,13 +8,27 @@ const byId = id => window.cookbook.recipes.find(r => r.id === id);
 export async function renderHost(container) {
   if (!menus) {
     try {
-      menus = await fetch('data/host-menus.json').then(r => r.json());
-    } catch {
-      container.innerHTML = '<p class="error">Could not load host menus.</p>';
+      // Cache-busted like the other data files; GitHub Pages holds JSON hard.
+      const res = await fetch(`data/host-menus.json?v=${Date.now()}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      menus = await res.json();
+    } catch (e) {
+      container.innerHTML = `<p class="error">Could not load host menus (${e.message}).</p>`;
       return;
     }
   }
 
+  // paint() in app.js cannot catch a throw from this side of the await, so
+  // this view reports its own render failures.
+  try {
+    draw(container);
+  } catch (e) {
+    console.error('[cookbook] host render failed:', e);
+    container.innerHTML = `<p class="error">Host menus failed to render (${e.message}).</p>`;
+  }
+}
+
+function draw(container) {
   container.innerHTML = `
     <div class="view-host">
       <div class="view-head">
