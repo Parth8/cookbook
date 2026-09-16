@@ -26,7 +26,7 @@ Highlights now in as real cards (not just aliases): **Chicken Katsu**, **Chilli 
 ## Features
 
 - **6 Entry Points**: Start from context (time, ingredients, cleanup, guests, post-workout, behind the bar) not chapters
-- **Collapsed-by-default board**: The menu opens as a one-screen index of all nine sections. Click a section head to unfold it; applying a filter unfolds whatever holds results, and `EXPAND ALL` opens everything at once. Your own open/closed choices persist in localStorage
+- **Collapsed-by-default board**: The menu opens as a one-screen index of all nine sections, and a section opens only when you click its head — filtering never opens one for you. While a filter is on, the head counts update and sections with no matches drop out, so you can see where the results are before deciding what to unfold. `EXPAND ALL` opens everything at once, and your open/closed choices persist in localStorage
 - **Faceted Filtering**: AND across facets, OR within, with tri-state chips - including temp (hot/cold) and drink strength (zero-proof / light pour / strong pour)
 - **Alias Search**: `aka` fields make every card findable by its other names, including near-miss dishes ("chicken katsu" → Chicken Parmesan) with the swap spelled out
 - **Fridge Matcher**: Tap what you have, get ranked recipes with honest set math

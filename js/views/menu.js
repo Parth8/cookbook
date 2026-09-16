@@ -271,9 +271,7 @@ function apply({ animate }) {
   };
   if (animate) setTimeout(updateSectionEmpty, 440); else updateSectionEmpty();
 
-  // Open the drawers that hold results. Runs on the same frame as the line
-  // reveal so the fold and the lines move together instead of in sequence.
-  syncSections(matched);
+  syncSections();
 
   chrome(matched.size, recipes.length);
 }
@@ -453,17 +451,12 @@ function setSectionOpen(sec, open) {
 }
 
 /**
- * Sections are closed by default, which would make filtering invisible — you
- * would narrow to 12 dishes and still stare at nine shut drawers. So while a
- * filter is on, any section holding a match opens itself. The user's own
- * choices live in `expanded` and come back the moment filters clear.
+ * A section opens only because someone opened it. Filtering never does it for
+ * them — the board stays folded and the head counts do the talking, so the
+ * collapsed default holds whether or not a filter is on.
  */
-function syncSections(matched) {
-  const filtering = hasActiveFilters(state);
-  sectionEls.forEach(sec => {
-    const hasMatch = [...sec.querySelectorAll('.line')].some(l => matched.has(l.dataset.id));
-    setSectionOpen(sec, filtering ? hasMatch : expanded.has(sec.dataset.key));
-  });
+function syncSections() {
+  sectionEls.forEach(sec => setSectionOpen(sec, expanded.has(sec.dataset.key)));
   updateExpandAll();
 }
 
